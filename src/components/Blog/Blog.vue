@@ -1,6 +1,6 @@
 <template>
-  <div class="bg-gray-400">
-    <p>This ia Blog page</p>
+  <div class="text-center">
+    <p class="text-2xl">This ia Blog page</p>
   </div>
 </template>
 
