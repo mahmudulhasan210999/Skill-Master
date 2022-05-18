@@ -3,6 +3,7 @@ import Home from '../views/home/index.vue';
 import Blog from '../views/blog/index.vue';
 import BlogDetails from '../views/blog/details/[id].vue';
 import Courses from "../views/courses/index.vue";
+import Contact from '../views/contact/index.vue'
 
 const routes = [
   {
@@ -20,6 +21,10 @@ const routes = [
   {
     path: '/courses',
     component: Courses
+  },
+  {
+    path: '/contact',
+    component: Contact
   }
 ]
 
