@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full">
+  <div class="w-full flex flex-col bg-gray-50">
     <div class="top-img p-40 w-full">
       <div class="py-12 text-white">
         <p class="text-5xl font-semibold p-2">Learn On Your Schedule</p>
@@ -11,25 +11,25 @@
           <i class="pi pi-search" />
           <InputText class="h-16 w-72" type="text" v-model="value" placeholder="Search" />
         </span>
-        
         <Dropdown class="h-16 w-72" v-model="selectedCategory" :options="category" optionLabel="name" placeholder="Choose Category" />
-
         <Button label="Search" class="p-button-danger h-16 w-28" />
       </div>
     </div>
 
-    <div class="grid grid-cols-3 px-52">
+    <div class="rounded-lg shadow-md mx-44">
+      <div class="grid grid-cols-3 px-12">
       <div class="p-5" v-for="(top, index) in tops" :key="index">
-        <div class="flex">
-          <div class="h-20 w-28  pt-2">
+        <div class="flex items-center">
+          <div>
             <img class="rounded-full h-14 w-14" :src="top.img" alt="Image">
           </div>
-          <div class="pl-3">
+          <div class="pl-4 text-left">
             <p class="font-semibold">{{ top.title }}</p>
-            <p class="">{{ top.text }}</p>
+            <p>{{ top.text }}</p>
           </div>
         </div>
       </div>
+    </div>
     </div>
   </div>
 </template>
@@ -71,7 +71,6 @@ export default {
   background-image: url('../../assets/images/Home/1.jpg');
   position: relative;
   background-size: cover;
-  width: 98vw;
-  height: 95vh;
+  height: 90vh;
 }
 </style>
