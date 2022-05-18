@@ -12,22 +12,24 @@
             </div>
         </div>
 
-        <!-- Trending Posts -->
+        <!-- Trending blogs -->
         <div class="bg-white rounded-md border border-gray-200 p-6 mt-8">
-            <p class="text-xl font-bold py-1">Trending Posts</p>
+            <p class="text-xl font-bold py-1">Trending blogs</p>
             <div class="flex my-3 text-left" v-for="(blog, index) in blogs" :key="index">
-                <div class="flex w-full text-sm">
-                    <div class="w-1/3">
-                        <img class="h-20 w-5/6" :src="blog.img" alt="">
-                    </div>
-                    <div class="w-2/3 font-medium">
-                        <p class="text-gray-700 text-lg font-semibold">{{blog.title}}</p>
-                        <div class="flex items-center text-sm text-gray-500">
-                            <i class="pi pi-clock"></i>
-                            <p class="m-1">{{blog.date}}</p>
+                <router-link :to="{ path: '/blog/' + blog.slug, params: { id: blog.title }}">
+                    <div class="flex w-full text-sm">
+                        <div class="w-1/3">
+                            <img class="h-20 w-5/6" :src="blog.img" alt="">
+                        </div>
+                        <div class="w-2/3 font-medium">
+                            <p class="text-gray-700 text-lg font-semibold">{{blog.title}}</p>
+                            <div class="flex items-center text-sm text-gray-500">
+                                <i class="pi pi-clock"></i>
+                                <p class="m-1">{{blog.date}}</p>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </router-link>
             </div>
         </div>
 

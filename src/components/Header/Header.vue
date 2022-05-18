@@ -2,7 +2,9 @@
     <div class="w-full flex justify-between px-36 shadow-lg">
         <div class="flex items-center">
             <div class="mr-20">
-                <img class="h-20" src="../../assets/logo/platform-logo.png" alt="">
+                <router-link to="/">
+                    <img class="h-20" src="../../assets/logo/platform-logo.png" alt="">
+                </router-link>
             </div>
             <div v-for="(item, index) in menu" :key="index">
                 <router-link :to="{ path: item.path}">
