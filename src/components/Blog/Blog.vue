@@ -1,5 +1,6 @@
 <template>
   <div class="">
+    <!-- Top design -->
     <div class="text-center p-12">
       <p class="text-5xl font-bold p-4">New & Top Articles</p>
       <div class="flex justify-center">
