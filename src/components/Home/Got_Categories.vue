@@ -1,39 +1,37 @@
 <template>
-  <div class="w-full my-10">
-    <div class="flex justify-between px-40">
-      <div>
-        <p class="text-xl font-semibold p-2">Got & Popular Categories</p>
+  <div class="w-full bg-green-50 my-10">
+    <div class="py-10">
+      <div class="flex justify-between px-40">
+        <div>
+          <p class="text-xl font-semibold p-2">Got & Popular Categories</p>
+        </div>
+        <div class="flex border border-gray-500 ">
+          <p class="p-2">Browse More</p>
+        </div>
       </div>
-      <div class="flex border border-gray-500 ">
-        <p class="p-2">Browse More</p>
-      </div>
-    </div>
 
-    <div class="px-40">
-      <Carousel :value="featured_courses" :numVisible="3" :numScroll="3" :responsiveOptions="responsiveOptions">
-        <template #item="slotProps">
-          <div class="p-3">
-            <img class="h-76 w-full" :src="slotProps.data.img" alt="Image">
-            <div class="text-center">
-              <p class="text-xl p-2">{{ slotProps.data.title }}</p>
-              <div class="flex justify-between px-3">
-                <p class="">{{ slotProps.data.views }} Views</p>
-                <p class="">{{ slotProps.data.duration }}</p>
-                <p class="">★ {{ slotProps.data.reviews }} Reviews</p>
-              </div>
-              <div class="flex justify-between px-20">
-                <p class="">{{ slotProps.data.teacher_name }}</p>
-                <p class="">{{ slotProps.data.lectures }}</p>
+      <div class="px-40">
+        <Carousel :value="got_categories" :numVisible="3" :numScroll="3" :responsiveOptions="responsiveOptions">
+          <template #item="slotProps">
+            <div class="p-3">
+              <img class="h-76 w-full" :src="slotProps.data.img" alt="Image">
+              <div class="px-3 p-4 bg-white">
+                <p class="text-xl p-2">{{ slotProps.data.title }}</p>
+                <div class="flex text-sm">
+                  <p class="p-2">★ {{ slotProps.data.videos }} Videos</p>
+                  <p class="p-2">★ {{ slotProps.data.lessos }} Lessos</p>
+                </div>
               </div>
             </div>
-          </div>
-        </template>
-      </Carousel>
+          </template>
+        </Carousel>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+import {mapState} from 'vuex';
 import Carousel from 'primevue/carousel';
 
 export default {
@@ -41,13 +39,9 @@ export default {
     Carousel,
   },
   computed: {
-    featured_courses() {
-      return this.$store.state.featured_courses;
-    }
+    ...mapState ({
+      got_categories: state => state.got_categories.got_categories
+    }),
   }
 }
 </script>
-
-<style scoped>
-
-</style>

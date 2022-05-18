@@ -15,40 +15,32 @@
     <div class="px-40">
       <Carousel :value="featured_courses" :numVisible="3" :numScroll="3" :responsiveOptions="responsiveOptions">
         <template #item="slotProps">
-          <div class="p-3">
+          <div class="p-3 ">
             <img class="h-76 w-full" :src="slotProps.data.img" alt="Image">
-            <div class="text-center">
-              <p class="text-xl p-2">{{ slotProps.data.title }}</p>
-              <div class="flex justify-between px-3">
-                <p class="">{{ slotProps.data.views }} Views</p>
-                <p class="">{{ slotProps.data.duration }}</p>
+            <div class="border border-gray-200">
+              <p class="text-xl p-3">{{ slotProps.data.title }}</p>
+              <div class="flex justify-between text-sm px-3">
+                <p class="">★ {{ slotProps.data.views }} Views</p>
+                <p class="">⏲ {{ slotProps.data.duration }}</p>
                 <p class="">★ {{ slotProps.data.reviews }} Reviews</p>
               </div>
-              <div class="flex justify-between px-20">
-                <p class="">{{ slotProps.data.teacher_name }}</p>
-                <p class="">{{ slotProps.data.lectures }}</p>
+              <div class="flex justify-between border-t border-gray-200 p-3 mt-2">
+                <div class="flex">
+                  <img class="rounded-full h-9 w-9" :src="slotProps.data.teacher_img" alt="Image">
+                  <p class="p-2 text-sm font-medium text-slate-600">{{ slotProps.data.teacher_name }}</p>
+                </div>
+                <p class="p-2 ">★ {{ slotProps.data.lectures }} lectures</p>
               </div>
             </div>
           </div>
         </template>
       </Carousel>
     </div>
-
-    <!-- <div class="grid grid-cols-3 px-40">
-      <div class="p-3" v-for="(course, index) in featured_courses" :key="index">
-        <img :src="course.img" alt="Image">
-        <p class="text-xl font-medium">{{ course.title }}</p>
-        <p>{{ course.views }}</p>
-        <p>{{ course.duration }}</p>
-        <p>{{ course.reviews }}</p>
-        <p>{{ course.teacher_name }}</p>
-        <p>{{ course.lectures }}</p>
-      </div>
-    </div> -->
   </div>
 </template>
 
 <script>
+import {mapState} from 'vuex';
 import Carousel from 'primevue/carousel';
 
 export default {
@@ -56,9 +48,9 @@ export default {
     Carousel,
   },
   computed: {
-    featured_courses() {
-      return this.$store.state.featured_courses;
-    }
+    ...mapState ({
+      featured_courses: state => state.featured_courses.featured_courses
+    }),
   }
 }
 </script>

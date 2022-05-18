@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full bg-green-50 my-10 p-8">
+  <div class="w-full bg-green-50  p-8">
     <div class="">
       <div class="flex justify-center px-32 p-4">
         <p class="text-2xl font-semibold text-red-600 p-1">Hot & Popular</p>
@@ -8,7 +8,7 @@
     </div>
 
     <div class="grid grid-cols-3 px-32">
-      <div class="p-3 " v-for="(category, index) in categories" :key="index">
+      <div class="p-3 " v-for="(category, index) in hot_categories" :key="index">
         <div class="flex bg-red-100 rounded-md p-5">
           <div>
             <img class="rounded-full h-20 w-20" :src="category.img" alt="Image">
@@ -24,15 +24,16 @@
 </template>
 
 <script>
+import {mapState} from 'vuex';
 
 export default {
   components: {
 
   },
   computed: {
-    categories() {
-      return this.$store.state.categories;
-    }
+    ...mapState ({
+      hot_categories: state => state.hot_categories.hot_categories
+    }),
   }
 }
 </script>
