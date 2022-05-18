@@ -15,8 +15,11 @@
     <div>
       <Carousel :value="featured_courses" :numVisible="3" :numScroll="3" :responsiveOptions="responsiveOptions">
         <template #item="slotProps">
-          <div class="p-3 ">
-            <img class="h-76 w-full" :src="slotProps.data.img" alt="Image">
+          <div class="p-3">
+            <div class="container">
+              <img class="h-76 w-full" :src="slotProps.data.img" alt="Image">
+              <div class="top-left px-3 py-1 bg-white shadow-lg rounded-sm text-gray-600 text-sm font-semibold">${{ slotProps.data.price }}</div>
+            </div>
             <div class="border border-gray-200">
               <p class="text-xl p-3">{{ slotProps.data.title }}</p>
               <div class="flex justify-between text-xs text-gray-500 px-3">
@@ -56,5 +59,15 @@ export default {
 </script>
 
 <style scoped>
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
 
+.top-left {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
 </style>
