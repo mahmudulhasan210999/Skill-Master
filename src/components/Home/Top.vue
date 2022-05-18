@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full flex flex-col bg-gray-50">
+  <div class="w-full flex flex-col bg-gray-50 container">
     <div class="top-img p-40 w-full">
       <div class="py-12 text-white">
         <p class="text-5xl font-semibold p-2">Learn On Your Schedule</p>
@@ -16,7 +16,7 @@
       </div>
     </div>
 
-    <div class="rounded-lg shadow-md mx-44">
+    <div class="rounded-lg shadow-md mx-44 bottom-middle">
       <div class="grid grid-cols-3 px-12">
       <div class="p-5" v-for="(top, index) in tops" :key="index">
         <div class="flex items-center">
@@ -72,6 +72,17 @@ export default {
   background-image: url('../../assets/images/Home/1.jpg');
   position: relative;
   background-size: cover;
-  height: 90vh;
+  height: 85vh;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+}
+
+.bottom-middle {
+  position: absolute;
+  top: 93%;
+  background: white;
 }
 </style>
