@@ -41,14 +41,10 @@ import Dropdown from 'primevue/dropdown';
 import Button from 'primevue/button';
 
 export default {
-  components: {
-    InputText,
-    Dropdown,
-    Button,
-  },
   data() {
     return {
       selectedCategory: null,
+      value: null,
       category: [
         {name: 'Web Designing'},
         {name: 'Business'},
@@ -57,6 +53,11 @@ export default {
         {name: 'Art & Culture'}
       ],
     }
+  },
+  components: {
+    InputText,
+    Dropdown,
+    Button,
   },
   computed: {
     ...mapState ({
