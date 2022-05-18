@@ -60,7 +60,7 @@ export default {
   },
   computed: {
     ...mapState ({
-      tops: state => state.tops.tops
+      tops: state => state.home.tops
     }),
   }
 }

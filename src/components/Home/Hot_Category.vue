@@ -32,7 +32,7 @@ export default {
   },
   computed: {
     ...mapState ({
-      hot_categories: state => state.hot_categories.hot_categories
+      hot_categories: state => state.home.hot_categories
     }),
   }
 }

@@ -49,7 +49,7 @@ export default {
   },
   computed: {
     ...mapState ({
-      featured_courses: state => state.featured_courses.featured_courses
+      featured_courses: state => state.courses.featured_courses
     }),
   }
 }

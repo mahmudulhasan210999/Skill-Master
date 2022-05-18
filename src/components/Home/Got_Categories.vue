@@ -40,7 +40,7 @@ export default {
   },
   computed: {
     ...mapState ({
-      got_categories: state => state.got_categories.got_categories
+      got_categories: state => state.home.got_categories
     }),
   }
 }

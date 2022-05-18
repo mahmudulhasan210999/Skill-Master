@@ -32,7 +32,7 @@ export default {
   },
   computed: {
     ...mapState ({
-      articles: state => state.articles.articles
+      articles: state => state.home.articles
     }),
   }
 }
