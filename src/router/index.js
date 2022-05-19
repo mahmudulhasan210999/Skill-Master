@@ -5,6 +5,7 @@ import BlogDetails from '../views/blog/details/[id].vue';
 import Courses from "../views/courses/index.vue";
 import Contact from '../views/contact/index.vue';
 import CourseDetails from "../views/courses/details/[id].vue";
+import Cart from "../views/cart/index.vue";
 
 const routes = [
   {
@@ -30,6 +31,10 @@ const routes = [
   {
     path: '/courses/:id',
     component: CourseDetails
+  },
+  {
+    path: '/cart',
+    component: Cart
   },
 ]
 
