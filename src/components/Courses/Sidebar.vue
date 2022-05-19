@@ -34,7 +34,7 @@
                             <div class="w-2/3 font-medium">
                                 <p class="text-gray-600">{{course.title}}</p>
                                 <p class="text-yellow-600">★★★★★</p>
-                                <p class="text-red-600 font-semibold">${{course.price}}</p>
+                                <p class="text-rose-600 font-semibold">${{course.price}}</p>
                             </div>
                         </div>
                     </router-link>
@@ -44,7 +44,7 @@
                 <p class="text-xl font-semibold text-black">Tags</p>
                 <div class="grid grid-cols-3">
                     <div class="flex items-center my-1" v-for="(tag, index) in categories" :key="index">
-                        <p class="px-3.5 py-1 bg-gray-200 mx-1 rounded-sm text-gray-600 text-sm cursor-pointer hover:text-white hover:bg-red-600">{{tag.category}}</p>
+                        <p class="px-3.5 py-1 bg-gray-200 mx-1 rounded-sm text-gray-600 text-sm cursor-pointer hover:text-white hover:bg-rose-600">{{tag.category}}</p>
                     </div>
                 </div>
             </div>

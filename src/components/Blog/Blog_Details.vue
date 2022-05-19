@@ -36,8 +36,8 @@
                     </div>
 
                     <div class="flex justify-between mt-8">
-                        <button class="bg-red-600 text-white py-3 px-5">Prev Post</button>
-                        <button class="bg-red-600 text-white py-3 px-5">Next Post</button>
+                        <button class="bg-rose-600 text-white py-3 px-5">Prev Post</button>
+                        <button class="bg-rose-600 text-white py-3 px-5">Next Post</button>
                     </div>
                 </div>
 

@@ -1,9 +1,9 @@
 <template>
-  <div class="w-full flex flex-col bg-gray-50 px-44">
+  <div class="w-full flex flex-col bg-gray-50 px-44 pb-16">
     <div class="text-center p-12">
       <p class="text-5xl font-bold p-4">New Top Articles</p>
       <div class="flex justify-center">
-        <router-link to="/"><p class="text-red-500">Home</p></router-link>
+        <router-link to="/"><p class="text-rose-600">Home</p></router-link>
         <p class="px-2"> / </p>
         <p>Blogs</p>
       </div>
@@ -27,7 +27,7 @@
     </div>
 
     <div class="flex justify-center p-4">
-      <button class="border border-gray-400 hover:border-red-500 rounded-md hover:text-white hover:bg-red-500 px-6 py-3">Load More ⟳</button>
+      <button class="border border-gray-400 hover:border-rose-600 rounded-md hover:text-white hover:bg-rose-600 px-6 py-3">Load More ⟳</button>
     </div>
   </div>
 </template>

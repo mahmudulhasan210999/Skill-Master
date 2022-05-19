@@ -5,8 +5,8 @@
         <div>
           <p class="text-xl font-semibold p-2">Got & Popular Categories</p>
         </div>
-        <div class="flex border border-gray-400 rounded-md bg-white">
-          <button class="px-4 py-2 text-gray-500 hover:text-red-400">Browse More</button>
+        <div class="flex border border-gray-400 rounded-md bg-white hover:border-rose-600 hover:bg-rose-600">
+          <button class="px-4 py-2 text-gray-600 hover:text-white">Browse More</button>
         </div>
       </div>
 

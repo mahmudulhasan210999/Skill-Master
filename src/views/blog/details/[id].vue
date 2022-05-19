@@ -3,7 +3,7 @@
     <div class="text-center px-12 py-20">
       <p class="text-5xl font-bold p-4">How To Increase Wordpress Speed</p>
       <div class="flex justify-center">
-        <router-link to="/"><p class="text-red-500">Home</p></router-link>
+        <router-link to="/"><p class="text-rose-600">Home</p></router-link>
         <p class="px-2"> / </p>
         <p>Blog Detail</p>
       </div>
