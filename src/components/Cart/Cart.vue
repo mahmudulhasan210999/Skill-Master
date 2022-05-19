@@ -1,6 +1,6 @@
 <template>
     <div class="flex flex-col w-full px-36 py-20">
-        <div class="text-center">
+        <div class="text-center mb-6">
             <p class="text-5xl font-bold">Add To Cart</p>
             <div class="flex justify-center mt-2">
                 <router-link to="/"><p class="text-rose-600">Home</p></router-link>
@@ -10,7 +10,7 @@
         </div>
         <div class="w-full flex mt-16">
             <div class="w-2/3">
-                <div class="flex flex-col">
+                <div class="flex flex-col border p-6 rounded-md">
                     <div v-if="cartItem.length > 0">
                         <DataTable :value="cartItem" responsiveLayout="scroll">
                             <Column header="Image">
@@ -18,7 +18,7 @@
                                     <img 
                                         :src="slotProps.data.image" 
                                         alt="" 
-                                        class="h-16 w-16 rounded-md"
+                                        class="h-12 w-12 rounded-sm"
                                     />
                                 </template>
                             </Column>
@@ -50,7 +50,7 @@
                                                 <i class="pi pi-angle-left"></i>
                                             </button>
                                         </div>
-                                        <div class="py-1.5 px-4 border">
+                                        <div class="py-1.5 px-4 border-y">
                                             <p class="text-lg">{{slotProps.data.quantity}}</p>
                                         </div>
                                         <div class="border p-1">
@@ -76,9 +76,9 @@
                                     </div>
                                 </template>
                             </Column>
-                            <Column header="Remove">
+                            <Column header="Action">
                                 <template #body="slotProps">
-                                    <i class="pi pi-times cursor-pointer px-3 py-2 border rounded-md border-red-500 bg-red-500" @click="removeItem(slotProps.data)" style="color: white;"></i>
+                                    <i class="pi pi-times cursor-pointer px-2.5 py-1.5 border rounded-md border-rose-600 bg-rose-600" @click="removeItem(slotProps.data)" style="color: white;"></i>
                                 </template>
                             </Column>
                         </DataTable> 
@@ -99,7 +99,7 @@
                     </div>
                 </div>
             </div>
-            <div class="w-1/3 pl-16">
+            <div class="w-1/3 pl-12">
                 <div class="w-full p-5 border border-gray-200 rounded-md">
                     <p class="text-black font-semibold">Billing Summary</p>
                     <div class="flex flex-col py-6 text-sm border-b border-dotted">
