@@ -8,14 +8,16 @@
         <div class="grid grid-cols-2">
             <div class="p-4" v-for="(course, index) in courses" :key="index">
                 <div class="shadow-sm hover:shadow-md">
-                    <!-- <router-link> -->
+                    <router-link :to="{ path: '/courses/' + course.slug}">
                         <div class="container">
                             <img class="h-76 w-full" :src="course.img" alt="Image">
                             <div class="top-left px-3 py-1 bg-white shadow-lg rounded-sm text-gray-600 text-sm font-semibold">${{ course.price }}</div>
                         </div>
-                    <!-- </router-link> -->
+                    </router-link>
                     <div class="border border-gray-200">
-                        <p class="text-xl p-3">{{ course.title }}</p>
+                        <router-link :to="{ path: '/courses/' + course.slug}">
+                            <p class="text-xl p-3">{{ course.title }}</p>
+                        </router-link>
                         <div class="flex justify-between text-xs text-gray-500 px-3">
                             <p>★ {{ course.views }} Views</p>
                             <p>⏲ {{ course.duration }}</p>

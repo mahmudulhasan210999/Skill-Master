@@ -9,9 +9,9 @@
       </div>
     </div>
 
-    <div class=" bg-gray-100">
+    <div class="bg-gray-100">
       <div class="flex px-40 py-20">
-        <div class="w-2/3 rounded px-8 py-4 mx-4 bg-white">
+        <div class="w-2/3 rounded-md px-8 py-4 mx-4 bg-white">
           <div class="">
             <p class="font-semibold border-b border-gray-300 py-2">Fillup The Form</p>
           </div>
@@ -38,20 +38,20 @@
           </div>
 
           <div class="flex justify-center pt-4">
-            <button class="bg-rose-600 text-white p-4 my-4">Submit Request</button>
+            <button class="bg-rose-600 hover:bg-rose-700 text-white rounded-md px-8 py-4 mb-4">Submit Request</button>
           </div>
 
         </div>
 
-        <div class="w-1/3 rounded p-4 mx-4 bg-white">
+        <div class="w-1/3 rounded-md p-4 mx-4 bg-white">
           <p class="font-semibold border-b border-gray-300 py-2">Reach Us</p>
 
           <div class="p-3">
             <p class="font-semibold text-3xl">Get In Touch</p>
             <p class="text-sm py-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
             
-            <div class="flex p-4">
-              <div class="p-4">
+            <div class="flex items-center p-4">
+              <div class="mr-3">
                 <i class="pi pi-home" style="font-size: 38px; color: rgb(194, 30, 86)"></i>
               </div>
               <div class="px-2 text-sm">
@@ -60,8 +60,8 @@
               </div>
             </div>
 
-            <div class="flex p-4">
-              <div class="p-4">
+            <div class="flex p-4 items-center">
+              <div class="mr-3">
                 <i class="pi pi-envelope" style="font-size: 38px; color: rgb(194, 30, 86)"></i>
               </div>
               <div class="px-2 text-sm">
@@ -71,8 +71,8 @@
               </div>
             </div>
 
-            <div class="flex p-4">
-              <div class="p-4">
+            <div class="flex p-4 items-center">
+              <div class="mr-3">
                 <i class="pi pi-mobile" style="font-size: 38px; color: rgb(194, 30, 86)"></i>
               </div>
               <div class="px-2 text-sm">

@@ -1,16 +1,16 @@
 <template>
     <div>
-        <Contact />
+        <Cart />
     </div>
 </template>
 
 <script>
 
-import Contact from '../../components/Contact/Contact.vue';
+import Cart from '../../components/Cart/Cart.vue';
 
 export default {
   components: {
-    Contact,
+    Cart,
   }
 }
 </script>
