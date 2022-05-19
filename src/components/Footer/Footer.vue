@@ -1,6 +1,6 @@
 <template>
   <div class="w-full flex flex-col">
-    <div class="text-center bg-rose-600 px-44 py-16">
+    <div class="text-center bg-rose-700 px-44 py-16">
       <div class="text-white pb-8">
         <p class="text-3xl font-bold p-2">Join Thousand Of Happy Students!</p>
         <p class="text-sm">Subscribe our newsletter & get latest news and updation!</p>
@@ -9,7 +9,7 @@
       <div class="px-60">
         <div class="flex rounded bg-white p-2">
           <InputText class="h-14 w-full" type="text" placeholder="  Your Email Address" v-model="value" />
-          <button class="rounded bg-rose-600 text-white h-14 w-40 px-4 ml-2">Get Started</button>
+          <button class="rounded bg-rose-700 text-white h-14 w-40 px-4 ml-2">Get Started</button>
         </div>
       </div>
     </div>
