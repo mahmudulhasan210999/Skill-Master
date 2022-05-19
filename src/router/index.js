@@ -8,8 +8,13 @@ import CourseDetails from "../views/courses/details/[id].vue";
 import Cart from "../views/cart/index.vue";
 import Login from "../views/login/index.vue";
 import Registration from "../views/registration/index.vue";
+import PageNotFound from "../views/404/index.vue";
 
 const routes = [
+  { 
+    path: '/:pathMatch(.*)*', 
+    component: PageNotFound 
+  },
   {
     path: '/',
     component: Home 

@@ -1,6 +1,6 @@
 <template>
   <div class="w-full flex flex-col">
-    <div class="text-center bg-rose-600 px-44 py-20">
+    <div class="text-center bg-rose-600 px-44 py-16">
       <div class="text-white pb-8">
         <p class="text-3xl font-bold p-2">Join Thousand Of Happy Students!</p>
         <p class="text-sm">Subscribe our newsletter & get latest news and updation!</p>
@@ -14,7 +14,6 @@
       </div>
     </div>
 
-    <!-- LearnUp -->
     <div class="step_2 px-44 py-16">
       <div class="flex justify-between gap-3 text-gray-400">
         <div>
@@ -89,7 +88,6 @@
       </div>
     </div>
 
-    <!-- Bottomest -->
     <div class="step_3 px-44 flex justify-between">
       <div>
         <p class="text-gray-400 text-sm p-4">© Copyright 2022 <a class="text-gray-300 font-medium" target="_blank" href="https://www.facebook.com/catchbitflex/">Bitflex</a> | <a class="text-gray-300 font-medium" target="_blank" href="https://www.facebook.com/catchbangladesh">Catch Bangladesh</a> All Rights Reserved.</p>
