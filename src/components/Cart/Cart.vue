@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col w-full px-36 py-16">
+    <div class="flex flex-col w-full px-36 py-20">
         <div class="text-center">
             <p class="text-5xl font-bold">Add To Cart</p>
             <div class="flex justify-center mt-2">
@@ -84,7 +84,8 @@
                         </DataTable> 
                         <div class="mt-6 flex justify-end items-center">
                             <InputText placeholder="Coupon Code" class="w-52" type="text" v-model="coupon_code" />
-                            <button class="ml-3 border rounded-md px-6 py-2.5 bg-rose-600 text-white hover:bg-rose-700 text-sm sm:text-base">Apply Coupon</button>
+                            <button class="button">Apply Coupon</button>
+                            <button class="button">Empty Cart</button>
                         </div>
                     </div> 
                     <div class="lg:mt-16 flex flex-col justify-center items-center" v-else>
@@ -93,7 +94,7 @@
                             <p class="text-gray-400 font-semibold text-xl sm:text-2xl">Your Cart is Empty</p>
                         </h3>
                         <div class="mt-4">
-                            <button class="button text-sm sm:text-base" @click="toHome">CONTINUE SHOPPING</button>
+                            <button class="text-sm sm:text-base" @click="toHome">CONTINUE SHOPPING</button>
                         </div>
                     </div>
                 </div>
@@ -172,6 +173,8 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+.button {
+    @apply ml-3 border rounded-md px-6 py-2.5 bg-rose-600 text-white hover:bg-rose-700 text-sm sm:text-base;
+}
 </style>
