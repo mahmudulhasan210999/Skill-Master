@@ -11,7 +11,7 @@
 
     <div class=" bg-gray-100">
       <div class="flex px-40 py-20">
-        <div class="w-2/3 px-8 py-4 mx-4 bg-white">
+        <div class="w-2/3 rounded px-8 py-4 mx-4 bg-white">
           <div class="">
             <p class="font-semibold border-b border-gray-300 py-2">Fillup The Form</p>
           </div>
@@ -43,7 +43,7 @@
 
         </div>
 
-        <div class="w-1/3 p-4 mx-4 bg-white">
+        <div class="w-1/3 rounded p-4 mx-4 bg-white">
           <p class="font-semibold border-b border-gray-300 py-2">Reach Us</p>
 
           <div class="p-3">
