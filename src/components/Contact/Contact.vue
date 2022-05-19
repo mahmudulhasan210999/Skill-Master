@@ -9,42 +9,9 @@
       </div>
     </div>
 
-<<<<<<< HEAD
-    <div class="flex">
-      <div class="w-2/3 p-6 mr-4 bg-gray-100">
-          <p class="font-semibold border-b border-gray-200 py-2">Fillup The Form</p>
-          <div class="flex flex-col items-center">
-              <div class="flex w-full">
-          <div class="w-1/2 pr-3">
-            <p class="text-sm py-2">Name</p>
-            <InputText class="h-12 w-full" type="text" v-model="value" />
-          </div>
-          <div class="w-1/2 pl-3">
-            <p class="text-sm py-2">Email</p>
-            <InputText class="h-12 w-full" type="text" v-model="value" />
-          </div>
-        </div>
-        <div class="w-full mt-3">
-          <p class="text-sm py-2">Subject</p>
-          <InputText class="h-12 w-full" type="text" v-model="value" />
-        </div>
-
-        <div class="w-full mt-3">
-          <p class="text-sm py-2">Message</p>
-          <Textarea class="h-24 w-full" v-model="value1" rows="5" cols="30" />
-        </div>
-        <div class="flex items-center">
-          <button class="bg-red-600 rounded-sm hover:bg-red-700 hover:shadow-md text-white p-4 my-4">Submit Request</button>
-        </div>
-          </div>
-      </div>
-
-      <div class="w-1/3 p-6 ml-4 bg-gray-100">
-        <p class="font-semibold border-b border-gray-200 py-2">Reach Us</p>
-=======
-    <div class=" bg-gray-100">
+    <div class="bg-gray-100">
       <div class="flex px-40 py-20">
-        <div class="w-2/3 px-8 py-4 mx-4 bg-white">
+        <div class="w-2/3 rounded-md px-8 py-4 mx-4 bg-white">
           <div class="">
             <p class="font-semibold border-b border-gray-300 py-2">Fillup The Form</p>
           </div>
@@ -71,21 +38,20 @@
           </div>
 
           <div class="flex justify-center pt-4">
-            <button class="bg-rose-600 text-white p-4 my-4">Submit Request</button>
+            <button class="bg-rose-600 hover:bg-rose-700 text-white rounded-md px-8 py-4 mb-4">Submit Request</button>
           </div>
 
         </div>
 
-        <div class="w-1/3 p-4 mx-4 bg-white">
+        <div class="w-1/3 rounded-md p-4 mx-4 bg-white">
           <p class="font-semibold border-b border-gray-300 py-2">Reach Us</p>
->>>>>>> dbe7b9aa09185a29e773b813340e446a2d23d119
 
           <div class="p-3">
             <p class="font-semibold text-3xl">Get In Touch</p>
             <p class="text-sm py-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
             
-            <div class="flex p-4">
-              <div class="p-4">
+            <div class="flex items-center p-4">
+              <div class="mr-3">
                 <i class="pi pi-home" style="font-size: 38px; color: rgb(194, 30, 86)"></i>
               </div>
               <div class="px-2 text-sm">
@@ -94,8 +60,8 @@
               </div>
             </div>
 
-            <div class="flex p-4">
-              <div class="p-4">
+            <div class="flex p-4 items-center">
+              <div class="mr-3">
                 <i class="pi pi-envelope" style="font-size: 38px; color: rgb(194, 30, 86)"></i>
               </div>
               <div class="px-2 text-sm">
@@ -105,8 +71,8 @@
               </div>
             </div>
 
-            <div class="flex p-4">
-              <div class="p-4">
+            <div class="flex p-4 items-center">
+              <div class="mr-3">
                 <i class="pi pi-mobile" style="font-size: 38px; color: rgb(194, 30, 86)"></i>
               </div>
               <div class="px-2 text-sm">
