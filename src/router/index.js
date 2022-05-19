@@ -3,7 +3,8 @@ import Home from '../views/home/index.vue';
 import Blog from '../views/blog/index.vue';
 import BlogDetails from '../views/blog/details/[id].vue';
 import Courses from "../views/courses/index.vue";
-import Contact from '../views/contact/index.vue'
+import Contact from '../views/contact/index.vue';
+import CourseDetails from "../views/courses/details/[id].vue";
 
 const routes = [
   {
@@ -25,7 +26,11 @@ const routes = [
   {
     path: '/contact',
     component: Contact
-  }
+  },
+  {
+    path: '/courses/:id',
+    component: CourseDetails
+  },
 ]
 
 const router = createRouter({
