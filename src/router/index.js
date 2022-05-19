@@ -6,11 +6,13 @@ import Courses from "../views/courses/index.vue";
 import Contact from '../views/contact/index.vue';
 import CourseDetails from "../views/courses/details/[id].vue";
 import Cart from "../views/cart/index.vue";
+import Login from "../views/login/index.vue";
+import Registration from "../views/registration/index.vue";
 
 const routes = [
   {
     path: '/',
-    component: Home
+    component: Home 
   },
   {
     path: '/blogs',
@@ -35,6 +37,14 @@ const routes = [
   {
     path: '/cart',
     component: Cart
+  },
+  {
+    path: '/login',
+    component: Login
+  },
+  {
+    path: '/registration',
+    component: Registration
   },
 ]
 

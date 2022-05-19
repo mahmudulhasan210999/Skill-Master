@@ -13,8 +13,12 @@
             </div>
         </div>
         <div class="flex items-center">
-            <button class="py-2 px-5 text-red-600 border rounded-md font-semibold hover:bg-red-600 hover:text-white">Sign in</button>
-            <button class="py-2 px-5 border rounded-md bg-black font-semibold text-white ml-4">Sign up</button>
+            <router-link to="/login">
+                <button class="py-2 px-5 text-red-600 border rounded-md font-semibold hover:bg-red-600 hover:text-white">Sign in</button>
+            </router-link>
+            <router-link to="/registration">
+                <button class="py-2 px-5 border rounded-md bg-black font-semibold text-white ml-4">Sign up</button>
+            </router-link>
         </div>
     </div>
 </template>

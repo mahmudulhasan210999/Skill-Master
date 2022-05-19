@@ -13,7 +13,7 @@
                     <InputText class="h-16 w-72" type="text" v-model="value" placeholder="Search" />
                 </span> -->
                 <!-- <Dropdown class="h-16 w-72" v-model="selectedCategory" :options="category" optionLabel="name" placeholder="Choose Category" /> -->
-                <button label="Search" class="p-6 rounded-r-md text-lg bg-rose-600 text-white">Go</button>
+                <button label="Search" class="p-6 rounded-r-md text-lg bg-rose-600 text-white hover:bg-rose-700">Go</button>
             </div>
         </div>
 
