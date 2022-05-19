@@ -3,7 +3,7 @@
         <div class="text-center">
             <p class="text-5xl font-bold">Add To Cart</p>
             <div class="flex justify-center mt-2">
-                <router-link to="/"><p class="text-red-500">Home</p></router-link>
+                <router-link to="/"><p class="text-rose-600">Home</p></router-link>
                 <p class="px-2"> / </p>
                 <p>Add To Cart</p>
             </div>

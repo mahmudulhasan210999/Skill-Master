@@ -9,6 +9,7 @@ import Cart from "../views/cart/index.vue";
 import Login from "../views/login/index.vue";
 import Registration from "../views/registration/index.vue";
 import PageNotFound from "../views/404/index.vue";
+import Checkout from "../views/checkout/index.vue";
 
 const routes = [
   { 
@@ -42,6 +43,10 @@ const routes = [
   {
     path: '/cart',
     component: Cart
+  },
+  {
+    path: '/checkout',
+    component: Checkout
   },
   {
     path: '/login',
