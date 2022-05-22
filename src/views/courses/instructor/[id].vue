@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import Instructors from '../../../components/Home/Instructors.vue';
+import Instructors from '../../../components/Instructors/Instructors.vue';
 
 export default {
   components: {
