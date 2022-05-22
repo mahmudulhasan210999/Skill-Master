@@ -31,55 +31,73 @@ const state = {
       id: 1,
       img: category_img,
       title: 'Development',
-      classes: '23'
+      classes: '23',
+      color: 'bg-cyan-100',
+      text_color: 'text-cyan-600'
     },
     {
       id: 2,
       img: category_img,
       title: 'Business',
-      classes: '33'
+      classes: '33',
+      color: 'bg-yellow-100',
+      text_color: 'text-yellow-500'
     },
     {
       id: 3,
       img: category_img,
       title: 'Accounting',
-      classes: '10'
+      classes: '10',
+      color: 'bg-red-100',
+      text_color: 'text-red-600'
     },
     {
       id: 4,
       img: category_img,
       title: 'IT & Software',
-      classes: '20'
+      classes: '20',
+      color: 'bg-lime-100',
+      text_color: 'text-lime-600'
     },
     {
       id: 5,
       img: category_img,
       title: 'Art & Design',
-      classes: '23'
+      classes: '23',
+      color: 'bg-sky-200',
+      text_color: 'text-sky-600'
     },
     {
       id: 6,
       img: category_img,
       title: 'Marketing',
-      classes: '17'
+      classes: '17',
+      color: 'bg-purple-100',
+      text_color: 'text-purple-600'
     },
     {
       id: 7,
       img: category_img,
       title: 'Photography',
-      classes: '06'
+      classes: '06',
+      color: 'bg-rose-100',
+      text_color: 'text-rose-600'
     },
     {
       id: 8,
       img: category_img,
       title: 'Health & Fitness',
-      classes: '12'
+      classes: '12',
+      color: 'bg-green-100',
+      text_color: 'text-green-600'
     },
     {
       id: 9,
       img: category_img,
       title: 'Lifestyle',
-      classes: '72'
+      classes: '72',
+      color: 'bg-orange-100',
+      text_color: 'text-orange-600'
     },
   ],
 
