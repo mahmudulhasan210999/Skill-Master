@@ -1,25 +1,146 @@
 <template>
-  <div v-for="(instructor, index) in featured_courses" :key="index">
-    <p class="text-5xl">{{ featured_courses.instructor }}</p>
-   
+  <div v-for="(instructor, index) in instructors" :key="index">
+    <div v-if="instructor.slug == id">
+      <!-- Instructor Details -->
+      <div class="flex px-40 py-8 bg-gray-100">
+        <div class="px-4">
+          <img class="rounded-full h-40 w-40" :src="instructor.instructor_img" alt="Image">
+        </div>
+        <div class="pl-4">
+          <div class="h-6 w-20 bg-red-300">
+            <p class="text-xs text-red-600 p-1">{{ instructor.experience }} Year Expe.</p>
+          </div>
+
+          <p class="text-xl font-semibold py-1">{{ instructor.instructor }}</p>
+
+          <div class="flex text-slate-500  py-1">
+            <p class="pr-2">{{ instructor.designation }},</p>
+            <p>{{ instructor.address }}</p>
+          </div>
+
+          <div class="flex text-sm py-2">
+            <div class="flex">
+              <p class="pr-2">{{ instructor.points }}</p>
+              <p class="text-slate-500 pr-4">Points</p>
+            </div>
+            <div class="flex">
+              <p class="pr-2">{{ instructor.videos }}</p>
+              <p class="text-slate-500 pr-4">Videos</p>
+            </div>
+            <div class="flex">
+              <p class="pr-2">{{ instructor.lectures }}</p>
+              <p class="text-slate-500 pr-4">Lectures</p>
+            </div>
+          </div>
+
+          <div class="flex pt-2">
+            <div class="mr-4">
+              <a target="_blank" href="https://www.facebook.com/theartist.com.bd/"><i class="pi pi-facebook" style="font-size: 18px; color: rgb(128,128,128)"></i></a>
+            </div>
+            <div class="mx-4">
+              <a target="_blank" href="https://www.youtube.com/channel/UCcCqoaZd8DYCwM9v8cG5ZYA"><i class="pi pi-youtube" style="font-size: 18px; color: rgb(128,128,128)"></i></a>
+            </div>
+            <div class="mx-4">
+              <a target="_blank" href="https://www.instagram.com/theartist.bd/"><i class="pi pi-instagram" style="font-size: 18px; color: rgb(128,128,128)"></i></a>
+            </div>
+            <div class="ml-4">
+              <a target="_blank" href="https://mobile.twitter.com/theartistbd/"><i class="pi pi-twitter" style="font-size: 18px; color: rgb(128,128,128)"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Classes and Education button -->
+      <div class="px-40 py-16">
+        <div class="px-5">
+          <button class="rounded h-12 w-24 text-sm text-slate-800 bg-gray-200 hover:text-rose-500 my-2" @click="classes" :class="[{ 'clicked' : classDetails }]">Classes</button>
+          <button class="rounded h-12 w-24 text-sm text-slate-800 bg-gray-200 hover:text-rose-500 mx-2 my-2" @click="education" :class="[{ 'clicked' : educationDetails }]">Education</button>
+        </div>
+
+        <!-- v-if="classDetails" -->
+        <div v-if="classDetails">
+          <div class="grid grid-cols-3 gap-3 p-3">
+            <div class="p-3" v-for="(classes, index) in instructor.classes" :key="index">
+              <img class="rounded-md" :src="classes.link" alt="Image">
+              <p class="text-sm font-semibold px-2 py-3">{{ classes.title }}</p>
+              <div class="flex justify-between text-sm text-slate-500 px-2">
+                <p>Total Lessons {{ classes.total_lessons }}</p>
+                <div class="flex">
+                  <i class="pi pi-desktop flex items-center" style="font-size: 14px; color: rgb(128,128,128)"></i>
+                  <p class="pl-2">{{ classes.chapter_name }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- v-if="educationDetails" -->
+        <div v-if="educationDetails">
+          <div class="px-6">
+            <p class="text-2xl font-semibold py-2">Education</p>
+            <div v-for="(education, index) in instructor.education" :key="index">
+              <div class="flex">
+                <div>
+                  <p class="text-rose-600 px-4 py-2">★</p>
+                </div>
+                <div class="text-sm py-2">
+                  <p class="text-rose-600 font-semibold p-1">{{ education.degree }}</p>
+                  <div class="text-slate-600">
+                    <p class=" p-1">{{ education.duratioin }}</p>
+                    <p class=" p-1">{{ education.institution }}</p>
+                    <p class=" p-1">{{ education.details }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p>{{ instructor.classes.title }}</p>
   </div>
-   <p>dghfdfduih</p>
 </template>
 
 <script>
 import { mapState } from "vuex";
+import Primeicons from 'primeicons/primeicons.css';
 
 export default {
-    components: {
+  data() {
+    return {
+      classDetails: true,
+      educationDetails: false,
+    }
+  },
 
+  methods: {
+    classes() {
+      this.classDetails = true;
+      this.educationDetails = false;
     },
-
-    props: ['slug'],
-
-    computed: {
-        ...mapState ({
-            featured_courses: state => state.courses.featured_courses
-        }),
+    education() {
+      this.educationDetails = true;
+      this.classDetails = false;
     },
+  },
+
+  components: {
+    Primeicons
+  },
+
+  props: ['id'],
+
+  computed: {
+      ...mapState ({
+          instructors: state => state.instructors.instructors
+      }),
+  },
 }
 </script>
+
+<style scoped>
+.clicked {
+  @apply text-white bg-rose-600;
+}
+</style>

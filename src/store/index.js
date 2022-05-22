@@ -3,6 +3,7 @@ import home from './modules/home';
 import courses from './modules/courses';
 import menu from './modules/menu';
 import blogs from './modules/blogs';
+import instructors from './modules/instructors';
 
 // import { isPromise } from '@vue/shared'
 
@@ -12,6 +13,7 @@ const store = createStore({
     courses,
     menu,
     blogs,
+    instructors,
   },
 
   // State

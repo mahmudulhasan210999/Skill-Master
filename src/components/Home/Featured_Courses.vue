@@ -32,14 +32,12 @@
                                 <p>★ {{ slotProps.data.reviews }} Reviews</p>
                             </div>
                             <div class="flex justify-between border-t border-gray-200 p-3 mt-2">
-                                <div class="flex">
-                                    <img class="rounded-full h-9 w-9" :src="slotProps.data.teacher_img" alt="Image">
-
-                                    <router-link :to="{ path: '/course/' + slotProps.data.slug, params: { id: featured_courses.instructor }}">
-
-                                    <p class="p-2 text-sm font-medium text-slate-600">{{ slotProps.data.instructor }}</p></router-link>
-
-                                </div>
+                                <router-link :to="{ path: '/course/' + slotProps.data.instructor_slug}">
+                                    <div class="flex">
+                                        <img class="rounded-full h-9 w-9" :src="slotProps.data.instructor_img" alt="Image">
+                                        <p class="p-2 text-sm font-medium text-slate-600">{{ slotProps.data.instructor }}</p>
+                                    </div>
+                                </router-link>
                                 <p class="p-2 border rounded-xl border-green-100 bg-green-100 text-green-500 text-sm">★ {{ slotProps.data.lectures }} lectures</p>
                             </div>
                         </div>

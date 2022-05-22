@@ -2,7 +2,7 @@
     <div class="w-full flex flex-col">
         <div class="flex">
             <div class="w-full">
-                <Instructors :slug="getDetails()" />
+                <Instructors :id="getDetails()" />
             </div>
         </div>
     </div>
