@@ -4,12 +4,12 @@
             <div>
                 <p class="text-xl font-semibold p-2">Featured Courses</p>
             </div>
-            <div class="flex border-b border-gray-500 ">
+            <!-- <div class="flex border-b border-gray-500 ">
                 <p class="p-2">Design</p>
                 <p class="p-2">Development</p>
                 <p class="p-2">Business</p>
                 <p class="p-2">Accounting</p>
-            </div>
+            </div> -->
         </div>
 
         <div>
