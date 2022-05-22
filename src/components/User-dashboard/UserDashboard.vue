@@ -1,15 +1,21 @@
 <template>
-    <div class="flex w-full p-8 bg-gray-50">
-        <div class="w-1/4 flex flex-col mr-6 bg-white rounded-md">
-            <div class="flex flex-col px-4 py-8">
-                <p>bhfkngrhtjy</p>
-                <p>dvkfbdsglf</p>
+    <div class="flex w-full px-12 pt-12 pb-24 bg-gray-100">
+        <div class="w-1/4 flex flex-col mr-6 bg-white rounded-md menu-height">
+            <div class="flex flex-col">
+                <DashboardMenu />
             </div>
         </div>
         <div class="w-3/4 flex flex-col ml-6">
+            <div class="w-full flex text-sm p-4 bg-white rounded-md shadow-md mb-8">
+                <router-link to="/">
+                    <p class="text-rose-600">Home</p>
+                </router-link>
+                <p class="px-2">/</p>
+                <p class="font-semibold">Dashboard</p>
+            </div>
             <div class="grid grid-cols-4 gap-6">
                 <div v-for="(detail, index) in course_details" :key="index">
-                    <div class="bg-white rounded-md p-4 flex justify-between items-center">
+                    <div class="bg-white rounded-md shadow-md p-4 flex justify-between items-center">
                         <div class="flex flex-col">
                             <p class="text-2xl font-semibold" :class="detail.text_colour">{{detail.number}}</p>
                             <p class="text-xs text-gray-600">{{detail.title}}</p>
@@ -20,8 +26,8 @@
                     </div>
                 </div>
             </div>
-            <div class="flex w-full mt-6">
-                <div class="w-2/3 mr-4">
+            <div class="flex w-full mt-8">
+                <div class="w-2/3 mr-5">
                     <p class="text-lg font-semibold">My Courses</p>
                     <div class="grid grid-cols-2 gap-6 mt-4">
                         <div v-for="(course, index) in my_courses" :key="index">
@@ -35,10 +41,18 @@
                         </div>
                     </div>
                 </div>
-                <div class="w-1/3 ml-4">
+                <div class="w-1/3 ml-5">
                     <p class="text-lg font-semibold">Popular Courses</p>
-                    <div class="mt-4 flex flex-col bg-white p-5 rounded-md">
-
+                    <div class="mt-4 flex flex-col bg-white p-5 rounded-md shadow-md">
+                        <div v-for="(course, index) in popular_courses" :key="index">
+                            <div class="flex items-center my-2">
+                                <img class="" :src="course.img" alt="">
+                                <div class="ml-3">
+                                    <p class="text-sm text-gray-600 font-semibold">{{course.title}}</p>
+                                    <p class="mt-3 text-xs font-semibold text-gray-500">{{course.date}}</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -47,6 +61,8 @@
 </template>
 
 <script>
+import DashboardMenu from "./Sidebar.vue";
+
 export default {
     data() {
         return {
@@ -105,8 +121,32 @@ export default {
                     title: 'Business Development',
                     classes: 13
                 }
+            ],
+            popular_courses: [
+                {
+                    id: 1,
+                    img: 'https://via.placeholder.com/90x90',
+                    title: 'Figma: Create A Beautiful Design Using Pen Tool',
+                    date: '12 July 2022'
+                },
+                {
+                    id: 2,
+                    img: 'https://via.placeholder.com/90x90',
+                    title: 'Figma: Create A Beautiful Design Using Pen Tool',
+                    date: '12 July 2022'
+                } ,
+                {
+                    id: 3,
+                    img: 'https://via.placeholder.com/90x90',
+                    title: 'Figma: Create A Beautiful Design Using Pen Tool',
+                    date: '12 July 2022'
+                }  
             ]
         }
+    },
+
+    components: {
+        DashboardMenu
     }
 }
 </script>
@@ -121,5 +161,9 @@ export default {
   position: absolute;
   bottom: 0px;
   left: 0px;
+}
+
+.menu-height {
+    height: 520px;
 }
 </style>

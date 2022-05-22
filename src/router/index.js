@@ -10,8 +10,9 @@ import Login from "../views/login/index.vue";
 import Registration from "../views/registration/index.vue";
 import PageNotFound from "../views/404/index.vue";
 import Checkout from "../views/checkout/index.vue";
-import Dashboard from "../views/user-dashboard/index.vue"
-
+import Dashboard from "../views/user-dashboard/dashboard/index.vue";
+import Orders from "../views/user-dashboard/my-orders/index.vue";
+import Settings from "../views/user-dashboard/settings/index.vue";
 import Instructor from '../views/courses/instructor/[id].vue';
 
 const routes = [
@@ -66,6 +67,14 @@ const routes = [
   {
     path: '/dashboard',
     component: Dashboard
+  },
+  {
+    path: '/my-orders',
+    component: Orders
+  },
+  {
+    path: '/settings',
+    component: Settings
   },
 ]
 

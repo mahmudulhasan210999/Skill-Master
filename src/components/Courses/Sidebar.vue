@@ -4,7 +4,7 @@
             <div class="">
                 <span class="p-input-icon-right">
                     <i class="pi pi-search" />
-                    <InputText class="w-72" type="text" v-model="value3" placeholder="Search Courses..." />
+                    <InputText class="w-72" type="text" v-model="value" placeholder="Search Courses..." />
                 </span>
             </div>
             <div class="mt-6">
@@ -60,6 +60,7 @@ import RadioButton from 'primevue/radiobutton';
 export default {
     data() {
         return {
+            value: null,
             selectedCategory: null,
             selectedPrice: null,
             categories: [
