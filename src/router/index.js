@@ -11,6 +11,8 @@ import Registration from "../views/registration/index.vue";
 import PageNotFound from "../views/404/index.vue";
 import Checkout from "../views/checkout/index.vue";
 
+import Instructor from '../views/courses/instructor/[id].vue';
+
 const routes = [
   { 
     path: '/:pathMatch(.*)*', 
@@ -31,6 +33,10 @@ const routes = [
   {
     path: '/courses',
     component: Courses
+  },
+  {
+    path: '/course/:id',
+    component: Instructor
   },
   {
     path: '/contact',

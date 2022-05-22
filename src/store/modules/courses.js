@@ -4,6 +4,7 @@ const state = {
   featured_courses: [
     {
       id: 1,
+      slug: 'muhammad_qasim',
       img: image,
       title: 'The Complete Business Course',
       slug: 'business_course',
@@ -17,6 +18,7 @@ const state = {
     },
     {
       id: 2,
+      slug: 'abdul_kuddus',
       img: image,
       title: 'The Complete Study Course',
       slug: 'study_course',
@@ -30,6 +32,7 @@ const state = {
     },
     {
       id: 3,
+      slug: 'abdus_salam',
       img: image,
       title: 'The Complete Bank Course',
       slug: 'bank_course',
@@ -43,6 +46,7 @@ const state = {
     },
     {
       id: 4,
+      slug: 'sultan_fateh',
       img: image,
       title: 'The Complete Mobile Course',
       slug: 'mobile_course',
@@ -56,6 +60,7 @@ const state = {
     },
     {
       id: 5,
+      slug: 'hasanur_rahman',
       img: image,
       title: 'The Complete Money Course',
       slug: 'money_course',
@@ -69,6 +74,7 @@ const state = {
     },
     {
       id: 6,
+      slug: 'robert_brown',
       img: image,
       title: 'The Complete Mouse Course',
       slug: 'mouse_course',
