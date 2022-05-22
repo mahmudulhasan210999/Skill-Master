@@ -12,7 +12,7 @@ const state = {
       duration: '1h 15min',
       reviews: 4.7,
       teacher_img: image,
-      teacher_name: 'Robert',
+      instructor: 'Muhammad Qasim',
       lectures: 15,
     },
     {
@@ -25,7 +25,7 @@ const state = {
       duration: '1h 15min',
       reviews: 4.7,
       teacher_img: image,
-      teacher_name: 'Robert',
+      instructor: 'Abdul Kuddus',
       lectures: 15,
     },
     {
@@ -38,7 +38,7 @@ const state = {
       duration: '1h 15min',
       reviews: 4.7,
       teacher_img: image,
-      teacher_name: 'Robert',
+      instructor: 'Abdus Salam',
       lectures: 15,
     },
     {
@@ -51,7 +51,7 @@ const state = {
       duration: '1h 15min',
       reviews: 4.7,
       teacher_img: image,
-      teacher_name: 'Robert',
+      instructor: 'Sultan Fateh',
       lectures: 15,
     },
     {
@@ -64,7 +64,7 @@ const state = {
       duration: '1h 15min',
       reviews: 4.7,
       teacher_img: image,
-      teacher_name: 'Robert',
+      instructor: 'Hasanur Rahman',
       lectures: 15,
     },
     {
@@ -77,10 +77,11 @@ const state = {
       duration: '1h 15min',
       reviews: 4,
       teacher_img: image,
-      teacher_name: 'Robert',
+      instructor: 'Robert Brown',
       lectures: 15,
     },
   ],
+
   courses: [
     {
       id: 1,
