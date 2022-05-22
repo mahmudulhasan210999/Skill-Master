@@ -125,7 +125,7 @@
                         <p class="text-sky-600">$140.00</p>
                     </div>
                     <div class="mt-10 flex justify-center w-full">
-                        <button class="py-4 px-12 bg-green-100 rounded-md text-gray-600 font-semibold hover:bg-rose-600 hover:text-white">Proceed To Checkout</button>
+                        <button @click="toCheckout" class="py-4 px-12 bg-green-100 rounded-md text-gray-600 font-semibold hover:bg-rose-600 hover:text-white">Proceed To Checkout</button>
                     </div>
                 </div>
             </div>
@@ -169,6 +169,12 @@ export default {
         DataTable,
         Column,
         InputText
+    },
+
+    methods: {
+        toCheckout() {
+            this.$router.push("/checkout")
+        }
     }
 }
 </script>
