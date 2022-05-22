@@ -10,6 +10,7 @@ import Login from "../views/login/index.vue";
 import Registration from "../views/registration/index.vue";
 import PageNotFound from "../views/404/index.vue";
 import Checkout from "../views/checkout/index.vue";
+import Dashboard from "../views/user-dashboard/index.vue"
 
 import Instructor from '../views/courses/instructor/[id].vue';
 
@@ -61,6 +62,10 @@ const routes = [
   {
     path: '/registration',
     component: Registration
+  },
+  {
+    path: '/dashboard',
+    component: Dashboard
   },
 ]
 

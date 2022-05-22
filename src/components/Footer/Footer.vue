@@ -117,16 +117,17 @@ import Primeicons from 'primeicons/primeicons.css';
 import Button from 'primevue/button';
 
 export default {
+  data() {
+    return {
+      value: null,
+    }
+  },
   components: {
     InputText,
     Textarea,
     Primeicons,
     Button,
 
-  },
-
-  methods: {
-    
   },
 }
 </script>
