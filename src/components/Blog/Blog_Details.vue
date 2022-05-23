@@ -2,6 +2,9 @@
     <div class="w-full flex flex-col">
         <div v-for="(blog, index) in blogs" :key="index">
             <div v-if="blog.slug == slug">
+
+                <button  @click="sidebar" class="bg-gray-700 text-white px-4 py-2 my-2 lg:hidden">Sidebar</button>
+
                 <div class="bg-white border rounded-md border-gray-200 p-6">
                     <img class="rounded-md" :src="blog.writer_img" alt="Image">
                     <div class="flex items-center py-4">
