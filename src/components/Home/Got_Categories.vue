@@ -1,12 +1,12 @@
 <template>
-  <div class="w-full bg-green-50 my-12 px-44">
-    <div class="py-10">
-      <div class="flex justify-between">
+  <div class="w-full bg-green-50 my-6 lg:my-12 xl:px-44">
+    <div class="py-6 md:py-10">
+      <div class="flex justify-between px-4">
         <div>
-          <p class="text-xl font-semibold p-2">Got & Popular Categories</p>
+          <p class="text-lg lg:text-xl font-semibold p-2">Got & Popular Categories</p>
         </div>
         <div class="flex border border-gray-400 rounded-md bg-white hover:border-rose-600 hover:bg-rose-600">
-          <button class="px-4 py-2 text-gray-600 hover:text-white">Browse More</button>
+          <button class="px-2 lg:px-4 lg:py-2 text-rose-600 hover:text-white">Browse More</button>
         </div>
       </div>
 
@@ -38,22 +38,22 @@ export default {
   data() {
     return {
       responsiveOptions: [
-				{
-					breakpoint: '1024px',
-					numVisible: 3,
-					numScroll: 3
-				},
-				{
-					breakpoint: '600px',
-					numVisible: 2,
-					numScroll: 2
-				},
-				{
-					breakpoint: '480px',
-					numVisible: 1,
-					numScroll: 1
-				}
-			]
+                {
+                    breakpoint: '1024px',
+                    numVisible: 3,
+                    numScroll: 3
+                },
+                {
+                    breakpoint: '840px',
+                    numVisible: 2,
+                    numScroll: 2
+                },
+                {
+                    breakpoint: '500px',
+                    numVisible: 1,
+                    numScroll: 1
+                }
+            ]
     }
   },
   components: {

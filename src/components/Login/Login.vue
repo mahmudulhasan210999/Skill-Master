@@ -1,16 +1,16 @@
 <template>
     <div class="w-full flex flex-col bg-gray-100">
-        <div class="w-full flex flex-col md:flex-row px-4 py-6 md:px-20 md:py-10 lg:px-40 lg:py-14 xl:px-72 xl:py-20">
+        <div class="w-full flex flex-col md:flex-row px-4 md:px-16 py-10 lg:px-40 lg:py-14 xl:px-72 xl:py-20">
 
             <div class="w-full md:w-1/2 bg-img">
-                <div class="pt-40 px-8 md:pt-56 md:px-110 lg:pt-64 lg:px-16">
+                <div class="pt-40 px-8 md:pt-56 lg:pt-64 lg:px-16">
                     <p class="text-xl font-semibold text-white">Customer Support</p>
                     <p class="text-sm text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Epsum dignissimos laborum, pariatur tempora nobis excepturi id aut alias consequatur</p>
                     <p class="text-yellow-600 font-semibold my-3">- Adam Someone</p>
                 </div>
             </div>
 
-            <div class="w-full md:w-1/2 bg-white mt-4 md:mt-0 p-6 lg:p-12 text-sm">
+            <div class="w-full md:w-1/2 bg-white md:mt-0 p-6 lg:p-12 text-sm">
                 <div class="flex text-2xl lg:text-3xl">
                     <p class="pr-2">Sign</p>
                     <p class="text-rose-600">In</p>
@@ -55,5 +55,26 @@ export default {
 .bg-img {
     background-image: url('../../assets/images/Home/1.jpg');
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@media screen and (max-width: 768px) {
+    .bg-img {
+        background-size: contain;
+        /* height: 100%; */
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .bg-img {
+        background-size: contain;
+        /* height: 100%; */
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100vw;
+    }
 }
 </style>

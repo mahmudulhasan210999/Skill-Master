@@ -1,8 +1,8 @@
 <template>
-    <div class="w-full flex flex-col my-12 px-44">
+    <div class="w-full flex flex-col my-6 lg:my-12 xl:px-44">
         <div class="flex justify-between">
             <div>
-                <p class="text-xl font-semibold p-2">Featured Courses</p>
+                <p class="text-xl font-semibold px-8 xl:px-2 py-2">Featured Courses</p>
             </div>
             <!-- <div class="flex border-b border-gray-500 ">
                 <p class="p-2">Design</p>
@@ -24,21 +24,21 @@
                         </router-link>
                         <div class="border border-gray-200">
                             <router-link :to="{ path: '/courses/' + slotProps.data.slug}">
-                                <p class="text-xl p-3">{{ slotProps.data.title }}</p>
+                                <p class="lg:text-xl p-1 lg:p-3">{{ slotProps.data.title }}</p>
                             </router-link>
-                            <div class="flex justify-between text-xs text-gray-500 px-3">
+                            <div class="flex justify-between text-xs text-gray-500 px-2 lg:px-3">
                                 <p>★ {{ slotProps.data.views }} Views</p>
                                 <p>⏲ {{ slotProps.data.duration }}</p>
                                 <p>★ {{ slotProps.data.reviews }} Reviews</p>
                             </div>
-                            <div class="flex justify-between border-t border-gray-200 p-3 mt-2">
+                            <div class="flex justify-between border-t border-gray-200 p-2 lg:p-3 mt-2">
                                 <router-link :to="{ path: '/course/' + slotProps.data.instructor_slug}">
                                     <div class="flex">
-                                        <img class="rounded-full h-9 w-9" :src="slotProps.data.instructor_img" alt="Image">
-                                        <p class="p-2 text-sm font-medium text-slate-600">{{ slotProps.data.instructor }}</p>
+                                        <img class="rounded-full h-8 w-8 lg:h-10 lg:w-10" :src="slotProps.data.instructor_img" alt="Image">
+                                        <p class="p-2 text-xs lg:text-sm font-medium text-slate-600">{{ slotProps.data.instructor }}</p>
                                     </div>
                                 </router-link>
-                                <p class="p-2 border rounded-xl border-green-100 bg-green-100 text-green-500 text-sm">★ {{ slotProps.data.lectures }} lectures</p>
+                                <p class="p-1 sm:p-2 border rounded-xl border-green-100 bg-green-100 text-green-500 text-xs lg:text-sm">★ {{ slotProps.data.lectures }} lectures</p>
                             </div>
                         </div>
                     </div>
@@ -64,12 +64,12 @@ export default {
                     numScroll: 3
                 },
                 {
-                    breakpoint: '600px',
+                    breakpoint: '840px',
                     numVisible: 2,
                     numScroll: 2
                 },
                 {
-                    breakpoint: '480px',
+                    breakpoint: '500px',
                     numVisible: 1,
                     numScroll: 1
                 }
