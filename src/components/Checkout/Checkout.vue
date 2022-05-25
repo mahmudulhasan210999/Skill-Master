@@ -1,54 +1,54 @@
 <template>
-    <div class="flex flex-col w-full px-44 py-20">
+    <div class="flex flex-col w-full px-4 sm:px-12 lg:px-20 xl:px-36 py-20">
         <div class="text-center mb-6">
-            <p class="text-5xl font-bold">Checkout</p>
-            <div class="flex justify-center mt-2">
+            <p class="text-2xl md:text-3xl xl:text-5xl font-bold">Checkout</p>
+            <div class="flex justify-center text-sm lg:text-base mt-2">
                 <router-link to="/"><p class="text-rose-600">Home</p></router-link>
                 <p class="px-2"> / </p>
                 <p>Checkout</p>
             </div>
         </div>
-        <div class="w-full flex mt-16">
-            <div class="w-2/3">
+        <div class="w-full lg:flex mt-16">
+            <div class="lg:w-2/3">
                 <div class="flex flex-col border border-gray-200 p-6 rounded-md"> 
                     <p class="text-black font-semibold">Billing Info</p> 
                     <div class="mt-4 flex flex-col">
-                        <div class="w-full flex">
-                            <div class="w-1/2 flex flex-col justify-start mr-4">
+                        <div class="w-full flex flex-col sm:flex-row">
+                            <div class="sm:w-1/2 flex flex-col justify-start sm:mr-4">
                                 <p class="font-thin text-sm text-gray-600 mb-1">First Name</p>
                                 <InputText  class="w-full" type="text" v-model="user.fname" />
                             </div>
-                            <div class="w-1/2 flex flex-col justify-start ml-4">
+                            <div class="sm:w-1/2 flex flex-col justify-start mt-6 sm:mt-0 sm:ml-4">
                                 <p class="font-thin text-sm text-gray-600 mb-1">Last Name</p>
                                 <InputText  class="w-full" type="text" v-model="user.lname" />
                             </div>
                         </div>
-                        <div class="w-full flex mt-6">
-                            <div class="w-1/2 flex flex-col justify-start mr-4">
+                        <div class="w-full flex flex-col sm:flex-row mt-6">
+                            <div class="sm:w-1/2 flex flex-col justify-start sm:mr-4">
                                 <p class="font-thin text-sm text-gray-600 mb-1">Email Address</p>
                                 <InputText  class="w-full" type="text" v-model="user.email" />
                             </div>
-                            <div class="w-1/2 flex flex-col justify-start ml-4">
+                            <div class="sm:w-1/2 flex flex-col justify-start mt-6 sm:mt-0 sm:ml-4">
                                 <p class="font-thin text-sm text-gray-600 mb-1">Phone Number</p>
                                 <InputText  class="w-full" type="text" v-model="user.phone" />
                             </div>
                         </div>
-                        <div class="w-full flex mt-6">
-                            <div class="w-1/2 flex flex-col justify-start mr-4">
+                        <div class="w-full flex flex-col sm:flex-row mt-6">
+                            <div class="sm:w-1/2 flex flex-col justify-start sm:mr-4">
                                 <p class="font-thin text-sm text-gray-600 mb-1">Address</p>
                                 <InputText  class="w-full" type="text" v-model="user.address" />
                             </div>
-                            <div class="w-1/2 flex flex-col justify-start ml-4">
+                            <div class="sm:w-1/2 flex flex-col justify-start mt-6 sm:mt-0 sm:ml-4">
                                 <p class="font-thin text-sm text-gray-600 mb-1">Town / City</p>
                                 <InputText  class="w-full" type="text" v-model="user.city" />
                             </div>
                         </div>
-                        <div class="w-full flex mt-6">
-                            <div class="w-1/2 flex flex-col justify-start mr-4">
+                        <div class="w-full flex flex-col sm:flex-row mt-6">
+                            <div class="sm:w-1/2 flex flex-col justify-start sm:mr-4">
                                 <p class="font-thin text-sm text-gray-600 mb-1">Country</p>
                                 <InputText  class="w-full" type="text" v-model="user.country" />
                             </div>
-                            <div class="w-1/2 flex flex-col justify-start ml-4">
+                            <div class="sm:w-1/2 flex flex-col justify-start mt-6 sm:mt-0 sm:ml-4">
                                 <p class="font-thin text-sm text-gray-600 mb-1">Zip / Postal Code</p>
                                 <InputText  class="w-full" type="text" v-model="user.zip" />
                             </div>
@@ -64,7 +64,7 @@
                     </div>
                 </div>
             </div>
-            <div class="w-1/3 pl-10">
+            <div class="lg:w-1/3 lg:pl-8 xl:pl-12 mt-8 lg:mt-0">
                 <div class="w-full p-5 border border-gray-200 rounded-md">
                     <p class="text-black font-semibold">Billing Summary</p>
                     <div class="flex flex-col py-6 text-sm border-b border-dotted">
