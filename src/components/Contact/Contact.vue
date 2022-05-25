@@ -9,9 +9,9 @@
       </div>
     </div>
 
-    <div class="bg-gray-100">
-      <div class="w-full flex flex-col md:flex-row px-2 py-4 lg:px-20 lg:py-16 xl:px-40 xl:py-20">
-        <div class="w-full md:w-2/3 rounded-md px-8 lg:px-4 py-4 mx-2 xl:mx-4 bg-white">
+    <div class="bg-gray-100 py-6">
+      <div class="w-full flex flex-col lg:flex-row px-4 sm:px-8 py-4 lg:px-20 lg:py-16 xl:px-40 xl:py-20">
+        <div class="w-full lg:w-2/3 rounded-md px-4 sm:px-8 lg:px-4 py-4 bg-white">
           <div class="">
             <p class="font-semibold border-b border-gray-300 py-2">Fillup The Form</p>
           </div>
@@ -42,39 +42,39 @@
           </div>
         </div>
 
-        <div class="w-full md:w-1/3 rounded-md px-8 lg:px-4 py-4 mx-2 xl:mx-4 mt-4 md:mt-0 bg-white">
+        <div class="w-full lg:w-1/3 rounded-md px-4 sm:px-8 lg:px-4 py-4 ml-0 lg:ml-8 mt-8 lg:mt-0 bg-white">
           <p class="font-semibold border-b border-gray-300 py-2">Reach Us</p>
 
-          <div class="p-3">
+          <div class="mt-3 sm:mt-0 sm:p-3">
             <p class="font-semibold text-xl md:text-2xl xl:text-3xl">Get In Touch</p>
             <p class="text-sm py-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
             
-            <div class="flex items-center p-4">
+            <div class="flex items-center py-2 sm:px-4 sm:py-4">
               <div class="mr-3">
                 <i class="pi pi-home" style="font-size: 38px; color: rgb(194, 30, 86)"></i>
               </div>
-              <div class="px-2 text-sm">
+              <div class="sm:px-2 text-sm">
                 <p class="font-semibold py-2">Reach Us</p>
                 <p>2512, New Market, Eliza Road, Sincher 80 CA, Canada, USA</p>
               </div>
             </div>
 
-            <div class="flex p-4 items-center">
+            <div class="flex py-2 sm:px-4 sm:py-4 items-center">
               <div class="mr-3">
                 <i class="pi pi-envelope" style="font-size: 38px; color: rgb(194, 30, 86)"></i>
               </div>
-              <div class="px-2 text-sm">
+              <div class="sm:px-2 text-sm">
                 <p class="font-semibold py-2">Drop A Mail</p>
                 <p>Rikada@gmail.com</p>
                 <p>Rikada@gmail.com</p>
               </div>
             </div>
 
-            <div class="flex p-4 items-center">
+            <div class="flex py-2 sm:px-4 sm:py-4 items-center">
               <div class="mr-3">
                 <i class="pi pi-mobile" style="font-size: 38px; color: rgb(194, 30, 86)"></i>
               </div>
-              <div class="px-2 text-sm">
+              <div class="sm:px-2 text-sm">
                 <p class="font-semibold py-2">Call Us</p>
                 <p>+91 235 548 7548</p>
                 <p>+91 235 548 7548</p>

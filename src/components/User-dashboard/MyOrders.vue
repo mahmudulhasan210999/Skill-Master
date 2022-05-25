@@ -1,12 +1,12 @@
 <template>
-    <div class="flex w-full px-12 pt-12 pb-24 bg-gray-100">
-        <div class="w-1/4 flex flex-col mr-6 bg-white rounded-md menu-height">
+    <div class="flex flex-col lg:flex-row w-full px-4 sm:px-12 pt-6 sm:pt-12 pb-24 bg-gray-100">
+        <div class="lg:w-1/4 flex flex-col lg:mr-6 bg-white rounded-md menu-height">
             <div class="flex flex-col">
                 <DashboardMenu />
             </div>
         </div>
-        <div class="w-3/4 flex flex-col ml-6">
-            <div class="w-full flex text-sm p-4 bg-white rounded-md shadow-md mb-8">
+        <div class="lg:w-3/4 flex flex-col lg:ml-6">
+            <div class="w-full mt-8 lg:mt-0 flex text-sm p-4 bg-white rounded-md shadow-md mb-8">
                 <router-link to="/">
                     <p class="text-rose-600">Home</p>
                 </router-link>
@@ -46,12 +46,12 @@
                             </Column>
                             <Column header="Action">
                                 <template #body="slotProps">
-                                    <button class="bg-green-100 py-2 px-4 mr-1 text-green-600 rounded-sm" @click="viewOrder(slotProps)">View</button>
-                                    <button class="bg-rose-100 py-2 px-4 ml-1 text-rose-600 rounded-sm" @click="deleteOrder(slotProps)">Delete</button>
+                                    <button class="bg-green-100 py-2 px-4 md:mr-1 text-green-600 rounded-sm" @click="viewOrder(slotProps)">View</button>
+                                    <button class="bg-rose-100 py-2 px-4 mt-1 md:mt-0 md:ml-1 text-rose-600 rounded-sm" @click="deleteOrder(slotProps)">Delete</button>
                                 </template>
                             </Column>
                         </DataTable> 
-                    </div> 
+                    </div>  
                     <div class="lg:mt-16 flex flex-col justify-center items-center" v-else>
                         <img src="../../assets/empty-search.jpg" class="" alt="empty cart" />
                         <h3 class="mt-4">
