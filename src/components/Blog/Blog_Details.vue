@@ -3,8 +3,16 @@
         <div v-for="(blog, index) in blogs" :key="index">
             <div v-if="blog.slug == slug">
 
-                <button  @click="sidebar" class="bg-gray-700 text-white px-4 py-2 my-2 lg:hidden">Sidebar</button>
+                <!-- button for Sidebar -->
+                <div>
+                    <button  @click="sidebar" class="bg-gray-700 text-white px-4 py-2 my-2 lg:hidden" :class="[{ 'clicked' : sidebarView }]">Sidebar</button>
 
+                    <div v-if="sidebarView">
+                        <p>khtfiytfiyfio</p>
+                    </div>
+                </div>
+
+                <!-- Blog Details main design -->
                 <div class="bg-white border rounded-md border-gray-200 p-6">
                     <img class="rounded-md" :src="blog.writer_img" alt="Image">
                     <div class="flex items-center py-4">
@@ -17,11 +25,11 @@
                             <p class="px-2">45 Comments</p>
                         </div>
                     </div>
-                    <p class="text-4xl font-bold py-2">{{ blog.title }}</p>
+                    <p class="text-2xl lg:text-4xl font-bold py-2">{{ blog.title }}</p>
                     <p class="py-2 text-slate-500 mt-6">{{ blog.blog }}</p>
 
                     <div class="flex flex-col items-end my-6 pb-8 border-b">
-                        <p class="font-semibold my-2">Social Share</p>
+                        <p class="text-sm md:text-base font-semibold my-2">Social Share</p>
                         <div class="flex">
                             <div class="mx-4">
                                 <a target="_blank" href="https://www.facebook.com/theartist.com.bd/"><i class="pi pi-facebook" style="font-size: 18px; color: rgb(128,128,128)"></i></a>
@@ -38,9 +46,9 @@
                         </div>
                     </div>
 
-                    <div class="flex justify-between mt-8">
-                        <button class="bg-rose-600 text-white py-3 px-5">Prev Post</button>
-                        <button class="bg-rose-600 text-white py-3 px-5">Next Post</button>
+                    <div class="flex justify-between text-sm md:text-base mt-8">
+                        <button class="bg-rose-600 text-white px-5 py-3">Prev Post</button>
+                        <button class="bg-rose-600 text-white px-5 py-3">Next Post</button>
                     </div>
                 </div>
 
@@ -79,6 +87,18 @@ export default {
 
     props: ['slug'],
 
+    data() {
+        return {
+            sidebarView: false,
+        }
+    },
+
+    methods: {
+        sidebar() {
+            this.sidebarView = !this.sidebarView;
+        },
+    },
+
     computed: {
         ...mapState ({
             blogs: state => state.blogs.blogs
@@ -86,3 +106,9 @@ export default {
     },
 }
 </script>
+
+<style scoped>
+.clicked {
+  @apply text-white bg-neutral-600;
+}
+</style>

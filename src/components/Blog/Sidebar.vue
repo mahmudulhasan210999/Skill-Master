@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full flex flex-col">
+    <div class="w-full hidden md:flex md:flex-col">
 
         <!-- Categories -->
         <div class="bg-white border rounded-md border-gray-200 p-6">

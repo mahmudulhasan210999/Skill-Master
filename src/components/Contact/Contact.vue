@@ -1,27 +1,27 @@
 <template>
   <div class="w-full flex flex-col">
-    <div class="text-center p-12 px-44">
-      <p class="text-5xl font-bold p-4">Get In Touch</p>
+    <div class="text-center p-8 md:px-12 md:py-20">
+      <p class="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold p-4">Get In Touch</p>
       <div class="flex justify-center">
-        <router-link to="/"><p class="text-rose-600">Home</p></router-link>
-        <p class="px-2"> / </p>
-        <p>Contact</p>
+        <router-link to="/"><p class="text-rose-600 text-sm lg:text-base">Home</p></router-link>
+        <p class="px-2 text-sm lg:text-base"> / </p>
+        <p class="text-sm lg:text-base">Contact</p>
       </div>
     </div>
 
     <div class="bg-gray-100">
-      <div class="flex px-40 py-20">
-        <div class="w-2/3 rounded-md px-8 py-4 mx-4 bg-white">
+      <div class="w-full flex flex-col md:flex-row px-2 py-4 lg:px-20 lg:py-16 xl:px-40 xl:py-20">
+        <div class="w-full md:w-2/3 rounded-md px-8 lg:px-4 py-4 mx-2 xl:mx-4 bg-white">
           <div class="">
             <p class="font-semibold border-b border-gray-300 py-2">Fillup The Form</p>
           </div>
 
-          <div class="flex py-2">
-            <div class="w-full pr-2">
+          <div class="sm:flex py-2">
+            <div class="w-full sm:pr-2">
               <p class="text-sm py-2">Name</p>
               <InputText class="h-12 w-full" type="text" v-model="value" />
             </div>
-            <div class="w-full pl-2">
+            <div class="w-full sm:pl-2">
               <p class="text-sm py-2">Email</p>
               <InputText class="h-12 w-full" type="text" v-model="value" />
             </div>
@@ -38,16 +38,15 @@
           </div>
 
           <div class="flex justify-center pt-4">
-            <button class="bg-rose-600 hover:bg-rose-700 text-white rounded-md px-8 py-4 mb-4">Submit Request</button>
+            <button class="bg-rose-600 hover:bg-rose-700 text-white rounded-md text-sm xl:text-base px-4 py-3 xl:px-8 xl:py-4 mb-4">Submit Request</button>
           </div>
-
         </div>
 
-        <div class="w-1/3 rounded-md p-4 mx-4 bg-white">
+        <div class="w-full md:w-1/3 rounded-md px-8 lg:px-4 py-4 mx-2 xl:mx-4 mt-4 md:mt-0 bg-white">
           <p class="font-semibold border-b border-gray-300 py-2">Reach Us</p>
 
           <div class="p-3">
-            <p class="font-semibold text-3xl">Get In Touch</p>
+            <p class="font-semibold text-xl md:text-2xl xl:text-3xl">Get In Touch</p>
             <p class="text-sm py-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
             
             <div class="flex items-center p-4">
