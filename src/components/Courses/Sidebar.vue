@@ -1,10 +1,10 @@
 <template>
-    <div class="w-full flex flex-col pr-16">
-        <div class="w-full border-2 border-gray-200 rounded-md p-6">
+    <div class="w-full flex flex-col pr-6 xl:pr-16">
+        <div class="w-full lg:border-2 border-gray-200 rounded-md p-6 xl:p-4 xxl:p-6">
             <div class="">
                 <span class="p-input-icon-right">
                     <i class="pi pi-search" />
-                    <InputText class="w-72" type="text" v-model="value" placeholder="Search Courses..." />
+                    <InputText class="w-52 sm:w-64" type="text" v-model="value" placeholder="Search Courses..." />
                 </span>
             </div>
             <div class="mt-6">
@@ -22,7 +22,7 @@
                 </div>
             </div>
         </div>
-        <div class="w-full border-2 border-gray-200 rounded-md mt-8 p-6">
+        <div class="w-full lg:border-2 border-gray-200 rounded-md mt-8 p-6">
             <div>
                 <p class="text-xl font-semibold text-black">Related Courses</p>
                 <div class="flex my-3 text-left" v-for="(course, index) in courses" :key="index">

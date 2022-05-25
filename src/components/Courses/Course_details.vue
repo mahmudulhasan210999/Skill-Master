@@ -2,40 +2,46 @@
     <div class="w-full flex flex-col">
         <div v-for="(course, index) in courses" :key="index">
             <div v-if="course.slug == slug">
-                <div class="flex w-full items-center bg-green-50 px-44 py-16">
-                    <div class="w-1/2 mr-8">
+                <div class="flex flex-col md:flex-row w-full items-center bg-green-50 px-4 sm:px-8 lg:px-16 xl:px-44 py-6 lg:py-16">
+                    <div class="md:w-1/2 md:mr-8">
                         <img class="rounded-xl" :src="course.img" alt="">
                     </div>
-                    <div class="w-1/2">
+                    <div class="md:w-1/2 mt-6 md:mt-0">
                         <div class="flex bg-yellow-100 p-4 rounded-md text-yellow-500 text-sm">
                             <i class="pi pi-calendar"></i>
                             <p class="font-semibold ml-2 mr-6">Duration:</p>
-                            <p>10 - 18 Weeks</p>
+                            <p class="pl-8 sm:pl-16">10 - 18 Weeks</p>
                         </div>
                         <div class="mt-3 flex bg-green-100 p-4 rounded-md text-green-500 text-sm">
                             <i class="pi pi-user"></i>
                             <p class="font-semibold ml-2 mr-6">Enrolled:</p>
-                            <p>712 Students</p>
+                            <p class="pl-8 sm:pl-16">712 Students</p>
                         </div>
                         <div class="mt-3 flex bg-red-100 p-4 rounded-md text-red-500 text-sm">
                             <i class="pi pi-book"></i>
                             <p class="font-semibold ml-2 mr-6">Lectures:</p>
-                            <p>602 Lectures</p>
+                            <p class="pl-8 sm:pl-16">602 Lectures</p>
                         </div>
                         <div class="mt-3 flex bg-purple-100 p-4 rounded-md text-purple-500 text-sm">
                             <i class="pi pi-video"></i>
                             <p class="font-semibold ml-2 mr-6">Videos:</p>
-                            <p>402 Videos</p>
+                            <p class="pl-8 sm:pl-16">402 Videos</p>
                         </div>
                         <div class="mt-3 flex bg-blue-100 p-4 rounded-md text-blue-500 text-sm">
                             <i class="pi pi-bookmark"></i>
                             <p class="font-semibold ml-2 mr-6">Level:</p>
-                            <p>Advance</p>
+                            <p class="pl-8 sm:pl-16">Advance</p>
+                        </div>
+                        <div class="mt-3 flex justify-center bg-rose-600 p-4 rounded-md text-white hover:bg-rose-700">
+                            <div class="flex items-center">
+                                <p>Enroll Now</p>
+                                <i class="pi pi-arrow-circle-right ml-12"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="flex w-full px-44 py-16">
-                    <div class="w-2/3 flex flex-col mr-4">
+                <div class="flex flex-col lg:flex-row w-full px-4 sm:px-8 lg:px-16 xl:px-44 py-6 lg:py-16">
+                    <div class="lg:w-2/3 flex flex-col lg:mr-4">
                         <div class="flex flex-col px-6 py-8 border border-gray-200 rounded-md">
                             <p class="font-semibold text-black">Course Overview</p>
                             <div class="mt-3 text-sm text-gray-600 tracking-wider">
@@ -114,13 +120,13 @@
                             </div>
                         </div>
                         <div class="flex items-center mt-8 border border-gray-200 p-6 rounded-md">
-                            <div class="w-1/5 flex flex-col items-center border-r border-gray-200">
+                            <div class="w-1/3 lg:w-1/5 flex flex-col items-center border-r border-gray-200">
                                 <p class="text-5xl font-semibold">4.2</p>
                                 <p class="text-sm">out of 5.0</p>
                                 <p class="text-yellow-600 text-xl">★★★★★</p>
                             </div>
-                            <div class="w-4/5 flex px-4">
-                                <div class="w-1/2 flex flex-col px-8">
+                            <div class="w-2/3 lg:w-4/5 flex flex-col lg:flex-row m-4 lg:ml-0 px-4">
+                                <div class="lg:w-1/2 flex flex-col lg:pr-3 xl:px-8">
                                     <div class="text-sm font-semibold">
                                         <div class="flex justify-between items-center mb-2">
                                             <p>★★★★★</p>
@@ -136,7 +142,7 @@
                                         <ProgressBar value="53" :showValue="false" style="height:8px; color:#FFD700;" />
                                     </div>
                                 </div>
-                                <div class="w-1/2 flex flex-col px-8">
+                                <div class="lg:w-1/2 flex flex-col mt-8 lg:mt-0 lg:pl-3 xl:px-8">
                                     <div class="text-sm font-semibold">
                                         <div class="flex justify-between items-center mb-2">
                                             <p>★★★★</p>
@@ -154,9 +160,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="flex items-center mt-8 border border-gray-200 p-3 rounded-md">
+                        <div class="flex flex-col sm:flex-row items-start sm:items-center mt-8 border border-gray-200 p-3 rounded-md">
                             <img class="w-52 h-48 rounded-md" :src="course.teacher_img" alt="">
-                            <div class="ml-6 text-left">
+                            <div class="mt-3 sm:mt-0 sm:ml-6 text-left">
                                 <p>{{course.teacher_name}}</p>
                                 <div class="flex mt-1 text-xs text-gray-500">
                                     <div class="flex mr-6">
@@ -190,7 +196,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="w-1/3 flex flex-col ml-4">
+                    <div class="lg:w-1/3 flex flex-col mt-8 lg:mt-0 lg:ml-4">
                         <div class="border border-gray-200 rounded-md">
                             <div class="flex p-4 border-b border-gray-200">
                                 <img class="h-16 w-16 rounded-md" :src="course.teacher_img" alt="">
@@ -238,49 +244,49 @@
                         <div class="flex flex-col mt-6 border border-gray-200 rounded-md p-5">
                             <p class="font-semibold text-black">Course Features</p>
                             <div class="mt-6 flex flex-col">
-                                <div class="flex justify-between px-4 text-sm text-gray-500">
+                                <div class="flex justify-between md:px-4 text-sm text-gray-500">
                                     <div class="flex">
                                         <i class="pi pi-user mr-2"></i>
                                         <p class="font-thin">Student Enrolled:</p>
                                     </div>
                                     <p class="font-semibold">1740</p>
                                 </div>
-                                <div class="flex mt-4 justify-between px-4 text-sm text-gray-500">
+                                <div class="flex mt-4 justify-between md:px-4 text-sm text-gray-500">
                                     <div class="flex">
                                         <i class="pi pi-book mr-2"></i>
                                         <p class="font-thin">Lectures:</p>
                                     </div>
                                     <p class="font-semibold">10</p>
                                 </div>
-                                <div class="flex mt-4 justify-between px-4 text-sm text-gray-500">
+                                <div class="flex mt-4 justify-between md:px-4 text-sm text-gray-500">
                                     <div class="flex">
                                         <i class="pi pi-question mr-2"></i>
                                         <p class="font-thin">Quizzes:</p>
                                     </div>
                                     <p class="font-semibold">4</p>
                                 </div>
-                                <div class="flex mt-4 justify-between px-4 text-sm text-gray-500">
+                                <div class="flex mt-4 justify-between md:px-4 text-sm text-gray-500">
                                     <div class="flex">
                                         <i class="pi pi-clock mr-2"></i>
                                         <p class="font-thin">Duration:</p>
                                     </div>
                                     <p class="font-semibold">40 hours</p>
                                 </div>
-                                <div class="flex mt-4 justify-between px-4 text-sm text-gray-500">
+                                <div class="flex mt-4 justify-between md:px-4 text-sm text-gray-500">
                                     <div class="flex">
                                         <i class="pi pi-bookmark mr-2"></i>
                                         <p class="font-thin">Skill Level:</p>
                                     </div>
                                     <p class="font-semibold">Beginner</p>
                                 </div>
-                                <div class="flex mt-4 justify-between px-4 text-sm text-gray-500">
+                                <div class="flex mt-4 justify-between md:px-4 text-sm text-gray-500">
                                     <div class="flex">
                                         <i class="pi pi-globe mr-2"></i>
                                         <p class="font-thin">Language:</p>
                                     </div>
                                     <p class="font-semibold">English</p>
                                 </div>
-                                <div class="flex mt-4 justify-between px-4 text-sm text-gray-500">
+                                <div class="flex mt-4 justify-between md:px-4 text-sm text-gray-500">
                                     <div class="flex">
                                         <i class="pi pi-copy mr-2"></i>
                                         <p class="font-thin">Assesment:</p>
