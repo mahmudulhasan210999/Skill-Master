@@ -1,8 +1,9 @@
 <template>
     <div class="w-full flex flex-col bg-gray-100">
-        <div class="w-full flex flex-col md:flex-row px-4 md:px-16 py-10 lg:px-40 lg:py-14 xl:px-72 xl:py-20">
-            <div class="w-full md:w-1/2 bg-img">
-                <div class="pt-40 px-8 md:pt-56 md:px-110 lg:pt-64 lg:px-16">
+        <div class="w-full flex flex-col md:flex-row px-4 sm:px-16 py-10 lg:px-40 lg:py-14 xl:px-72 xl:py-20">
+            <div class="w-full md:w-1/2 container">
+                <img class="bg-img" src="../../assets/images/Home/1.jpg" alt="">
+                <div class="text-left bottom-left">
                     <p class="text-xl font-semibold text-white">Customer Support</p>
                     <p class="text-sm text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Epsum dignissimos laborum, pariatur tempora nobis excepturi id aut alias consequatur</p>
                     <p class="text-yellow-600 font-semibold my-3">- Adam Someone</p>
@@ -47,26 +48,35 @@ export default {
 
 <style scoped>
 .bg-img {
-    background-image: url('../../assets/images/Home/1.jpg');
-    background-size: cover;
+    background-size: contain;
+    height: 100%;
+    width: 100%;
 }
 
-@media screen and (max-width: 768px) {
-    .bg-img {
-        background-size: contain;
-        /* height: 100%; */
-        background-repeat: no-repeat;
-        background-position: center;
-    }
+.container {
+  position: relative;
+  text-align: center;
 }
 
-@media screen and (max-width: 680px) {
-    .bg-img {
-        background-size: contain;
-        height: 100%;
-        background-repeat: no-repeat;
-        background-position: center;
-        width: 100%;
-    }
+.bottom-left {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
 }
+
+@media screen and (max-width: 500px) {
+    .bottom-left {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+    }
+} 
+
+@media screen and (max-width: 350px) {
+    .bottom-left {
+        position: absolute;
+        bottom: 8px;
+        left: 12px;
+    }
+} 
 </style>
