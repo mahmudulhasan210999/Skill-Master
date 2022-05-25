@@ -2,11 +2,11 @@
   <div v-for="(instructor, index) in instructors" :key="index">
     <div v-if="instructor.slug == id">
       <!-- Instructor Details -->
-      <div class="flex px-40 py-12 bg-green-50">
+      <div class="md:flex px-6 py-8 md:px-40 md:py-12 bg-green-50">
         <div class="px-4">
           <img class="rounded-full h-40 w-40" :src="instructor.instructor_img" alt="Image">
         </div>
-        <div class="pl-4">
+        <div class="pl-8 pt-4 md:pt-0 md:pl-4">
           <div class="flex items-center">
             <p class="text-xs text-red-600 px-2 py-1 bg-rose-200 rounded-sm">{{ instructor.experience }} Year Expe.</p>
           </div>
@@ -18,7 +18,7 @@
             <p>{{ instructor.address }}</p>
           </div>
 
-          <div class="flex text-sm pt-4">
+          <div class="flex text-xs md:text-sm pt-4">
             <div class="flex">
               <p class="pr-1 font-semibold">{{ instructor.points }}</p>
               <p class="text-gray-500 pr-4">Points</p>
@@ -50,16 +50,16 @@
         </div>
       </div>
 
-      <!-- Classes and Education button -->
-      <div class="px-40 py-12 mb-6">
-        <div class="px-5">
+      <div class="px-4 py-4 md:px-20 md:py-8 lg:px-28 lg:py-10 xl:px-40 xl:py-12 mb-6">
+         <!-- Classes and Education button -->
+        <div class="px-3">
           <button class="rounded h-12 w-24 text-sm text-black bg-gray-200 hover:text-rose-600 my-2" @click="classes" :class="[{ 'clicked' : classDetails }]">Classes</button>
           <button class="rounded h-12 w-24 text-sm text-black bg-gray-200 hover:text-rose-600 mx-2 my-2" @click="education" :class="[{ 'clicked' : educationDetails }]">Education</button>
         </div>
 
         <!-- v-if="classDetails" -->
         <div v-if="classDetails">
-          <div class="grid grid-cols-3 gap-3 p-3">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
             <div class="p-3" v-for="(classes, index) in instructor.classes" :key="index">
               <img class="rounded-md" :src="classes.link" alt="Image">
               <p class="text-sm font-semibold px-2 pt-3">{{ classes.title }}</p>
@@ -77,11 +77,11 @@
         <!-- v-if="educationDetails" -->
         <div v-if="educationDetails">
           <div class="px-6">
-            <p class="text-2xl font-semibold py-2">Education</p>
+            <p class="text-xl md:text-2xl font-semibold py-2">Education</p>
             <div v-for="(education, index) in instructor.education" :key="index">
               <div class="flex">
                 <div>
-                  <p class="text-rose-600 px-4 py-2">★</p>
+                  <p class="text-rose-600 md:px-4 py-2">★</p>
                 </div>
                 <div class="text-sm py-2">
                   <p class="text-rose-600 font-semibold p-1">{{ education.degree }}</p>

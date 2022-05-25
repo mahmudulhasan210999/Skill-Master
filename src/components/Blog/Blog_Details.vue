@@ -2,30 +2,20 @@
     <div class="w-full flex flex-col">
         <div v-for="(blog, index) in blogs" :key="index">
             <div v-if="blog.slug == slug">
-
-                <!-- button for Sidebar -->
-                <div>
-                    <button  @click="sidebar" class="bg-gray-700 text-white px-4 py-2 my-2 lg:hidden" :class="[{ 'clicked' : sidebarView }]">Sidebar</button>
-
-                    <div v-if="sidebarView">
-                        <p>khtfiytfiyfio</p>
-                    </div>
-                </div>
-
                 <!-- Blog Details main design -->
                 <div class="bg-white border rounded-md border-gray-200 p-6">
                     <img class="rounded-md" :src="blog.writer_img" alt="Image">
                     <div class="flex items-center py-4">
                         <div class="flex items-center text-sm text-gray-500">
                             <i class="pi pi-user"></i>
-                            <p class="ml-1">by {{ blog.writer }}</p>
+                            <p class="px-2">by {{ blog.writer }}</p>
                         </div>
                         <div class="flex items-center ml-6 text-sm text-gray-500">
                             <i class="pi pi-inbox"></i>
                             <p class="px-2">45 Comments</p>
                         </div>
                     </div>
-                    <p class="text-2xl lg:text-4xl font-bold py-2">{{ blog.title }}</p>
+                    <p class="text-xl md:text-xl lg:text-4xl font-bold py-2">{{ blog.title }}</p>
                     <p class="py-2 text-slate-500 mt-6">{{ blog.blog }}</p>
 
                     <div class="flex flex-col items-end my-6 pb-8 border-b">
@@ -52,7 +42,7 @@
                     </div>
                 </div>
 
-                <div class="bg-white border rounded-md border-gray-200 p-4 mt-8 text-center flex flex-col items-center">
+                <div class="bg-white border rounded-md border-gray-200 p-4 mt-4 lg:mt-8 text-center flex flex-col items-center">
                     <img class="rounded-full h-32 w-32" :src="blog.writer_img" alt="Image">
                     <p class="font-semibold my-3 text-lg">{{ blog.writer }}</p>
                     <div class="flex mb-4">
@@ -89,14 +79,12 @@ export default {
 
     data() {
         return {
-            sidebarView: false,
+
         }
     },
 
     methods: {
-        sidebar() {
-            this.sidebarView = !this.sidebarView;
-        },
+
     },
 
     computed: {
@@ -106,9 +94,3 @@ export default {
     },
 }
 </script>
-
-<style scoped>
-.clicked {
-  @apply text-white bg-neutral-600;
-}
-</style>

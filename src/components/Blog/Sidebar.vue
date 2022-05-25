@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full hidden md:flex md:flex-col">
+    <div class="w-full md:flex md:flex-col">
 
         <!-- Categories -->
         <div class="bg-white border rounded-md border-gray-200 p-6">
@@ -13,7 +13,7 @@
         </div>
 
         <!-- Trending blogs -->
-        <div class="bg-white rounded-md border border-gray-200 p-6 mt-8">
+        <div class="bg-white rounded-md border border-gray-200 p-6 mt-4 lg:mt-8">
             <p class="text-xl font-bold py-1">Trending blogs</p>
             <div class="flex my-3 text-left" v-for="(blog, index) in blogs" :key="index">
                 <router-link :to="{ path: '/blog/' + blog.slug, params: { id: blog.title }}">
@@ -22,7 +22,7 @@
                             <img class="h-20 w-5/6" :src="blog.img" alt="">
                         </div>
                         <div class="w-2/3 font-medium">
-                            <p class="text-gray-700 text-lg font-semibold">{{blog.title}}</p>
+                            <p class="text-gray-700 text-base xl:text-lg font-semibold">{{blog.title}}</p>
                             <div class="flex items-center text-sm text-gray-500">
                                 <i class="pi pi-clock"></i>
                                 <p class="m-1">{{blog.date}}</p>
@@ -34,7 +34,7 @@
         </div>
 
         <!-- Tags Cloud -->
-        <div class="mt-6 p-6 bg-white rounded-md border border-gray-200">
+        <div class="mt-4 lg:mt-8 p-6 bg-white rounded-md border border-gray-200">
             <p class="text-xl font-semibold text-black">Tags</p>
             <div class="grid grid-cols-3">
                 <div class="flex items-center my-1" v-for="(tag, index) in categories" :key="index">

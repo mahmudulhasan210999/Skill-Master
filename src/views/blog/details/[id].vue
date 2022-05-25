@@ -9,12 +9,12 @@
       </div>
     </div>
 
-    <div class="w-full flex flex-col md:flex-row bg-gray-100 px-4 lg:px-40 py-2 lg:py-20">
+    <div class="w-full flex flex-col md:flex-row bg-gray-100 px-4 py-4 lg:px-28 lg:py-14 xl:px-40 xl:py-20">
       <div class="w-full md:w-2/3">
         <Details :slug="getDetails()" />
       </div>
 
-      <div class="w-full md:w-1/3 ml-8">
+      <div class="w-full md:w-1/3 pt-4 md:pt-0 ml-4 lg:ml-8">
         <Sidebar />
       </div>
     </div>
