@@ -9,7 +9,7 @@
             </div>
         </div>
         <div class="flex flex-col lg:flex-row w-full">
-            <div class="hidden lg:flex lg:w-1/3">
+            <div class="hidden lg:flex lg:w-1/3 width-sidebar">
                 <Sidebar />
             </div>
             <div class="flex mb-8 lg:hidden">
@@ -19,7 +19,7 @@
                 </button>
                 <MobileSidebar v-if="navToggled" @navClosed="closeNav"/>
             </div>
-            <div class="lg:w-2/3">
+            <div class="lg:w-2/3 width-courses">
                 <Courses />
             </div>
         </div>
@@ -55,3 +55,15 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+@media screen and (min-width: 1540px) {
+    .width-sidebar {
+        @apply w-1/4;
+    }
+
+    .width-courses {
+        @apply w-3/4;
+    }
+}
+</style>

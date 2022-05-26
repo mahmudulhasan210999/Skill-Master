@@ -5,7 +5,7 @@
             <p class="px-1 text-base font-semibold">142</p>
             <p>courses for you</p>
         </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2">
+        <div class="grid grid-cols-1 sm:grid-cols-2 grid-view">
             <div class="p-2 md:p-4" v-for="(course, index) in courses" :key="index">
                 <div class="shadow-sm hover:shadow-md">
                     <router-link :to="{ path: '/courses/' + course.slug}">
@@ -60,5 +60,11 @@ export default {
   position: absolute;
   top: 20px;
   left: 20px;
+}
+
+@media screen and (min-width: 1540px) {
+    .grid-view {
+        @apply grid grid-cols-3;
+    }
 }
 </style>

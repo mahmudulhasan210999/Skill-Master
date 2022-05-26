@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full flex flex-col items-center container">
+    <div class="w-full flex flex-col items-center">
         <div class="container w-full flex flex-col items-center text-left">
             <img class="w-full bg-img" src="../../assets/images/Home/1.jpg" alt="">
             <div class="text-left text-white bottom-left">
@@ -68,7 +68,7 @@ export default {
     background-size: cover;
     position: relative;
     height: 88vh;
-    width: 100%;
+    width: 100vw;
 }
 
 .container {
