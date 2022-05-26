@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full flex flex-col bg-gray-50 pt-12 lg:pt-28 pb-6 lg:pb-12 px-4 sm:px-8 lg:px-44">
+  <div class="w-full flex flex-col bg-gray-50 pt-12 md:pt-16 lg:pt-20 pb-6 lg:pb-12 px-4 sm:px-8 lg:px-44">
     <div class="flex flex-col items-center">
       <p class="text-sm text-gray-600">Popular Category</p>
       <div class="flex justify-center text-base lg:text-2xl font-semibold">
