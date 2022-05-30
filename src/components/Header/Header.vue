@@ -15,12 +15,14 @@
                 </div>
             </div>
             <div class="flex items-center">
-                <router-link to="/cart">
-                    <div class="flex items-center mr-8 xl:mr-16 border px-3 xl:px-5 py-2 rounded-md hover:border-2 hover:border-rose-600 hover:text-rose-700">
-                        <i class="pi pi-shopping-cart"></i>
-                        <p class="ml-2">Cart</p>
-                    </div>
-                </router-link>
+                <div class="mr-2 xl:mr-4">
+                    <router-link to="/cart">
+                        <div class="flex items-center border px-3 xl:px-5 py-2 rounded-md hover:border-2 hover:border-rose-600 hover:text-rose-700">
+                            <i class="pi pi-shopping-cart"></i>
+                            <p class="ml-2">Cart</p>
+                        </div>
+                    </router-link>
+                </div>
                 <router-link to="/login">
                     <button class="py-2 px-3 xl:px-5 text-rose-600 border rounded-md font-semibold hover:bg-rose-600 hover:text-white">Sign in</button>
                 </router-link>
