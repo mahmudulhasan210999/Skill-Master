@@ -6,15 +6,15 @@
             <p class="text-xl font-bold py-1">Categories</p>
             <div v-for="(category, index) in categories" :key="index">
                 <div class="flex justify-between p-2 border-b text-sm">
-                  <p>{{category.category}}</p>
-                  <p>{{category.course}}</p>
+                  <p>{{category.title}}</p>
+                  <p>{{category.blog_count}}</p>
                 </div>
             </div>
         </div>
 
-        <!-- Trending blogs -->
+        <!-- Recent blogs -->
         <div class="bg-white rounded-md border border-gray-200 p-6 mt-4 lg:mt-8">
-            <p class="text-xl font-bold py-1">Trending blogs</p>
+            <p class="text-xl font-bold py-1">Recent blogs</p>
             <div class="flex my-3 text-left" v-for="(blog, index) in blogs" :key="index">
                 <router-link :to="{ path: '/blog/' + blog.slug, params: { id: blog.title }}">
                     <div class="flex w-full text-sm">
@@ -25,7 +25,7 @@
                             <p class="text-gray-700 text-base xl:text-lg font-semibold">{{blog.title}}</p>
                             <div class="flex items-center text-sm text-gray-500">
                                 <!-- <i class="pi pi-clock"></i> -->
-                                <img class="rounded-full h-8 w-8" :src="blog.author_thumb" alt="Image">
+                                <img class="rounded-full h-6 w-6" :src="blog.author_thumb" alt="Image">
                                 <p class="m-1">{{blog.author_name}}</p>
                             </div>
                         </div>
@@ -38,8 +38,8 @@
         <div class="mt-4 lg:mt-8 p-6 bg-white rounded-md border border-gray-200">
             <p class="text-xl font-semibold text-black">Tags</p>
             <div class="grid grid-cols-3">
-                <div class="flex items-center my-1" v-for="(tag, index) in categories" :key="index">
-                    <p class="w-full text-center py-2 mx-1 rounded-sm text-gray-600 border text-sm cursor-pointer hover:text-white hover:bg-red-600">{{tag.category}}</p>
+                <div class="flex items-center my-1" v-for="(tag, index) in tags" :key="index">
+                    <p class="w-full text-center py-2 mx-1 rounded-sm text-gray-600 border text-sm cursor-pointer hover:text-white hover:bg-red-600">{{tag.title}}</p>
                 </div>
             </div>
         </div>
@@ -54,33 +54,6 @@ import Button from 'primevue/button';
 export default {
   data() {
     return {
-       categories: [
-                {
-                    id: 1,
-                    category: 'Backend',
-                    course: 7
-                },
-                {
-                    id: 1,
-                    category: 'Frontend',
-                    course: 15
-                },
-                {
-                    id: 1,
-                    category: 'General',
-                    course: 9
-                },
-                {
-                    id: 1,
-                    category: 'Software',
-                    course: 11
-                },
-                {
-                    id: 1,
-                    category: 'Photography',
-                    course: 5
-                },
-            ],
     }
   },
   components: {
@@ -91,12 +64,16 @@ export default {
   computed: {
       ...mapState ({
           hot_categories: state => state.home.hot_categories,
-          blogs: state => state.blogs.blogs
+          blogs: state => state.blogs.recent_blogs,
+          tags: state => state.blogs.tags,
+          categories: state => state.blogs.categories
       }),
   },
 
   mounted() {
-      this.$store.dispatch('blogs/getBlogs')
+      this.$store.dispatch('blogs/getRecentBlogs'),
+      this.$store.dispatch('blogs/getCategories'),
+      this.$store.dispatch('blogs/getBlogDetails')
   }
 }
 </script>
