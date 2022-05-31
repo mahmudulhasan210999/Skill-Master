@@ -14,8 +14,8 @@ const getters = {
 }
 
 const actions = {
-  getBlogs ({ commit }) {
-    axios.get(V1API.get_blogs).then(result => {
+  getBlogs ({ commit }, payload) {
+    axios.get(V1API.get_blogs+payload).then(result => {
       let results = result.data.results
         // console.log(result.data.results)
           commit('SET_BLOGS', results)

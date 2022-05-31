@@ -6,7 +6,7 @@
       <div class="xl:p-3 " v-for="(blog, index) in blogs" :key="index">
         <div class="p-3 lg:p-4">
           <div>
-            <router-link :to="{ path: '/blog/' + blog.slug}"><img class="h-60 md:h-52 xl:h-60 w-full" :src="blog.headerImage" alt="Image"></router-link>
+            <router-link :to="{ path: '/blog/' + blog.slug}"><img class="h-52 xl:h-60 w-full" :src="blog.headerImage" alt="Image"></router-link>
           </div>
           <div class="p-1 lg:p-3 border border-gray-200">
             <router-link :to="{ path: '/blog/' + blog.slug}"><p class="lg:text-xl font-medium p-1 lg:p-2">{{ blog.title }}</p></router-link>
