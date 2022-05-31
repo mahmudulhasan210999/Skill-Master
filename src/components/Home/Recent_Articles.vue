@@ -6,12 +6,14 @@
       <div class="xl:p-3 " v-for="(blog, index) in blogs" :key="index">
         <div class="p-3 lg:p-4">
           <div>
-            <router-link :to="{ path: '/blog/' + blog.slug}"><img class="h-52 xl:h-60 w-full" :src="blog.headerImage" alt="Image"></router-link>
+            <router-link :to="{ path: '/blog/' + blog.slug}"><img class="h-52 xl:h-60 w-full small" :src="blog.headerImage" alt="Image"></router-link>
           </div>
           <div class="p-1 lg:p-3 border border-gray-200">
-            <router-link :to="{ path: '/blog/' + blog.slug}"><p class="lg:text-xl font-medium p-1 lg:p-2">{{ blog.title }}</p></router-link>
+            <router-link :to="{ path: '/blog/' + blog.slug}"><p class="text-base lg:text-xl font-medium p-1 lg:p-2">{{ blog.title }}</p></router-link>
             <div class="flex px-1 lg:px-2">
-              <img class="rounded-full h-9 w-9" :src="blog.author_thumb" alt="Image">
+              <div class="flex items-center">
+                <img class="rounded-full h-6 w-6 md:h-8 md:w-8" :src="blog.author_thumb" alt="Image">
+              </div>
               <p class="p-2 text-sm text-gray-600">{{ blog.author_name }}</p>
             </div>
           </div>
@@ -41,5 +43,9 @@ export default {
 </script>
 
 <style scoped>
-
+@media screen and (max-width: 360px) {
+  .small {
+    @apply h-32;
+  }
+}
 </style>
