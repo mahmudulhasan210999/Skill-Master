@@ -45,7 +45,7 @@ export default {
 <style scoped>
 @media screen and (max-width: 360px) {
   .small {
-    @apply h-32;
+    @apply h-40;
   }
 }
 </style>

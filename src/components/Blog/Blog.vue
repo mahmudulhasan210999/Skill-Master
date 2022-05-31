@@ -29,8 +29,7 @@
     <div class="flex justify-center p-4">
       <button 
         class="border border-gray-300 text-rose-600 hover:border-rose-600 rounded-md hover:text-white hover:bg-rose-600 text-sm lg:text-base px-6 py-3"
-        @click="loadMore()"
-      >
+        @click="loadMore()">
         Load More ⟳
       </button>
     </div>
@@ -63,12 +62,12 @@ export default {
   methods: {
     loadMore() {
       this.current = ++this.current
-            // if(this.slug){
-            //     this.$store.dispatch('products/getProductByCategory', {slug:this.slug, current:this.current})
-            // }else{
-                this.$store.dispatch('blogs/getBlogs', this.current)
-                console.log(this.current)
-            // }
+        // if(this.slug){
+        //     this.$store.dispatch('products/getProductByCategory', {slug:this.slug, current:this.current})
+        // }else{
+          this.$store.dispatch('blogs/getBlogs', this.current)
+          console.log(this.current)
+        // }
             
     }
   }
@@ -78,7 +77,7 @@ export default {
 <style scoped>
 @media screen and (max-width: 360px) {
   .small {
-    @apply h-32;
+    @apply h-40;
   }
 }
 </style>
