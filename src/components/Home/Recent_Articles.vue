@@ -6,10 +6,10 @@
       <div class="xl:p-3 " v-for="(blog, index) in blogs" :key="index">
         <div class="p-3 lg:p-4">
           <div>
-            <img class="h-60 md:h-52 xl:h-60 w-full" :src="blog.headerImage" alt="Image">
+            <router-link :to="{ path: '/blog/' + blog.slug}"><img class="h-60 md:h-52 xl:h-60 w-full" :src="blog.headerImage" alt="Image"></router-link>
           </div>
           <div class="p-1 lg:p-3 border border-gray-200">
-            <p class="lg:text-xl font-medium p-1 lg:p-2">{{ blog.title }}</p>
+            <router-link :to="{ path: '/blog/' + blog.slug}"><p class="lg:text-xl font-medium p-1 lg:p-2">{{ blog.title }}</p></router-link>
             <div class="flex px-1 lg:px-2">
               <img class="rounded-full h-9 w-9" :src="blog.author_thumb" alt="Image">
               <p class="p-2 text-sm text-gray-600">{{ blog.author_name }}</p>
