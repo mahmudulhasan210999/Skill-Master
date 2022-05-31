@@ -30,7 +30,6 @@ export default {
   },
   computed: {
     ...mapState ({
-      // articles: state => state.home.articles,
       blogs: state => state.blogs.recent_blogs,
     }),
   },
