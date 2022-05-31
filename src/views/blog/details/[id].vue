@@ -23,7 +23,7 @@
               </div>
               <div class="flex items-center ml-6 text-sm text-gray-500">
                 <i class="pi pi-inbox"></i>
-                <p class="px-2">45 Comments</p>
+                <p class="px-2"> {{ 45 }} Comments</p>
               </div>
             </div>
           
@@ -47,11 +47,6 @@
                 </div>
               </div>
             </div>
-
-            <div class="flex justify-between text-sm md:text-base mt-8">
-              <button class="bg-rose-600 text-white px-5 py-3">Prev Post</button>
-              <button class="bg-rose-600 text-white px-5 py-3">Next Post</button>
-            </div>
           </div>
 
           <div class="bg-white border rounded-md border-gray-200 p-4 mt-4 lg:mt-8 text-center flex flex-col items-center">
@@ -65,7 +60,8 @@
                 <a target="_blank" href="https://www.youtube.com/channel/UCcCqoaZd8DYCwM9v8cG5ZYA"><i class="pi pi-youtube" style="font-size: 18px; color: rgb(128,128,128)"></i></a>
               </div>
               <div class="mx-4">
-                <a target="_blank" href="https://www.instagram.com/theartist.bd/"><i class="pi pi-instagram" style="font-size: 18px; color: rgb(128,128,128)"></i></a>
+               
+                <a target="_blank" :href='getDetails.author.twitter'><i class="pi pi-instagram" style="font-size: 18px; color: rgb(128,128,128)"></i></a>
               </div>
               <div class="ml-4">
                 <a target="_blank" href="https://mobile.twitter.com/theartistbd/"><i class="pi pi-twitter" style="font-size: 18px; color: rgb(128,128,128)"></i></a>
@@ -95,22 +91,7 @@ export default {
     Sidebar,
     Primeicons,
   },
-  // data(){
-  //     return{
-  //       getDetails:null
-  //     }
-  //   },
-  // watch:{
-  //   // getDetails(newVal, oldVal){
-  //   //   this.getDetails=this.details
-  //   // }
-  // },
-
-  // methods: {
-  //   getDetails() {
-  //     return this.$route.params.id
-  //   }
-  // },
+  
   computed: {
     ...mapState ({
       getDetails: state => state.blogs.getDetails
