@@ -27,7 +27,12 @@
     </div>
 
     <div class="flex justify-center p-4">
-      <button class="border border-gray-300 text-rose-600 hover:border-rose-600 rounded-md hover:text-white hover:bg-rose-600 text-sm lg:text-base px-6 py-3">Load More ⟳</button>
+      <button 
+        class="border border-gray-300 text-rose-600 hover:border-rose-600 rounded-md hover:text-white hover:bg-rose-600 text-sm lg:text-base px-6 py-3"
+        @click="loadMore()"
+      >
+        Load More ⟳
+      </button>
     </div>
   </div>
 </template>
@@ -36,7 +41,14 @@
 import { mapState } from "vuex";
 
 export default {
-  props: ['slug'],
+  // props: ['slug'],
+  data() {
+    return {
+      current: 1,
+      pages: [],
+      paginates: '',
+    }
+  },
 
   computed: {
     ...mapState ({
@@ -45,7 +57,20 @@ export default {
   },
 
   mounted() {
-     this.$store.dispatch('blogs/getBlogs')
+     this.$store.dispatch('blogs/getBlogs', this.current)
+  },
+
+  methods: {
+    loadMore() {
+      this.current = ++this.current
+            // if(this.slug){
+            //     this.$store.dispatch('products/getProductByCategory', {slug:this.slug, current:this.current})
+            // }else{
+                this.$store.dispatch('blogs/getBlogs', this.current)
+                console.log(this.current)
+            // }
+            
+    }
   }
 }
 </script>

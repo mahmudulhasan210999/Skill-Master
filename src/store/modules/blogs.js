@@ -78,13 +78,13 @@ const getters = {
 
 const actions = {
 
-  getBlogs ({ commit }) {
+  getBlogs ({ commit }, payload) {
     // var config = {
     //   headers: { 
     //     'Authorization': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ4MzY2NTMwLCJqdGkiOiIwZjMwNzhjNTcxNjA0NjZhYTQ2ZTkzZGE4ZDA1YTExYyIsInVzZXJfaWQiOjM0OX0.I3NBqyeaBSscMACMBY0KOsAwzIxVmLNrW0OYXmTqXbY'
     //   }
     // };
-    axios.get(V1API.get_blogs).then(result => {
+    axios.get(V1API.get_blogs+payload).then(result => {
       let results = result.data.results
           // console.log(result.data.results)
             commit('SET_BLOGS', results)
