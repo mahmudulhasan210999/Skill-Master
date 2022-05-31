@@ -13,13 +13,13 @@
       <div class="p-6" v-for="(blog, index) in blogs" :key="index">
         <div>
           <div>
-            <router-link :to="{ path: '/blog/' + blog.slug, params: { id: blog.title }}"><img class="rounded-t-lg lg:p-0" :src="blog.img" alt="Image"></router-link>
+            <router-link :to="{ path: '/blog/' + blog.slug}"><img class="rounded-t-lg lg:p-0" :src="blog.headerImage" alt="Image"></router-link>
           </div>
           <div class="px-4 pt-4 bg-white rounded-b-lg shadow-md">
             <p class="lg:text-xl font-medium">{{ blog.title }}</p>
             <div class="flex items-center py-2">
-              <img class="rounded-full h-8 w-8" :src="blog.writer_img" alt="Image">
-              <p class="font-medium text-xs text-gray-600 lg:text-sm pl-2">{{ blog.writer }}</p>
+              <img class="rounded-full h-8 w-8" :src="blog.author_thumb" alt="Image">
+              <p class="font-medium text-xs text-gray-600 lg:text-sm pl-2">{{ blog.author_name }}</p>
             </div>
           </div>
         </div>
@@ -43,5 +43,9 @@ export default {
       blogs: state => state.blogs.blogs
     }),
   },
+
+  mounted() {
+     this.$store.dispatch('blogs/getBlogs')
+  }
 }
 </script>

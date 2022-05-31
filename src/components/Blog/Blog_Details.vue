@@ -1,22 +1,20 @@
 <template>
     <div class="w-full flex flex-col">
-        <div v-for="(blog, index) in blogs" :key="index">
-            <div v-if="blog.slug == slug">
                 <!-- Blog Details main design -->
                 <div class="bg-white border rounded-md border-gray-200 p-6">
-                    <img class="rounded-md" :src="blog.writer_img" alt="Image">
+                    <img class="rounded-md" :src="getDetails.author.thumb" alt="Image">
                     <div class="flex items-center py-4">
                         <div class="flex items-center text-sm text-gray-500">
                             <i class="pi pi-user"></i>
-                            <p class="px-2">by {{ blog.writer }}</p>
+                            <p class="px-2">by {{ getDetails.author.author_name }}</p>
                         </div>
                         <div class="flex items-center ml-6 text-sm text-gray-500">
                             <i class="pi pi-inbox"></i>
                             <p class="px-2">45 Comments</p>
                         </div>
                     </div>
-                    <p class="text-xl md:text-xl lg:text-4xl font-bold py-2">{{ blog.title }}</p>
-                    <p class="py-2 text-slate-500 mt-6">{{ blog.blog }}</p>
+                    <p class="text-xl md:text-xl lg:text-4xl font-bold py-2">{{ getDetails.title }}</p>
+                    <p class="py-2 text-slate-500 mt-6" v-html="getDetails.content"></p>
 
                     <div class="flex flex-col items-end my-6 pb-8 border-b">
                         <p class="text-sm md:text-base font-semibold my-2">Social Share</p>
@@ -43,8 +41,8 @@
                 </div>
 
                 <div class="bg-white border rounded-md border-gray-200 p-4 mt-4 lg:mt-8 text-center flex flex-col items-center">
-                    <img class="rounded-full h-32 w-32" :src="blog.writer_img" alt="Image">
-                    <p class="font-semibold my-3 text-lg">{{ blog.writer }}</p>
+                    <img class="rounded-full h-32 w-32" :src="getDetails.author.thumb" alt="Image">
+                    <p class="font-semibold my-3 text-lg">{{ getDetails.author.author_name }}</p>
                     <div class="flex mb-4">
                         <div class="mx-4">
                             <a target="_blank" href="https://www.facebook.com/theartist.com.bd/"><i class="pi pi-facebook" style="font-size: 18px; color: rgb(128,128,128)"></i></a>
@@ -62,8 +60,6 @@
                     <p class="text-sm text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. In vitae, maiores debitis nisi quisquam, optio minima totam necessitatibus commodi quos unde quis, eum adipisci atque. Quod expedita repellendus tempora assumenda!</p>
                 </div>
             </div>
-        </div>
-    </div>
 </template>
 
 <script>
@@ -74,8 +70,6 @@ export default {
     components: {
         Primeicons,
     },
-
-    props: ['slug'],
 
     data() {
         return {
@@ -89,8 +83,13 @@ export default {
 
     computed: {
         ...mapState ({
-            blogs: state => state.blogs.blogs
+            getDetails: state => state.blogs.getDetails
         }),
     },
+
+    created() {
+        this.$store.dispatch('blogs/getBlogDetails', this.$route.params.id)
+    },
+
 }
 </script>

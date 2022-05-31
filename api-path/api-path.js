@@ -3,6 +3,7 @@ var host = "https://platform.bitflex.xyz";
 
 const V1API = {
     'get_blogs':host+'/api/blog?count=12',
+    'get_blog_details' :host+'/api/blog/details/'
 }
 
 export default V1API;
