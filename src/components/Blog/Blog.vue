@@ -9,6 +9,7 @@
       </div>
     </div>
 
+    <!-- BLOG LIST -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
       <div class="p-6" v-for="(blog, index) in blogs" :key="index">
         <div>
@@ -25,34 +26,45 @@
         </div>
       </div>
     </div>
-
-    <div class="flex justify-center p-4">
-      <button 
-        class="border border-gray-300 text-rose-600 hover:border-rose-600 rounded-md hover:text-white hover:bg-rose-600 text-sm lg:text-base px-6 py-3"
-        @click="loadMore()">
-        Load More ⟳
-      </button>
+    <!-- END OF BLOG LIST -->
+    
+    <!-- PAGINATION -->
+    <div class="mt-4">
+      <Pagination :total="blog_count" @pageChange="handlePageChange"></pagination>
     </div>
+    <!-- END OF PAGINATION -->
   </div>
 </template>
 
 <script>
 import { mapState } from "vuex";
+import Pagination from "../../components/Pagination/pagination.vue";
 
 export default {
-  // props: ['slug'],
   data() {
     return {
+      blog_count: '',
+      blogs:[],
       current: 1,
-      pages: [],
-      paginates: '',
     }
+  },
+
+  components: {
+    Pagination
   },
 
   computed: {
     ...mapState ({
-      blogs: state => state.blogs.blogs
+      blog: state => state.blogs.blogs,
+      count: state => state.blogs.count,
     }),
+  },
+
+  watch:{
+    blog(newValue, oldValue){
+      this.blogs = this.blog
+      this.blog_count = this.count
+    }
   },
 
   mounted() {
@@ -60,21 +72,22 @@ export default {
   },
 
   methods: {
-    loadMore() {
-      this.current = ++this.current
-        // if(this.slug){
-        //     this.$store.dispatch('products/getProductByCategory', {slug:this.slug, current:this.current})
-        // }else{
-          this.$store.dispatch('blogs/getBlogs', this.current)
-          console.log(this.current)
-        // }
-            
-    }
+    handlePageChange(page) {
+      this.$store.dispatch('blogs/getBlogs', page)
+    },
   }
 }
 </script>
 
 <style scoped>
+.pagination-hover {
+    @apply cursor-pointer;
+}
+
+.pagination-hover:hover {
+    @apply bg-gray-200;
+}
+
 @media screen and (max-width: 360px) {
   .small {
     @apply h-40;

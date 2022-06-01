@@ -6,7 +6,8 @@ const state = {
   getDetails: {},
   categories: [],
   recent_blogs: [],
-  tags: []
+  tags: [],
+  count: ''
 }
 
 const getters = {
@@ -17,8 +18,10 @@ const actions = {
   getBlogs ({ commit }, payload) {
     axios.get(V1API.get_blogs+payload).then(result => {
       let results = result.data.results
-        // console.log(result.data.results)
+      let count = result.data.count
+        // console.log(result.data)
           commit('SET_BLOGS', results)
+          commit('SET_COUNT', count)
         })
         .catch(error => {
           console.log(error)
@@ -65,6 +68,10 @@ const mutations = {
   SET_BLOGS (state, items) {
       state.blogs = items
   },
+
+  SET_COUNT (state, item) {
+    state.count = item
+},
 
   SET_RECENT_BLOGS(state, items) {
     state.recent_blogs = items
