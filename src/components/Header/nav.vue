@@ -13,11 +13,9 @@
         </div>
 
         <div> 
-            <div v-for="(item, index) in menu" :key="index">
-                <router-link :to="{ path: item.path}">
-                    <p class="mx-2 px-4 py-2 my-2 text-white hover:text-rose-600">{{item.title}}</p>
-                </router-link>
-            </div>
+            <router-link v-for="(item, index) in menu" :key="index" :to="item.path">
+                <p @click="$emit('navClosed')" class="mx-2 px-4 py-2 my-2 text-white hover:text-rose-600">{{item.title}}</p>
+            </router-link>
 
             <div class="flex p-4">
                 <router-link to="/login">
@@ -39,7 +37,7 @@ export default {
         ...mapState ({
             menu: state => state.menu.menu
         }),
-    }
+    },
 }
 </script>
 
