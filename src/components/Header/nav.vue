@@ -2,7 +2,7 @@
     <div class="flex flex-col navbar">
         <div class="py-3 nav-cross">
             <router-link to="/cart">
-                <div class="flex items-center text-white border border-white px-5 py-2 rounded-md hover:border-2 hover:border-rose-600 hover:text-rose-700">
+                <div class="flex items-center text-white border border-white px-5 py-2 rounded-md hover:border-2 hover:border-rose-600 hover:text-rose-700" @click="$emit('navClosed')">
                     <i class="pi pi-shopping-cart"></i>
                     <p class="ml-2">Cart</p>
                 </div>
@@ -19,10 +19,10 @@
 
             <div class="flex p-4">
                 <router-link to="/login">
-                    <button class="py-2 px-3 sm:px-5 text-rose-600 border rounded-md font-semibold bg-white">Sign in</button>
+                    <button @click="$emit('navClosed')" class="py-2 px-3 sm:px-5 text-rose-600 border rounded-md font-semibold bg-white">Sign in</button>
                 </router-link>
                 <router-link to="/registration">
-                    <button class="py-2 px-3 sm:px-5 border rounded-md bg-black font-semibold text-white ml-2 sm:ml-4">Sign up</button>
+                    <button @click="$emit('navClosed')" class="py-2 px-3 sm:px-5 border rounded-md bg-black font-semibold text-white ml-2 sm:ml-4">Sign up</button>
                 </router-link>
             </div>
         </div>
