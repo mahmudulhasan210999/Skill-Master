@@ -1,6 +1,7 @@
 <template>
-    <div class="w-full flex flex-col bg-gray-100">
-        <div class="w-full flex flex-col md:flex-row px-4 sm:px-16 py-10 lg:px-40 lg:py-14 xl:px-72 xl:py-20">
+    <div class="w-full flex flex-col items-center bg-gray-100">
+        <div class="container">
+            <div class="w-full flex flex-col md:flex-row px-4 sm:px-16 py-10 lg:px-40 lg:py-14 xl:px-72 xl:py-20 2xl:px-36">
             <div class="w-full md:w-1/2 container">
                 <img class="bg-img" src="../../assets/images/Home/1.jpg" alt="">
                 <div class="text-left bottom-left">
@@ -32,6 +33,7 @@
                     </router-link>
                 </div>
             </div>
+        </div>
         </div>
     </div>
 </template>

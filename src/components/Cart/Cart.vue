@@ -1,6 +1,7 @@
 <template>
-    <div class="flex flex-col w-full px-4 sm:px-12 lg:px-20 xl:px-36 py-20">
-        <div class="text-center mb-6">
+    <div class="flex flex-col items-center w-full px-4 sm:px-12 lg:px-20 xl:px-36 py-20">
+        <div class="container">
+            <div class="text-center mb-6">
             <p class="text-2xl md:text-3xl xl:text-5xl font-bold">Add To Cart</p>
             <div class="flex justify-center text-sm lg:text-base mt-2">
                 <router-link to="/"><p class="text-rose-600">Home</p></router-link>
@@ -131,6 +132,7 @@
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     </div>
 </template>

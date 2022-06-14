@@ -1,9 +1,11 @@
 <template>
-  <div>
+ <div class="">
+     <div>
     <Header />
     <router-view></router-view>
     <Footer />
   </div>
+ </div>
 </template>
 
 <script>
@@ -27,4 +29,14 @@ export default {
   color: #2c3e50;
   margin-top: 60px; */
 }
+
+@media screen and (min-width: 1536px) {
+    .container {
+      max-width: 1280px !important;
+  }
+}
+
+/* .container {
+  max-width: 1435px !important;
+} */
 </style>

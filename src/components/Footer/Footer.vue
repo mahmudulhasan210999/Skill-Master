@@ -1,21 +1,25 @@
 <template>
-  <div class="w-full flex flex-col">
-    <div class="text-center bg-rose-700 px-8 lg:px-44 py-8 lg:py-16">
-      <div class="text-white pb-8">
+  <div class="w-full flex flex-col items-center">
+    
+      <div class="flex flex-col w-full items-center text-center bg-rose-700 px-8 lg:px-44 py-8 lg:py-16">
+        <div class="container">
+          <div class="text-white pb-8">
         <p class="text-xl lg:text-3xl font-bold p-2">Join Thousand Of Happy Students!</p>
         <p class="text-xs lg:text-sm">Subscribe our newsletter & get latest news and updation!</p>
       </div>
 
       <div class="md:px-36 lg:px-20 xl:px-60">
         <div class="flex rounded bg-white p-2">
-          <InputText class="w-full" type="text" placeholder="  Your Email Address" v-model="value" />
+          <InputText class="w-full" type="text" placeholder="Your Email Address" v-model="value" />
           <button class="rounded bg-rose-700 text-white text-xs lg:text-base h-12 xl:h-14 w-40 px-4 ml-2">Get Started</button>
         </div>
       </div>
+        </div>
     </div>
 
-    <div class="step_2 px-8 lg:px-20 xl:px-44 py-8 lg:py-14 xl:py-16">
-      <div class="flex flex-col lg:flex-row justify-between gap-3 text-gray-400">
+    <div class="w-full flex items-center justify-center step_2 px-8 lg:px-20 xl:px-44 py-8 lg:py-14 xl:py-16">
+      <div class="container">
+        <div class="flex flex-col lg:flex-row justify-between gap-3 text-gray-400">
         <div>
           <div class="bg-white w-40 mb-2">
             <img class="h-16" src="../../assets/logo/platform-logo.png" alt="">
@@ -86,13 +90,15 @@
           </div>
         </div>
       </div>
+      </div>
     </div>
 
-    <div class="step_3 px-4 lg:px-20 xl:px-44 flex flex-col lg:flex-row justify-between">
-      <div>
-        <p class="text-gray-400 text-sm p-4">© Copyright 2022 <a class="text-gray-300 font-medium" target="_blank" href="https://www.facebook.com/catchbitflex/">Bitflex</a> | <a class="text-gray-300 font-medium" target="_blank" href="https://www.facebook.com/catchbangladesh">Catch Bangladesh</a> All Rights Reserved.</p>
+    <div class="w-full flex flex-col items-center step_3 px-4 lg:px-20 xl:px-44">
+      <div class="container flex flex-col md:flex-row justify-between items-center">
+        <div>
+        <p class="text-gray-400 text-sm py-4">© Copyright 2022 <a class="text-gray-300 font-medium" target="_blank" href="https://www.facebook.com/catchbitflex/">Bitflex</a> | <a class="text-gray-300 font-medium" target="_blank" href="https://www.facebook.com/catchbangladesh">Catch Bangladesh</a> All Rights Reserved.</p>
       </div>
-      <div class="flex px-4 lg:px-0 pb-4 lg:pb-0 lg:pt-4">
+      <div class="flex mb-4 md:mb-0">
         <div class="mr-4">
           <a target="_blank" href="https://www.facebook.com/theartist.com.bd/"><i class="pi pi-facebook" style="font-size: 18px; color: rgb(128,128,128)"></i></a>
         </div>
@@ -106,8 +112,9 @@
           <a target="_blank" href="https://mobile.twitter.com/theartistbd/"><i class="pi pi-twitter" style="font-size: 18px; color: rgb(128,128,128)"></i></a>
         </div>
       </div>
+      </div>
     </div>
-  </div>
+    </div>
 </template>
 
 <script>

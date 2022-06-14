@@ -1,7 +1,7 @@
 <template>
-    <div class="w-full">
-        <!-- Header -->
-        <div class="w-full flex justify-between px-4 lg:px-16 xl:px-36 shadow-lg">
+    <div class= "w-full flex flex-col items-center">
+    <div class="container">
+        <div class="w-full flex justify-between px-4 lg:px-16 xl:px-36 2xl:px-0">
             <div class="flex items-center">
                 <router-link to="/">
                     <img class="h-20" src="../../assets/logo/platform-logo.png" alt="logo">
@@ -15,7 +15,7 @@
                 </div>
                 <div class="md:ml-6 lg:ml-12 mr-2 xl:mr-4">
                     <router-link to="/cart">
-                        <div class="flex items-center border px-2 lg:px-3 xl:px-5 py-2 rounded-md hover:border-2 hover:border-rose-600 hover:text-rose-700">
+                        <div class="flex items-center border px-2 lg:px-3 xl:px-5 py-2 rounded-md hover:border hover:border-rose-600 hover:text-rose-700">
                             <i class="pi pi-shopping-cart"></i>
                             <p class="ml-2">Cart</p>
                         </div>
@@ -35,6 +35,9 @@
                 <Navbar v-if="navToggled" @navClosed="closeNav"/>
             </div>
         </div>
+    </div>
+        <!-- Header -->
+        
     </div>
 </template>
 

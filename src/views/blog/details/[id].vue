@@ -1,6 +1,7 @@
 <template>
-  <div class="w-full flex flex-col">
-    <div class="text-center p-8 md:px-12 md:py-20">
+  <div class="w-full flex flex-col items-center">
+    <div class="container">
+      <div class="text-center p-8 md:p-12">
       <p class="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold p-4">How To Increase Wordpress Speed</p>
       <div class="flex justify-center">
         <router-link to="/"><p class="text-rose-600 text-sm lg:text-base">Home</p></router-link>
@@ -9,7 +10,7 @@
       </div>
     </div>
 
-    <div class="w-full flex flex-col md:flex-row bg-gray-100 px-4 py-4 lg:px-28 lg:py-14 xl:px-40 xl:py-20">
+    <div class="w-full flex flex-col md:flex-row bg-gray-100 p-4 lg:p-14 xl:p-20 2xl:p-8 my-16">
       <div class="w-full md:w-2/3">
         <!-- <Details /> -->
         <div class="w-full flex flex-col">
@@ -72,9 +73,10 @@
         </div>
       </div>
 
-      <div class="w-full md:w-1/3 pt-4 md:pt-0 ml-4 lg:ml-8">
+      <div class="w-full md:w-1/3 pt-4 md:pt-0 md:ml-4 lg:ml-8">
         <Sidebar />
       </div>
+    </div>
     </div>
   </div>
 </template>

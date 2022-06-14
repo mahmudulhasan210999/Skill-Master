@@ -1,6 +1,8 @@
 <template>
-    <div class="flex flex-col lg:flex-row w-full px-4 sm:px-8 md:px-12 pt-6 md:pt-12 pb-12 md:pb-24 bg-gray-100">
-        <div class="lg:w-1/4 flex flex-col lg:mr-6 bg-white rounded-md menu-height">
+    <div class="flex justify-center px-4 sm:px-8 md:px-12 py-6 md:py-12 bg-gray-100">
+        <div class="container">
+            <div class="flex flex-col lg:flex-row w-full">
+                <div class="lg:w-1/4 flex flex-col lg:mr-6 bg-white rounded-md menu-height">
             <div class="flex flex-col">
                 <DashboardMenu />
             </div>
@@ -84,6 +86,8 @@
                     </div>
                 </div>
                 <button class="px-6 py-3 text-white border border-rose-600 bg-rose-600 hover:bg-rose-700 hover:shadow-md">Save Chnages</button>
+            </div>
+        </div>
             </div>
         </div>
     </div>

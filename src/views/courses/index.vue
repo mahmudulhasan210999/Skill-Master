@@ -1,6 +1,7 @@
 <template>
-    <div class="w-full flex flex-col bg-gray-50 px-4 sm:px-8 md:px-12 xl:px-36 pb-16">
-        <div class="text-center p-12">
+    <div class="w-full flex flex-col items-center bg-gray-50 px-4 sm:px-8 md:px-12 xl:px-36 pb-16">
+        <div class="container">
+            <div class="text-center p-12">
             <p class="text-2xl md:text-3xl xl:text-5xl font-bold p-4">Courses With Sidebar</p>
             <div class="flex justify-center text-sm lg:text-base">
                 <router-link to="/"><p class="text-rose-600">Home</p></router-link>
@@ -22,6 +23,7 @@
             <div class="lg:w-2/3 width-courses">
                 <Courses />
             </div>
+        </div>
         </div>
     </div>
 </template>
@@ -57,7 +59,7 @@ export default {
 </script>
 
 <style scoped>
-@media screen and (min-width: 1540px) {
+/* @media screen and (min-width: 1536px) {
     .width-sidebar {
         @apply w-1/4;
     }
@@ -65,5 +67,5 @@ export default {
     .width-courses {
         @apply w-3/4;
     }
-}
+} */
 </style>

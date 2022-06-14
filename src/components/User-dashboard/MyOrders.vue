@@ -1,6 +1,8 @@
 <template>
-    <div class="flex flex-col lg:flex-row w-full px-4 sm:px-12 pt-6 sm:pt-12 pb-24 bg-gray-100">
-        <div class="lg:w-1/4 flex flex-col lg:mr-6 bg-white rounded-md menu-height">
+    <div class="flex justify-center px-4 sm:px-12 py-6 sm:py-12 bg-gray-100">
+        <div class="container">
+            <div class="flex flex-col lg:flex-row w-full">
+                <div class="lg:w-1/4 flex flex-col lg:mr-6 bg-white rounded-md menu-height">
             <div class="flex flex-col">
                 <DashboardMenu />
             </div>
@@ -61,6 +63,8 @@
                             <button class="text-sm sm:text-base" @click="toHome">CONTINUE SHOPPING</button>
                         </div>
                     </div>
+            </div>
+        </div>
             </div>
         </div>
     </div>

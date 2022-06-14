@@ -6,11 +6,11 @@
             <p>courses for you</p>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 grid-view">
-            <div class="p-2 md:p-4" v-for="(course, index) in courses" :key="index">
+            <div class="p-2 md:p-4 2xl:p-3" v-for="(course, index) in courses" :key="index">
                 <div class="shadow-sm hover:shadow-md">
                     <router-link :to="{ path: '/courses/' + course.slug}">
                         <div class="container">
-                            <img class="h-76 w-full" :src="course.img" alt="Image">
+                            <img class="h-76 w-full bg-cover" :src="course.img" alt="Image">
                             <div class="top-left px-3 py-1 bg-white shadow-lg rounded-sm text-gray-600 text-sm font-semibold">${{ course.price }}</div>
                         </div>
                     </router-link>
@@ -62,9 +62,9 @@ export default {
   left: 20px;
 }
 
-@media screen and (min-width: 1540px) {
+/* @media screen and (min-width: 1540px) {
     .grid-view {
         @apply grid grid-cols-3;
     }
-}
+} */
 </style>

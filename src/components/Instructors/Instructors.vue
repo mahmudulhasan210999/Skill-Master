@@ -2,8 +2,10 @@
   <div v-for="(instructor, index) in instructors" :key="index">
     <div v-if="instructor.slug == id">
       <!-- Instructor Details -->
-      <div class="md:flex px-6 py-8 md:px-40 md:py-12 bg-green-50">
-        <div class="px-4">
+        <div class="flex flex-col items-center px-6 py-8 md:px-40 md:py-12 bg-green-50">
+        <div class="container">
+          <div class="md:flex items-center">
+            <div class="px-4">
           <img class="rounded-full h-40 w-40" :src="instructor.instructor_img" alt="Image">
         </div>
         <div class="pl-8 pt-4 md:pt-0 md:pl-4">
@@ -48,11 +50,14 @@
             </div>
           </div>
         </div>
+          </div>
+        </div>
       </div>
 
-      <div class="px-4 py-4 md:px-20 md:py-8 lg:px-28 lg:py-10 xl:px-40 xl:py-12 mb-6">
+      <div class="flex flex-col items-center px-4 py-4 md:px-20 md:py-8 lg:px-28 lg:py-10 xl:px-40 xl:py-12 2xl:px-24">
          <!-- Classes and Education button -->
-        <div class="px-3">
+        <div class="container">
+          <div class="px-3">
           <button class="rounded h-12 w-24 text-sm text-black bg-gray-200 hover:text-rose-600 my-2" @click="classes" :class="[{ 'clicked' : classDetails }]">Classes</button>
           <button class="rounded h-12 w-24 text-sm text-black bg-gray-200 hover:text-rose-600 mx-2 my-2" @click="education" :class="[{ 'clicked' : educationDetails }]">Education</button>
         </div>
@@ -95,9 +100,10 @@
             </div>
           </div>
         </div>
+        </div>
+      </div>
       </div>
     </div>
-  </div>
 </template>
 
 <script>

@@ -2,46 +2,52 @@
     <div class="w-full flex flex-col">
         <div v-for="(course, index) in courses" :key="index">
             <div v-if="course.slug == slug">
-                <div class="flex flex-col md:flex-row w-full items-center bg-green-50 px-4 sm:px-8 lg:px-16 xl:px-44 py-6 lg:py-16">
-                    <div class="md:w-1/2 md:mr-8">
-                        <img class="rounded-xl" :src="course.img" alt="">
-                    </div>
-                    <div class="md:w-1/2 mt-6 md:mt-0">
-                        <div class="flex bg-yellow-100 p-4 rounded-md text-yellow-500 text-sm">
-                            <i class="pi pi-calendar"></i>
-                            <p class="font-semibold ml-2 mr-6">Duration:</p>
-                            <p class="pl-8 sm:pl-16">10 - 18 Weeks</p>
-                        </div>
-                        <div class="mt-3 flex bg-green-100 p-4 rounded-md text-green-500 text-sm">
-                            <i class="pi pi-user"></i>
-                            <p class="font-semibold ml-2 mr-6">Enrolled:</p>
-                            <p class="pl-8 sm:pl-16">712 Students</p>
-                        </div>
-                        <div class="mt-3 flex bg-red-100 p-4 rounded-md text-red-500 text-sm">
-                            <i class="pi pi-book"></i>
-                            <p class="font-semibold ml-2 mr-6">Lectures:</p>
-                            <p class="pl-8 sm:pl-16">602 Lectures</p>
-                        </div>
-                        <div class="mt-3 flex bg-purple-100 p-4 rounded-md text-purple-500 text-sm">
-                            <i class="pi pi-video"></i>
-                            <p class="font-semibold ml-2 mr-6">Videos:</p>
-                            <p class="pl-8 sm:pl-16">402 Videos</p>
-                        </div>
-                        <div class="mt-3 flex bg-blue-100 p-4 rounded-md text-blue-500 text-sm">
-                            <i class="pi pi-bookmark"></i>
-                            <p class="font-semibold ml-2 mr-6">Level:</p>
-                            <p class="pl-8 sm:pl-16">Advance</p>
-                        </div>
-                        <div class="mt-3 flex justify-center bg-rose-600 p-4 rounded-md text-white hover:bg-rose-700">
-                            <div class="flex items-center">
-                                <p>Enroll Now</p>
-                                <i class="pi pi-arrow-circle-right ml-12"></i>
+                <div class="w-full flex justify-center bg-green-50 px-4 sm:px-8 lg:px-16 xl:px-44 py-6 lg:py-16">
+                    <div class="container w-full flex items-center">
+                        <div class="flex flex-col md:flex-row w-full justify-center items-center course-top">
+                            <div class="md:w-1/2 md:mr-8">
+                                <img class="rounded-xl" :src="course.img" alt="">
+                            </div>
+                            <div class="w-full md:w-1/2 mt-6 md:mt-0">
+                                <div class="flex bg-yellow-100 p-4 rounded-md text-yellow-500 text-sm">
+                                    <i class="pi pi-calendar"></i>
+                                    <p class="font-semibold ml-2 mr-6">Duration:</p>
+                                    <p class="pl-8 sm:pl-16">10 - 18 Weeks</p>
+                                </div>
+                                <div class="mt-3 flex bg-green-100 p-4 rounded-md text-green-500 text-sm">
+                                    <i class="pi pi-user"></i>
+                                    <p class="font-semibold ml-2 mr-6">Enrolled:</p>
+                                    <p class="pl-8 sm:pl-16">712 Students</p>
+                                </div>
+                                <div class="mt-3 flex bg-red-100 p-4 rounded-md text-red-500 text-sm">
+                                    <i class="pi pi-book"></i>
+                                    <p class="font-semibold ml-2 mr-6">Lectures:</p>
+                                    <p class="pl-8 sm:pl-16">602 Lectures</p>
+                                </div>
+                                <div class="mt-3 flex bg-purple-100 p-4 rounded-md text-purple-500 text-sm">
+                                    <i class="pi pi-video"></i>
+                                    <p class="font-semibold ml-2 mr-6">Videos:</p>
+                                    <p class="pl-8 sm:pl-16">402 Videos</p>
+                                </div>
+                                <div class="mt-3 flex bg-blue-100 p-4 rounded-md text-blue-500 text-sm">
+                                    <i class="pi pi-bookmark"></i>
+                                    <p class="font-semibold ml-2 mr-6">Level:</p>
+                                    <p class="pl-8 sm:pl-16">Advance</p>
+                                </div>
+                                <div class="mt-3 flex justify-center bg-rose-600 p-4 rounded-md text-white hover:bg-rose-700">
+                                    <div class="flex items-center">
+                                        <p>Enroll Now</p>
+                                        <i class="pi pi-arrow-circle-right ml-12"></i>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="flex flex-col lg:flex-row w-full px-4 sm:px-8 lg:px-16 xl:px-44 py-6 lg:py-16">
-                    <div class="lg:w-2/3 flex flex-col lg:mr-4">
+                <div class="flex justify-center w-full px-4 sm:px-8 lg:px-16 xl:px-44 py-6 lg:py-16 2xl:px-12">
+                    <div class="container">
+                       <div class="flex flex-col lg:flex-row justify-center ">
+                             <div class="lg:w-2/3 flex flex-col lg:mr-4">
                         <div class="flex flex-col px-6 py-8 border border-gray-200 rounded-md">
                             <p class="font-semibold text-black">Course Overview</p>
                             <div class="mt-3 text-sm text-gray-600 tracking-wider">
@@ -296,10 +302,12 @@
                             </div>
                         </div>
                     </div>
+                       </div>
+                    </div>
+                </div>
                 </div>
             </div>
         </div>
-    </div>
 </template>
 
 <script>
@@ -333,6 +341,11 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+@media screen and (min-width: 1536px) {
 
+    .course-top {
+        @apply px-20;
+    }
+}
 </style>

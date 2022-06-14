@@ -1,10 +1,10 @@
 <template>
     <div class="w-full flex flex-col pr-6 xl:pr-16">
         <div class="w-full lg:border-2 border-gray-200 rounded-md p-6 xl:p-4 xxl:p-6">
-            <div class="">
+            <div class="w-full">
                 <span class="p-input-icon-right">
                     <i class="pi pi-search" />
-                    <InputText class="w-52 sm:w-64" type="text" v-model="value" placeholder="Search Courses..." />
+                    <InputText type="text" v-model="value" placeholder="Search Courses..." />
                 </span>
             </div>
             <div class="mt-6">
@@ -28,10 +28,10 @@
                 <div class="flex my-3 text-left" v-for="(course, index) in courses" :key="index">
                     <router-link :to="{ path: '/courses/' + course.slug}">
                         <div class="flex w-full text-sm">
-                            <div class="w-1/3">
-                                <img class="h-20 w-5/6" :src="course.img" alt="">
+                            <div>
+                                <img class="h-20 w-24 bg-cover" :src="course.img" alt="">
                             </div>
-                            <div class="w-2/3 font-medium">
+                            <div class="ml-3 font-medium">
                                 <p class="text-gray-600">{{course.title}}</p>
                                 <p class="text-yellow-600">★★★★★</p>
                                 <p class="text-rose-600 font-semibold">${{course.price}}</p>

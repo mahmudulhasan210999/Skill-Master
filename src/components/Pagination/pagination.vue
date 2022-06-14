@@ -8,7 +8,7 @@
                     <li class="prev-next-button">
                         <a @click="previousPage" class="flex items-center" :aria-disabled="true" aria-label="Previous">
                             <span class="pi pi-angle-left"></span>
-                            <span>Previous</span>
+                            <!-- <span>Previous</span> -->
                         </a>
                     </li>
                     <li class="first-pagination" :class="getActiveClass((i+1))" v-for="(e,i) in Math.ceil(5)" :key="i" >
@@ -22,7 +22,7 @@
                     </li>
                     <li class="prev-next-button">
                         <a @click.stop="nextPage" class="flex items-center" aria-label="Next">
-                            <span>Next</span>
+                            <!-- <span>Next</span> -->
                             <span class="pi pi-angle-right"></span>
                         </a>
                     </li>
@@ -33,7 +33,7 @@
                     <li class="prev-next-button">
                         <a @click="previousPage" :aria-disabled="true" aria-label="Previous">
                             <span class="pi pi-angle-left"></span>
-                            <span>Previous</span>
+                            <!-- <span>Previous</span> -->
                         </a>
                     </li>
                     <li class="first-pagination">
@@ -47,7 +47,7 @@
                     </li>
                     <li class="prev-next-button">
                         <a @click.stop="nextPage" class="page-link" aria-label="Next">
-                            <span>Next</span>
+                            <!-- <span>Next</span> -->
                             <span class="pi pi-angle-right"></span>
                         </a>
                     </li>
@@ -59,7 +59,7 @@
                         <li class="prev-next-button">
                             <a @click="previousPage" class="flex items-center" :aria-disabled="true" aria-label="Previous">
                                 <span class="pi pi-angle-left"></span>
-                                <span>Previous</span>
+                                <!-- <span>Previous</span> -->
                             </a>
                         </li>
                         <li class="first-pagination">
@@ -85,7 +85,7 @@
                         </li>
                         <li class="prev-next-button">
                             <a @click.stop="nextPage" class="flex items-center" aria-label="Next">
-                                <span>Next</span>
+                                <!-- <span>Next</span> -->
                                 <span class="pi pi-angle-right"></span>
                             </a>
                         </li>
@@ -100,7 +100,7 @@
                     <li class="prev-next-button">
                         <a @click="previousPage" class="flex items-center" :aria-disabled="true" aria-label="Previous">
                             <span class="pi pi-angle-left"></span>
-                            <span>Previous</span>
+                            <!-- <span>Previous</span> -->
                         </a>
                     </li>
                     <li class="first-pagination" :class="getActiveClass((i+1))" v-for="(e,i) in Math.ceil(total/12)" :key="i">
@@ -108,7 +108,7 @@
                     </li>
                     <li class="prev-next-button">
                         <a @click.stop="nextPage" class="flex items-center" aria-label="Next">
-                            <span>Next</span>
+                            <!-- <span>Next</span> -->
                             <span class="pi pi-angle-right"></span>
                         </a>
                     </li>
@@ -129,11 +129,11 @@ export default {
     methods: {
         previousPage(){
             if(this.pageCount===1){
-            this.pageCount=1
-        }else{
-            this.pageCount--;
-            this.$emit('pageChange',this.pageCount)
-        }
+                this.pageCount=1
+            }else{
+                this.pageCount--;
+                this.$emit('pageChange',this.pageCount)
+            }
         },
 
         nextPage(){
@@ -161,14 +161,14 @@ export default {
 
 <style scoped>
 .first-pagination {
-    @apply flex items-center border-y border-rose-600 cursor-pointer hover:bg-rose-100 hover:text-rose-600;
+    @apply flex items-center border-y border-gray-600 cursor-pointer hover:bg-gray-600 hover:text-white;
 }
 
 .prev-next-button {
-    @apply p-3 border border-rose-600 cursor-pointer hover:bg-rose-100 hover:text-rose-600;
+    @apply p-3 border border-gray-600 cursor-pointer hover:bg-gray-600 hover:text-white;
 }
 
 .active-page {
-    @apply bg-rose-600 text-white;
+    @apply bg-gray-600 text-white;
 }
 </style>

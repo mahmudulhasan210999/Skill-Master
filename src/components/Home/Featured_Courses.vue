@@ -1,24 +1,15 @@
 <template>
-    <div class="w-full flex flex-col my-6 lg:my-12 xl:px-44">
-        <div class="flex justify-between">
-            <div>
-                <p class="text-xl font-semibold px-8 xl:px-2 py-2">Featured Courses</p>
-            </div>
-            <!-- <div class="flex border-b border-gray-500 ">
-                <p class="p-2">Design</p>
-                <p class="p-2">Development</p>
-                <p class="p-2">Business</p>
-                <p class="p-2">Accounting</p>
-            </div> -->
-        </div>
+    <div class="w-full flex flex-col items-center my-6 lg:my-12 xl:px-44">
+        <div class="container">
+        <p class="text-xl font-semibold px-8 xl:px-2 py-2">Featured Courses</p>
 
         <div>
             <Carousel :value="featured_courses" :numVisible="3" :numScroll="3" :responsiveOptions="responsiveOptions">
                 <template #item="slotProps">
                     <div class="p-3">
                         <router-link :to="{ path: '/courses/' + slotProps.data.slug}">
-                            <div class="container">
-                                <img class="h-76 w-full" :src="slotProps.data.img" alt="Image">
+                            <div class="image-container">
+                                <img class="h-76 w-full bg-cover" :src="slotProps.data.img" alt="Image">
                                 <div class="top-left px-3 py-1 bg-white shadow-lg rounded-sm text-gray-600 text-sm font-semibold">${{ slotProps.data.price }}</div>
                             </div>
                         </router-link>
@@ -44,6 +35,7 @@
                     </div>
                 </template>
             </Carousel>
+        </div>
         </div>
     </div>
 </template>
@@ -88,7 +80,7 @@ export default {
 </script>
 
 <style scoped>
-.container {
+.image-container {
     position: relative;
     text-align: center;
     color: white;

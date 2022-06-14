@@ -1,6 +1,7 @@
 <template>
-  <div class="w-full flex flex-col bg-gray-50 pt-12 md:pt-16 lg:pt-20 pb-6 lg:pb-12 px-4 sm:px-8 lg:px-44">
-    <div class="flex flex-col items-center">
+  <div class="w-full flex flex-col items-center bg-gray-50 py-12 md:py-16 lg:py-20 px-4 sm:px-8 lg:px-44">
+    <div class="container"> 
+      <div class="flex flex-col items-center">
       <p class="text-sm text-gray-600">Popular Category</p>
       <div class="flex justify-center text-base lg:text-2xl font-semibold">
         <p class="text-red-600 p-1">Hot & Popular</p>
@@ -12,7 +13,7 @@
       <div class="p-2 lg:p-3" v-for="(category, index) in hot_categories" :key="index">
         <div class="flex items-center rounded-md p-5" :class="category.color">
           <div>
-            <img class="rounded-full h-12 lg:h-20 w-12 lg:w-20" :src="category.img" alt="Image">
+            <img class="rounded-full h-12 lg:h-20 w-12 lg:w-20 bg-cover" :src="category.img" alt="Image">
           </div>
           <div class="p-2 lg:p-4">
             <p class="text-sm lg:text-base font-semibold" :class="category.text_color">{{ category.title }}</p>
@@ -23,6 +24,7 @@
           </div>
         </div>
       </div>
+    </div>
     </div>
   </div>
 </template>

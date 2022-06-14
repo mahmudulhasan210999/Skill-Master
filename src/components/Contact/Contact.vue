@@ -1,6 +1,7 @@
 <template>
-  <div class="w-full flex flex-col">
-    <div class="text-center p-8 md:px-12 md:py-20">
+  <div class="w-full flex flex-col items-center">
+    <div class="container">
+      <div class="text-center p-8 md:px-12 lg:py-12">
       <p class="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold p-4">Get In Touch</p>
       <div class="flex justify-center">
         <router-link to="/"><p class="text-rose-600 text-sm lg:text-base">Home</p></router-link>
@@ -9,8 +10,8 @@
       </div>
     </div>
 
-    <div class="bg-gray-100 py-6">
-      <div class="w-full flex flex-col lg:flex-row px-4 sm:px-8 py-4 lg:px-20 lg:py-16 xl:px-40 xl:py-20">
+    <div class="bg-gray-100 my-16">
+      <div class="w-full flex flex-col lg:flex-row p-4 sm:p-8 lg:p-20 xl:p-20">
         <div class="w-full lg:w-2/3 rounded-md px-4 sm:px-8 lg:px-4 py-4 bg-white">
           <div class="">
             <p class="font-semibold border-b border-gray-300 py-2">Fillup The Form</p>
@@ -83,6 +84,7 @@
           </div>
         </div>
       </div>
+    </div>
     </div>
   </div>
 </template>

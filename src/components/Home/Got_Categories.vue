@@ -1,20 +1,21 @@
 <template>
-  <div class="w-full bg-green-50 my-6 lg:my-12 xl:px-44">
-    <div class="py-6 md:py-10">
+  <div class="flex flex-col items-center w-full bg-green-50 my-6 lg:my-12 xl:px-44  ">
+    <div class="container">
+      <div class="py-6 md:py-10">
       <div class="flex justify-between px-4">
         <div>
           <p class="text-lg lg:text-xl font-semibold p-2">Got & Popular Categories</p>
         </div>
-        <div class="flex border border-gray-400 rounded-md bg-white hover:border-rose-600 hover:bg-rose-600">
+        <!-- <div class="flex border border-gray-400 rounded-md bg-white hover:border-rose-600 hover:bg-rose-600">
           <button class="px-2 lg:px-4 lg:py-2 text-rose-600 hover:text-white">Browse More</button>
-        </div>
+        </div> -->
       </div>
 
       <div>
         <Carousel :value="got_categories" :numVisible="3" :numScroll="3" :responsiveOptions="responsiveOptions">
           <template #item="slotProps">
             <div class="p-3">
-              <img class="h-76 w-full" :src="slotProps.data.img" alt="Image">
+              <img class="h-76 w-full bg-cover" :src="slotProps.data.img" alt="Image">
               <div class="p-3 bg-white">
                 <p class="text-xl px-2 py-1">{{ slotProps.data.title }}</p>
                 <div class="flex text-sm text-gray-500">
@@ -27,6 +28,8 @@
         </Carousel>
       </div>
     </div>
+    </div>
+    
   </div>
 </template>
 

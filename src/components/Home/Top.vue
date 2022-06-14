@@ -1,7 +1,9 @@
 <template>
-    <div class="w-full flex flex-col items-center">
-        <div class="container w-full flex flex-col items-center text-left">
-            <img class="w-full bg-img" src="../../assets/images/Home/1.jpg" alt="">
+    <div class="w-full flex flex-col items-center bg-blue-300">
+        <div class="container">
+            <div class="image-container w-full flex flex-col items-center text-left">
+            <img class="w-full bg-img" src="../../assets/images/Home/3.png" alt="">
+
             <div class="text-left text-white bottom-left">
                 <p class="text-xl lg:text-5xl font-semibold p-2">Learn On Your Schedule</p>
                 <p class="text-xs lg:text-base p-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit tur adipisicing elit.</p>
@@ -11,13 +13,12 @@
                 </div>
             </div>
         </div>
-
-        <div class="rounded-lg shadow-md py-4 md:py-0 mt-4 md:mt-10 mx-4 sm:mx-8 lg:mx-12 xl:mx-44">
+        <div class="rounded-lg shadow-md py-4 my-4 md:my-10 mx-4 sm:mx-8 lg:mx-12 xl:mx-44 2xl:mx-20 bg-white">
             <div class="grid grid-cols-1 md:grid-cols-3 sm:px-4 lg:px-12">
-                <div class="p-2 sm:p-3 lg:p-5" v-for="(top, index) in tops" :key="index">
+                <div class="p-2 sm:p-3 lg:p-5 xl:p-4" v-for="(top, index) in tops" :key="index">
                     <div class="w-full flex items-center">
                         <div class="w-1/4 flex justify-center">
-                            <img class="rounded-full h-12 w-12" :src="top.img" alt="Image">
+                            <img class="rounded-full h-12 w-12 bg-cover" :src="top.img" alt="Image">
                         </div>
                         <div class="w-3/4 pl-0 md:pl-2 text-left">
                             <p class="text-gray-700 font-semibold text-sm">{{ top.title }}</p>
@@ -27,6 +28,7 @@
                 </div>
             </div>
         </div> 
+        </div>
   </div>
 </template>
 
@@ -67,11 +69,11 @@ export default {
 .bg-img {
     background-size: cover;
     position: relative;
-    height: 88vh;
+    height: auto;
     width: 100vw;
 }
 
-.container {
+.image-container {
     position: relative;
     text-align: center;
 }
@@ -83,12 +85,14 @@ export default {
 }
 
 
+
+
 @media screen and (max-width: 800px) {
-    .bg-img {
+    /* .bg-img {
         background-size: contain;
         height: 100%;
         width: 100%;
-    }
+    } */
     .bottom-left {
         position: absolute;
         bottom: 80px;
