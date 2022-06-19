@@ -7,11 +7,12 @@
                     <InputText type="text" v-model="value" placeholder="Search Courses..." />
                 </span>
             </div>
-            <div class="mt-6">
+            <div class="mt-6 w-full">
                 <p class="text-xl font-semibold text-black">Course Categories</p>
-                <div class="flex my-2 text-left" v-for="(category, index) in categories" :key="index">
-                    <input class="mt-1 mr-1.5" type="radio" id="category" name="category" :value="category" v-model="selectedCategory">
-                    <label class="text-gray-600 text-sm" for="category">{{category.category}} ({{category.course}})</label><br>
+                <div class="flex my-2 text-left w-full" v-for="(category, index) in categories" :key="index">
+                    <router-link class="w-full text-gray-600 hover:text-rose-600" :to="{ path: '/' + category.slug }">
+                        <p class="w-full text-sm py-1">{{ category.title}} ({{category.course_count}})</p>
+                    </router-link>
                 </div>
             </div>
             <div class="mt-6">
@@ -40,14 +41,14 @@
                     </router-link>
                 </div>
             </div>
-            <div class="mt-6">
+            <!-- <div class="mt-6">
                 <p class="text-xl font-semibold text-black">Tags</p>
                 <div class="grid grid-cols-3">
                     <div class="flex items-center my-1" v-for="(tag, index) in categories" :key="index">
                         <p class="px-3.5 py-1 bg-gray-200 mx-1 rounded-sm text-gray-600 text-sm cursor-pointer hover:text-white hover:bg-rose-600">{{tag.category}}</p>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </template>
@@ -63,33 +64,6 @@ export default {
             value: null,
             selectedCategory: null,
             selectedPrice: null,
-            categories: [
-                {
-                    id: 1,
-                    category: 'Backend',
-                    course: 7
-                },
-                {
-                    id: 1,
-                    category: 'Frontend',
-                    course: 15
-                },
-                {
-                    id: 1,
-                    category: 'General',
-                    course: 9
-                },
-                {
-                    id: 1,
-                    category: 'Software',
-                    course: 11
-                },
-                {
-                    id: 1,
-                    category: 'Photography',
-                    course: 5
-                },
-            ],
             prices: [
                 {
                     id: 1,
@@ -110,9 +84,14 @@ export default {
     },
     computed: {
         ...mapState ({
-            courses: state => state.courses.courses
+            courses: state => state.courses.courses,
+            categories: state => state.home.hot_categories
         }),
     },
+
+    mounted() {
+        this.$store.dispatch('home/getCategories')
+    }
 }
 </script>
 

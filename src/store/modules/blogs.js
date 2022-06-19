@@ -1,5 +1,5 @@
-import V1API from '../../../api-path/api-path'
-import axios from 'axios'
+import V1API from '../../../api-path/api-path';
+import axios from 'axios';
 
 const state = {
   blogs: [],
@@ -10,8 +10,32 @@ const state = {
   count: ''
 }
 
-const getters = {
+const getters = {}
 
+const mutations = {
+  SET_BLOGS (state, items) {
+      state.blogs = items
+  },
+
+  SET_COUNT (state, item) {
+    state.count = item
+},
+
+  SET_RECENT_BLOGS(state, items) {
+    state.recent_blogs = items
+},
+
+  SET_DETAILS (state, items) {
+    state.getDetails = items
+  },
+
+  SET_TAGS (state, items) {
+    state.tags = items
+  },
+
+  SET_CATEGORIES (state, items) {
+    state.categories = items
+  },
 }
 
 const actions = {
@@ -64,31 +88,6 @@ getBlogDetails ({ commit }, payload) {
   },
 }
 
-const mutations = {
-  SET_BLOGS (state, items) {
-      state.blogs = items
-  },
-
-  SET_COUNT (state, item) {
-    state.count = item
-},
-
-  SET_RECENT_BLOGS(state, items) {
-    state.recent_blogs = items
-},
-
-  SET_DETAILS (state, items) {
-    state.getDetails = items
-  },
-
-  SET_TAGS (state, items) {
-    state.tags = items
-  },
-
-  SET_CATEGORIES (state, items) {
-    state.categories = items
-  },
-}
 
 export default {
   namespaced: true,

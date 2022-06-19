@@ -1,11 +1,9 @@
 <template>
- <div class="">
-     <div>
-    <Header />
-    <router-view></router-view>
-    <Footer />
-  </div>
- </div>
+    <div>
+        <Header />
+        <router-view></router-view>
+        <Footer />
+    </div>
 </template>
 
 <script>
@@ -35,8 +33,4 @@ export default {
       max-width: 1280px !important;
   }
 }
-
-/* .container {
-  max-width: 1435px !important;
-} */
 </style>

@@ -5,7 +5,8 @@ const V1API = {
     'get_blogs':host+'/api/blog?count=12&page=',
     'get_blog_details':host+'/api/blog/details/',
     'get_categories':host+'/api/blog/category',
-    'get_recent_blogs':host+'/api/recent-blog'
+    'get_recent_blogs':host+'/api/recent-blog',
+    'get_category':host+'/api/course/category'
 }
 
 export default V1API;

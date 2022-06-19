@@ -12,7 +12,7 @@
       </div>
 
       <div>
-        <Carousel :value="got_categories" :numVisible="3" :numScroll="3" :responsiveOptions="responsiveOptions">
+        <Carousel :value="got_categories" :numVisible="3" :numScroll="3" :responsiveOptions="responsiveOptions" indicatorsContentClass="hidden">
           <template #item="slotProps">
             <div class="p-3">
               <img class="h-76 w-full bg-cover" :src="slotProps.data.img" alt="Image">

@@ -14,6 +14,7 @@ import Dashboard from "../views/user-dashboard/dashboard/index.vue";
 import Orders from "../views/user-dashboard/my-orders/index.vue";
 import Settings from "../views/user-dashboard/settings/index.vue";
 import Instructor from '../views/courses/instructor/[id].vue';
+import Categories from '../views/courses/categories/[id].vue';
 
 const routes = [
   { 
@@ -47,6 +48,10 @@ const routes = [
   {
     path: '/courses/:id',
     component: CourseDetails
+  },
+  {
+    path: '/:id',
+    component: Categories
   },
   {
     path: '/cart',
