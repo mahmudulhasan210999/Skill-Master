@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full flex flex-col items-center my-6 lg:my-12 xl:px-44">
+    <div class="w-full flex flex-col items-center py-6 lg:py-12 xl:px-44 bg-green-50">
         <div class="container">
         <p class="text-xl font-semibold px-8 xl:px-2 py-2">Featured Courses</p>
 

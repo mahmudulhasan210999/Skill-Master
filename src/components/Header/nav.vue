@@ -2,24 +2,24 @@
     <div class="flex flex-col navbar">
         <div class="py-3 nav-cross">
             <router-link to="/cart">
-                <div class="flex items-center text-white border border-white px-5 py-2 rounded-md hover:border-2 hover:border-rose-600 hover:text-rose-700" @click="$emit('navClosed')">
+                <div class="flex items-center text-white border border-white px-5 py-2 rounded-md hover:border-2 hover:border-primary" @click="$emit('navClosed')">
                     <i class="pi pi-shopping-cart"></i>
                     <p class="ml-2">Cart</p>
                 </div>
             </router-link>
-            <div class="flex items-center text-white border border-white mx-4 px-3 py-3 rounded-md hover:border-2 hover:border-rose-600 hover:text-rose-700">
+            <div class="flex items-center text-white border border-white mx-4 px-3 py-3 rounded-md hover:border-2 hover:border-primary">
                 <i @click="$emit('navClosed')" class="pi pi-times"></i>
             </div>
         </div>
 
         <div> 
             <router-link v-for="(item, index) in menu" :key="index" :to="item.path">
-                <p @click="$emit('navClosed')" class="mx-2 px-4 py-2 my-2 text-white hover:text-rose-600">{{item.title}}</p>
+                <p @click="$emit('navClosed')" class="mx-2 px-4 py-2 my-2 text-white hover:text-primary">{{item.title}}</p>
             </router-link>
 
             <div class="flex p-4">
                 <router-link to="/login">
-                    <button @click="$emit('navClosed')" class="py-2 px-3 sm:px-5 text-rose-600 border rounded-md font-semibold bg-white">Sign in</button>
+                    <button @click="$emit('navClosed')" class="py-2 px-3 sm:px-5 text-primary border rounded-md font-semibold bg-white">Sign in</button>
                 </router-link>
                 <router-link to="/registration">
                     <button @click="$emit('navClosed')" class="py-2 px-3 sm:px-5 border rounded-md bg-black font-semibold text-white ml-2 sm:ml-4">Sign up</button>

@@ -58,8 +58,8 @@
          <!-- Classes and Education button -->
         <div class="container">
           <div class="px-3">
-          <button class="rounded h-12 w-24 text-sm text-black bg-gray-200 hover:text-rose-600 my-2" @click="classes" :class="[{ 'clicked' : classDetails }]">Classes</button>
-          <button class="rounded h-12 w-24 text-sm text-black bg-gray-200 hover:text-rose-600 mx-2 my-2" @click="education" :class="[{ 'clicked' : educationDetails }]">Education</button>
+          <button class="rounded h-12 w-24 text-sm text-black bg-gray-200 hover:text-primary my-2" @click="classes" :class="[{ 'clicked' : classDetails }]">Classes</button>
+          <button class="rounded h-12 w-24 text-sm text-black bg-gray-200 hover:text-primary mx-2 my-2" @click="education" :class="[{ 'clicked' : educationDetails }]">Education</button>
         </div>
 
         <!-- v-if="classDetails" -->
@@ -86,10 +86,10 @@
             <div v-for="(education, index) in instructor.education" :key="index">
               <div class="flex">
                 <div>
-                  <p class="text-rose-600 md:px-4 py-2">★</p>
+                  <p class="text-primary md:px-4 py-2">★</p>
                 </div>
                 <div class="text-sm py-2">
-                  <p class="text-rose-600 font-semibold p-1">{{ education.degree }}</p>
+                  <p class="text-primary font-semibold p-1">{{ education.degree }}</p>
                   <div class="text-slate-600">
                     <p class=" p-1">{{ education.duratioin }}</p>
                     <p class=" p-1">{{ education.institution }}</p>
@@ -145,6 +145,6 @@ export default {
 
 <style scoped>
 .clicked {
-  @apply text-white bg-rose-600;
+  @apply text-white bg-primary;
 }
 </style>

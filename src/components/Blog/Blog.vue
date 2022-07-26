@@ -4,7 +4,7 @@
       <div class="text-center p-8">
       <p class="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold p-4">New Top Articles</p>
       <div class="flex justify-center">
-        <router-link to="/"><p class="text-rose-600 text-sm lg:text-base">Home</p></router-link>
+        <router-link to="/"><p class="text-primary text-sm lg:text-base">Home</p></router-link>
         <p class="px-2 text-sm lg:text-base"> / </p>
         <p class="text-sm lg:text-base">Blogs</p>
       </div>

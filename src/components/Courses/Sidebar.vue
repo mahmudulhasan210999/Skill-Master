@@ -10,7 +10,7 @@
             <div class="mt-6 w-full">
                 <p class="text-xl font-semibold text-black">Course Categories</p>
                 <div class="flex my-2 text-left w-full" v-for="(category, index) in categories" :key="index">
-                    <router-link class="w-full text-gray-600 hover:text-rose-600" :to="{ path: '/' + category.slug }">
+                    <router-link class="w-full text-gray-600 hover:text-primary" :to="{ path: '/' + category.slug }">
                         <p class="w-full text-sm py-1">{{ category.title}} ({{category.course_count}})</p>
                     </router-link>
                 </div>
@@ -35,7 +35,7 @@
                             <div class="ml-3 font-medium">
                                 <p class="text-gray-600">{{course.title}}</p>
                                 <p class="text-yellow-600">★★★★★</p>
-                                <p class="text-rose-600 font-semibold">${{course.price}}</p>
+                                <p class="text-primary font-semibold">${{course.price}}</p>
                             </div>
                         </div>
                     </router-link>
@@ -45,7 +45,7 @@
                 <p class="text-xl font-semibold text-black">Tags</p>
                 <div class="grid grid-cols-3">
                     <div class="flex items-center my-1" v-for="(tag, index) in categories" :key="index">
-                        <p class="px-3.5 py-1 bg-gray-200 mx-1 rounded-sm text-gray-600 text-sm cursor-pointer hover:text-white hover:bg-rose-600">{{tag.category}}</p>
+                        <p class="px-3.5 py-1 bg-gray-200 mx-1 rounded-sm text-gray-600 text-sm cursor-pointer hover:text-white hover:bg-primary">{{tag.category}}</p>
                     </div>
                 </div>
             </div> -->

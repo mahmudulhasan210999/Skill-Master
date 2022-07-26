@@ -10,7 +10,7 @@
         <div class="lg:w-3/4 mt-8 lg:mt-0 flex flex-col lg:ml-6">
             <div class="w-full flex text-sm p-4 bg-white rounded-md shadow-md mb-8">
                 <router-link to="/">
-                    <p class="text-rose-600">Home</p>
+                    <p class="text-primary">Home</p>
                 </router-link>
                 <p class="px-2">/</p>
                 <p class="font-semibold">Settings</p>
@@ -85,7 +85,7 @@
                         </div>
                     </div>
                 </div>
-                <button class="px-6 py-3 text-white border border-rose-600 bg-rose-600 hover:bg-rose-700 hover:shadow-md">Save Chnages</button>
+                <button class="px-6 py-3 text-white border border-primary bg-primary hover:shadow-md">Save Chnages</button>
             </div>
         </div>
             </div>

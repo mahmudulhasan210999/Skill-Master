@@ -39,7 +39,7 @@
             <p class="text-xl font-semibold text-black">Tags</p>
             <div class="grid grid-cols-3">
                 <div class="flex items-center my-1" v-for="(tag, index) in tags" :key="index">
-                    <p class="w-full text-center py-2 mx-1 rounded-sm text-gray-600 border text-sm cursor-pointer hover:text-white hover:bg-rose-600">{{tag.title}}</p>
+                    <p class="w-full text-center py-2 mx-1 rounded-sm text-gray-600 border text-sm cursor-pointer hover:text-white hover:bg-primary">{{tag.title}}</p>
                 </div>
             </div>
         </div>

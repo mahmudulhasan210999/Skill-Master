@@ -15,7 +15,7 @@
             <div class="w-full md:w-1/2 bg-white md:mt-0 p-6 lg:p-12 text-sm">
                 <div class="flex text-2xl lg:text-3xl">
                     <p class="pr-2">Sign</p>
-                    <p class="text-rose-600">In</p>
+                    <p class="text-primary">In</p>
                 </div>
             
                 <div class="my-4">
@@ -30,12 +30,12 @@
                     <InputText class="h-12 w-full" type="password" placeholder="********" v-model="value" />
                 </div>
 
-                <button class="bg-rose-600 text-white hover:bg-rose-700 rounded-md w-full py-3 lg:py-4 mt-6">Sign In</button>
+                <button class="bg-primary text-white rounded-md w-full py-3 lg:py-4 mt-6">Sign In</button>
 
                 <div class="flex justify-center mt-8"> 
                     <p class="pr-1">Have't Any Account?</p>
                     <router-link to="/registration">
-                        <p class="text-rose-600">Signup</p>
+                        <p class="text-primary">Signup</p>
                     </router-link>
                 </div>
             </div>

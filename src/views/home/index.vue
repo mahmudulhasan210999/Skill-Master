@@ -2,7 +2,7 @@
   <Top />
   <Category />
   <Courses />
-  <GotCategory />
+  <!-- <GotCategory /> -->
   <RecentArticles />
 </template>
 

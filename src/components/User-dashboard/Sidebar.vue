@@ -59,6 +59,6 @@ export default {
 
 <style scoped>
 .menu-items {
-    @apply flex items-center text-gray-600 font-semibold p-4 hover:bg-rose-100 hover:text-rose-600 hover:rounded-md cursor-pointer;
+    @apply flex items-center text-gray-600 font-semibold p-4 hover:bg-rose-100 hover:text-primary hover:rounded-md cursor-pointer;
 }
 </style>

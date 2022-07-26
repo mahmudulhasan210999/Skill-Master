@@ -5,7 +5,7 @@
                     <img class="rounded-md" :src="getDetails.author.thumb" alt="Image">
                     <div class="flex items-center py-4">
                         <div class="flex items-center text-sm text-gray-500">
-                            <i class="pi pi-user"></i>
+                            <i class="pi pi-user"></i> 
                             <p class="px-2">by {{ getDetails.author.author_name }}</p>
                         </div>
                         <div class="flex items-center ml-6 text-sm text-gray-500">
@@ -35,8 +35,8 @@
                     </div>
 
                     <div class="flex justify-between text-sm md:text-base mt-8">
-                        <button class="bg-rose-600 text-white px-5 py-3">Prev Post</button>
-                        <button class="bg-rose-600 text-white px-5 py-3">Next Post</button>
+                        <button class="bg-primary text-white px-5 py-3">Prev Post</button>
+                        <button class="bg-primary text-white px-5 py-3">Next Post</button>
                     </div>
                 </div>
 

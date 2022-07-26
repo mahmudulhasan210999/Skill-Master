@@ -10,7 +10,7 @@
         <div class="lg:w-3/4 flex flex-col lg:ml-6">
             <div class="w-full mt-8 lg:mt-0 flex text-sm p-4 bg-white rounded-md shadow-md mb-8">
                 <router-link to="/">
-                    <p class="text-rose-600">Home</p>
+                    <p class="text-primary">Home</p>
                 </router-link>
                 <p class="px-2">/</p>
                 <p class="font-semibold">My orders</p>
@@ -33,7 +33,7 @@
                                 <template #body="slotProps">
                                     <div class="flex text-center">
                                         <p v-if="slotProps.data.status == 'Completed'" class="px-2 py-1 w-24 bg-green-100 text-green-600 rounded-sm">{{slotProps.data.status}}</p>
-                                        <p v-if="slotProps.data.status == 'Cancelled'" class="px-2 py-1 w-24 bg-rose-100 text-rose-600 rounded-sm">{{slotProps.data.status}}</p>
+                                        <p v-if="slotProps.data.status == 'Cancelled'" class="px-2 py-1 w-24 bg-rose-100 text-primary rounded-sm">{{slotProps.data.status}}</p>
                                         <p v-if="slotProps.data.status == 'In Progress'" class="px-2 py-1 w-24 bg-yellow-100 text-yellow-600 rounded-sm">{{slotProps.data.status}}</p>
                                     </div>
                                 </template>
@@ -49,7 +49,7 @@
                             <Column header="Action">
                                 <template #body="slotProps">
                                     <button class="bg-green-100 py-2 px-4 md:mr-1 text-green-600 rounded-sm" @click="viewOrder(slotProps)">View</button>
-                                    <button class="bg-rose-100 py-2 px-4 mt-1 md:mt-0 md:ml-1 text-rose-600 rounded-sm" @click="deleteOrder(slotProps)">Delete</button>
+                                    <button class="bg-rose-100 py-2 px-4 mt-1 md:mt-0 md:ml-1 text-primary rounded-sm" @click="deleteOrder(slotProps)">Delete</button>
                                 </template>
                             </Column>
                         </DataTable> 

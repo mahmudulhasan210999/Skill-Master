@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full flex flex-col items-center bg-blue-300">
+    <div class="w-full flex flex-col items-center bg-primary">
         <div class="container">
             <div class="image-container w-full flex flex-col items-center text-left">
             <img class="w-full bg-img" src="../../assets/images/Home/3.png" alt="">
@@ -8,8 +8,8 @@
                 <p class="text-xl lg:text-5xl font-semibold p-2">Learn On Your Schedule</p>
                 <p class="text-xs lg:text-base p-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit tur adipisicing elit.</p>
                 <div class="flex p-2">
-                    <input class="rounded-l-md w-44 lg:w-80 lg:text-xl pl-4" type="text" placeholder="Search...">
-                    <button label="Search" class="p-2 lg:p-6 rounded-r-md text-lg bg-rose-600 text-white hover:bg-rose-700">Go</button>
+                    <input class="rounded-l-md w-44 lg:w-80 lg:text-xl pl-4 outline-none text-black" type="text" placeholder="Search...">
+                    <button class="p-2 lg:p-6 rounded-r-md bg-secondary text-white">Go</button>
                 </div>
             </div>
         </div>

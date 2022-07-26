@@ -4,7 +4,7 @@
             <div class="text-center mb-6">
             <p class="text-2xl md:text-3xl xl:text-5xl font-bold">Checkout</p>
             <div class="flex justify-center text-sm lg:text-base mt-2">
-                <router-link to="/"><p class="text-rose-600">Home</p></router-link>
+                <router-link to="/"><p class="text-primary">Home</p></router-link>
                 <p class="px-2"> / </p>
                 <p>Checkout</p>
             </div>
@@ -59,7 +59,7 @@
                 </div>
                 <div class="mt-8 flex flex-col border border-gray-200 p-6 rounded-md"> 
                     <p class="text-black font-semibold mb-3">Select Payment Method</p> 
-                    <div class="flex mt-1.5 text-left text-gray-600 text-sm hover:text-rose-600" v-for="(method, index) in payment_methods" :key="index">
+                    <div class="flex mt-1.5 text-left text-gray-600 text-sm hover:text-primary" v-for="(method, index) in payment_methods" :key="index">
                         <input class="mt-1 mr-1" type="radio" id="payment" name="payment" :value="method" v-model="payment_method">
                         <label for="method">{{method.method}} - {{method.charge}}%</label><br>
                     </div>
@@ -87,11 +87,11 @@
                         </div>
                     </div>
                     <div class="flex justify-between font-semibold text-xl mt-6">
-                        <p class="text-rose-600">Total Cost</p>
+                        <p class="text-primary">Total Cost</p>
                         <p class="text-sky-600">$140.00</p>
                     </div>
                     <div class="mt-10 flex justify-center w-full">
-                        <button class="py-4 px-12 bg-green-100 rounded-md text-gray-600 font-semibold hover:bg-rose-600 hover:text-white">Place Order</button>
+                        <button class="py-4 px-12 bg-green-100 rounded-md text-gray-600 font-semibold hover:bg-primary hover:text-white">Place Order</button>
                     </div>
                 </div>
             </div>

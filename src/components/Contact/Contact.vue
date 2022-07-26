@@ -4,7 +4,7 @@
       <div class="text-center p-8 md:px-12 lg:py-12">
       <p class="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold p-4">Get In Touch</p>
       <div class="flex justify-center">
-        <router-link to="/"><p class="text-rose-600 text-sm lg:text-base">Home</p></router-link>
+        <router-link to="/"><p class="text-primary text-sm lg:text-base">Home</p></router-link>
         <p class="px-2 text-sm lg:text-base"> / </p>
         <p class="text-sm lg:text-base">Contact</p>
       </div>
@@ -39,7 +39,7 @@
           </div>
 
           <div class="flex justify-center pt-4">
-            <button class="bg-rose-600 hover:bg-rose-700 text-white rounded-md text-sm xl:text-base px-4 py-3 xl:px-8 xl:py-4 mb-4">Submit Request</button>
+            <button class="bg-primary text-white rounded-md text-sm xl:text-base px-4 py-3 xl:px-8 xl:py-4 mb-4">Submit Request</button>
           </div>
         </div>
 
@@ -52,7 +52,7 @@
             
             <div class="flex items-center py-2 sm:px-4 sm:py-4">
               <div class="mr-3">
-                <i class="pi pi-home" style="font-size: 38px; color: rgb(194, 30, 86)"></i>
+                <i class="pi pi-home text-alternate1" style="font-size: 38px;"></i>
               </div>
               <div class="sm:px-2 text-sm">
                 <p class="font-semibold py-2">Reach Us</p>
@@ -62,18 +62,18 @@
 
             <div class="flex py-2 sm:px-4 sm:py-4 items-center">
               <div class="mr-3">
-                <i class="pi pi-envelope" style="font-size: 38px; color: rgb(194, 30, 86)"></i>
+                <i class="pi pi-envelope text-primary" style="font-size: 38px"></i>
               </div>
               <div class="sm:px-2 text-sm">
                 <p class="font-semibold py-2">Drop A Mail</p>
-                <p>Rikada@gmail.com</p>
-                <p>Rikada@gmail.com</p>
+                <p>catchplatform@gmail.com</p>
+                <p>contact@catchplatform.com</p>
               </div>
             </div>
 
             <div class="flex py-2 sm:px-4 sm:py-4 items-center">
               <div class="mr-3">
-                <i class="pi pi-mobile" style="font-size: 38px; color: rgb(194, 30, 86)"></i>
+                <i class="pi pi-mobile text-secondary" style="font-size: 38px;"></i>
               </div>
               <div class="sm:px-2 text-sm">
                 <p class="font-semibold py-2">Call Us</p>

@@ -6,8 +6,8 @@
         <div>
           <p class="text-lg lg:text-xl font-semibold p-2">Got & Popular Categories</p>
         </div>
-        <!-- <div class="flex border border-gray-400 rounded-md bg-white hover:border-rose-600 hover:bg-rose-600">
-          <button class="px-2 lg:px-4 lg:py-2 text-rose-600 hover:text-white">Browse More</button>
+        <!-- <div class="flex border border-gray-400 rounded-md bg-white hover:border-primary hover:bg-primary">
+          <button class="px-2 lg:px-4 lg:py-2 text-primary hover:text-white">Browse More</button>
         </div> -->
       </div>
 

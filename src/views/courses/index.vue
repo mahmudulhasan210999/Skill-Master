@@ -4,7 +4,7 @@
             <div class="text-center p-12">
             <p class="text-2xl md:text-3xl xl:text-5xl font-bold p-4">Courses With Sidebar</p>
             <div class="flex justify-center text-sm lg:text-base">
-                <router-link to="/"><p class="text-rose-600">Home</p></router-link>
+                <router-link to="/"><p class="text-primary">Home</p></router-link>
                 <p class="px-2"> / </p>
                 <p>Find Courses</p>
             </div>
@@ -14,7 +14,7 @@
                 <Sidebar />
             </div>
             <div class="flex mb-8 lg:hidden">
-                <button class="flex items-center justify-between px-5 py-3 bg-rose-600 text-white rounded-md" @click="toggleNav">
+                <button class="flex items-center justify-between px-5 py-3 bg-primary text-white rounded-md" @click="toggleNav">
                     <p class="pr-8">Show Filter</p>
                     <i class="pi pi-arrow-circle-right"></i>
                 </button>

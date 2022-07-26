@@ -4,7 +4,7 @@
             <div class="text-center mb-6">
             <p class="text-2xl md:text-3xl xl:text-5xl font-bold">Add To Cart</p>
             <div class="flex justify-center text-sm lg:text-base mt-2">
-                <router-link to="/"><p class="text-rose-600">Home</p></router-link>
+                <router-link to="/"><p class="text-primary">Home</p></router-link>
                 <p class="px-2"> / </p>
                 <p>Add To Cart</p>
             </div>
@@ -79,7 +79,7 @@
                             </Column>
                             <Column header="Action">
                                 <template #body="slotProps">
-                                    <i class="pi pi-times cursor-pointer px-2.5 py-1.5 border rounded-md border-rose-600 bg-rose-600" @click="removeItem(slotProps.data)" style="color: white;"></i>
+                                    <i class="pi pi-times cursor-pointer px-2.5 py-1.5 border rounded-md border-primary bg-primary" @click="removeItem(slotProps.data)" style="color: white;"></i>
                                 </template>
                             </Column>
                         </DataTable> 
@@ -124,11 +124,11 @@
                         </div>
                     </div>
                     <div class="flex justify-between font-semibold text-xl mt-6">
-                        <p class="text-rose-600">Total Cost</p>
-                        <p class="text-sky-600">$140.00</p>
+                        <p>Total Cost</p>
+                        <p>$140.00</p>
                     </div>
                     <div class="mt-10 flex justify-center w-full">
-                        <button @click="toCheckout" class="py-4 px-8 sm:px-12 bg-green-100 rounded-md text-gray-600 font-semibold hover:bg-rose-600 hover:text-white">Proceed To Checkout</button>
+                        <button @click="toCheckout" class="py-4 px-8 sm:px-12 bg-green-100 rounded-md text-gray-600 font-semibold hover:bg-primary hover:text-white">Proceed To Checkout</button>
                     </div>
                 </div>
             </div>
@@ -185,6 +185,6 @@ export default {
 
 <style scoped>
 .button {
-    @apply ml-1.5 md:ml-3 border rounded-md px-6 py-2.5 bg-rose-600 text-white hover:bg-rose-700 text-sm sm:text-base;
+    @apply ml-1.5 md:ml-3 border rounded-md px-6 py-2.5 bg-primary text-white text-sm sm:text-base;
 }
 </style>

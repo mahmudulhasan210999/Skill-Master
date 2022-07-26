@@ -10,7 +10,7 @@
         <div class="lg:w-3/4 mt-8 lg:mt-0 flex flex-col lg:ml-6">
             <div class="w-full flex text-sm p-4 bg-white rounded-md shadow-md mb-8">
                 <router-link to="/">
-                    <p class="text-rose-600">Home</p>
+                    <p class="text-primary">Home</p>
                 </router-link>
                 <p class="px-2">/</p>
                 <p class="font-semibold">Dashboard</p>
@@ -76,7 +76,7 @@ export default {
                     title: 'Courses in Progress',
                     number: 10,
                     icon: 'pi pi-video',
-                    text_colour: 'text-rose-600'
+                    text_colour: 'text-primary'
                 },
                 {
                     id: 2,
