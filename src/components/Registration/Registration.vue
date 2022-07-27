@@ -1,39 +1,52 @@
 <template>
     <div class="w-full flex flex-col items-center bg-gray-100">
         <div class="container">
-            <div class="w-full flex flex-col md:flex-row px-4 sm:px-16 py-10 lg:px-40 lg:py-14 xl:px-72 xl:py-20 2xl:px-36">
-            <div class="w-full md:w-1/2 container">
-                <img class="bg-img" src="../../assets/images/Home/1.jpg" alt="">
-                <div class="text-left bottom-left">
-                    <p class="text-xl font-semibold text-white">Customer Support</p>
-                    <p class="text-sm text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Epsum dignissimos laborum, pariatur tempora nobis excepturi id aut alias consequatur</p>
-                    <p class="text-yellow-600 font-semibold my-3">- Adam Someone</p>
-                </div>
-            </div>
-            <div class="w-full md:w-1/2 bg-white md:mt-0 p-6 lg:p-12 text-sm">
-                <div class="flex text-2xl lg:text-3xl">
-                    <p class="pr-2">Create An</p>
-                    <p class="text-primary">Account</p>
-                </div>   
-                <div class="my-4">
-                    <p class="py-2">Emain Address*</p>
-                    <InputText class="h-12 w-full" type="text" placeholder="someone@gmail.com" v-model="value" />
-                </div>
-                <div class="mt-6">
-                    <div class="flex py-2">
-                        <p>Password*</p>
+            <div class="w-full flex flex-col items-center sing-up-container px-20 sm:px-24 md:px-40 lg:px-16 py-20 xl:px-40 2xl:px-36">
+                <div class="w-full lg:w-1/2 bg-white md:mt-0 p-6 lg:p-12 text-sm">
+                    <div class="flex text-2xl lg:text-3xl">
+                        <p class="pr-2 text-gray-600">Create an</p>
+                        <p class="text-primary">Account</p>
+                    </div>   
+                    <div class="my-4 text-left">
+                        <p class="py-2 text-gray-600">Emain Address*</p>
+                        <InputText class="h-11 w-full" type="text" placeholder="someone@gmail.com" v-model="value" />
                     </div>
-                    <InputText class="h-12 w-full" type="password" placeholder="********" v-model="value" />
-                </div>
-                <button class="bg-primary text-white rounded-md w-full py-3 lg:py-4 mt-6">Sign Up</button>
-                <div class="flex justify-center mt-8"> 
-                    <p class="pr-1">Already Have An Account?</p>
-                    <router-link to="/login">
-                        <p class="text-primary">Login</p>
-                    </router-link>
+                    <div class="mt-4">
+                        <div class="flex py-2">
+                            <p class="text-gray-600">Username*</p>
+                        </div>
+                        <InputText class="h-11 w-full" type="text" placeholder="Alex Romero" v-model="value" />
+                    </div>
+                    <div class="mt-4">
+                        <div class="flex py-2">
+                            <p class="text-gray-600">Phone Number*</p>
+                        </div>
+                        <InputText class="h-11 w-full" type="text" placeholder="01XXXXXXXXX" v-model="value" />
+                    </div>
+                    <div class="mt-4">
+                        <div class="flex py-2">
+                            <p class="text-gray-600">Password*</p>
+                        </div>
+                        <InputText class="h-11 w-full" type="password" placeholder="********" v-model="value" />
+                    </div>
+                    <div class="mt-4">
+                        <div class="flex py-2">
+                            <p class="text-gray-600">Confirm Password*</p>
+                        </div>
+                        <InputText class="h-11 w-full" type="password" placeholder="********" v-model="value" />
+                    </div>
+
+                    <button class="bg-primary text-white rounded-md w-full py-3 lg:py-4 mt-6">Sign Up</button>
+
+                    <div class="flex justify-center mt-8 text-gray-500"> 
+                        <p class="pr-1">Have an account?</p>
+                        <router-link to="/login">
+                            <p class="text-primary underline underline-offset-1 font-medium">Login</p>
+                        </router-link>
+                        <p class="pl-1">now.</p>
+                    </div>
                 </div>
             </div>
-        </div>
         </div>
     </div>
 </template>
@@ -43,8 +56,8 @@ import InputText from 'primevue/inputtext';
 
 export default {
     components: {
-    InputText,
-  },
+        InputText,
+    },
 }
 </script>
 
@@ -79,6 +92,18 @@ export default {
         position: absolute;
         bottom: 8px;
         left: 12px;
+    }
+} 
+
+@media screen and (max-width: 490px) {
+    .sing-up-container {
+        @apply px-10;
+    }
+} 
+
+@media screen and (max-width: 380px) {
+    .sing-up-container {
+        @apply px-5;
     }
 } 
 </style>
