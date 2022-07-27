@@ -5,15 +5,15 @@
                 <img class="w-full bg-img" src="../../assets/images/Home/3.png" alt="">
 
                 <div class="text-left text-white bottom-left">
-                    <p class="text-xl lg:text-5xl font-semibold p-2">Learn On Your Schedule</p>
-                    <p class="text-xs lg:text-base p-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit tur adipisicing elit.</p>
+                    <p class="title-text text-xl sm:text-3xl lg:text-4xl xl:text-5xl font-semibold p-2">Learn On Your Schedule</p>
+                    <p class="desc-text text-sm md:text-base p-2 w-60 sm:w-80 md:w-96 lg:w-full">Lorem ipsum, dolor sit amet consectetur adipisicing elit tur adipisicing elit.</p>
                     <div class="flex p-2">
-                        <input class="rounded-l-md w-44 lg:w-80 lg:text-xl pl-4 outline-none text-black" type="text" placeholder="Search...">
-                        <button class="p-2 lg:p-6 rounded-r-md bg-secondary text-white">Go</button>
+                        <input class="rounded-l-md w-44 sm:w-60 lg:w-80 md:text-xl pl-4 outline-none text-black" type="text" placeholder="Search...">
+                        <button class="p-3 sm:p-4 lg:p-6 rounded-r-md bg-secondary text-white">Go</button>
                     </div>
                 </div>
             </div>
-            <div class="rounded-lg shadow-md py-4 mb-4 md:mb-10 mx-4 sm:mx-8 lg:mx-12 xl:mx-44 2xl:mx-20 bg-white">
+            <div class="rounded-lg shadow-md py-2 sm:py-4 my-8 md:mb-10 mx-4 sm:mx-8 lg:mx-12 xl:mx-44 2xl:mx-20 bg-white">
                 <div class="grid grid-cols-1 md:grid-cols-3 sm:px-4 lg:px-12">
                     <div class="p-2 sm:p-3 lg:p-5 xl:p-4" v-for="(top, index) in tops" :key="index">
                         <div class="w-full flex items-center">
@@ -70,7 +70,6 @@ export default {
     background-size: cover;
     position: relative;
     height: auto;
-    width: 100vw;
 }
 
 .image-container {
@@ -84,35 +83,68 @@ export default {
     left: 180px;
 }
 
+@media screen and (max-width: 1280px) {
+    .bottom-left {
+        position: absolute;
+        bottom: 170px;
+        left: 90px;
+    }
+}
 
+@media screen and (max-width: 1024px) {
+    .bottom-left {
+        position: absolute;
+        bottom: 98px;
+        left: 55px;
+    }
+}
 
 
 @media screen and (max-width: 800px) {
-    /* .bg-img {
-        background-size: contain;
-        height: 100%;
-        width: 100%;
-    } */
     .bottom-left {
         position: absolute;
-        bottom: 80px;
+        bottom: 70px;
         left: 50px;
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 640px) {
     .bottom-left {
         position: absolute;
-        bottom: 40px;
-        left: 30px;
+        bottom: 50px;
+        left: 85px;
     }
 } 
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 540px) {
     .bottom-left {
         position: absolute;
-        bottom: 8px;
-        left: 12px;
+        bottom: 25px;
+        left: 55px;
+    }
+} 
+
+@media screen and (max-width: 470px) {
+    .bottom-left {
+        position: absolute;
+        bottom: 15px;
+        left: 20px;
+    }
+} 
+
+@media screen and (max-width: 430px) {
+    .bottom-left {
+        position: absolute;
+        bottom: 0px;
+        left: 20px;
+    }
+
+    .title-text {
+        @apply text-lg;
+    }
+
+    .desc-text {
+        @apply text-xs;
     }
 }
 </style>

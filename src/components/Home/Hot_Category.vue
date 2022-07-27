@@ -9,7 +9,7 @@
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 grid-view sm:grid-cols-2 lg:grid-cols-3 pt-4">
+            <div class="grid grid-cols-1 grid-view sm:grid-cols-2 md:grid-cols-3 pt-4">
                 <div class="p-2 lg:p-3" v-for="(category, index) in hot_categories" :key="index">
                     <router-link :to="{ path: '/' + category.slug }">
                         <div class="flex items-center rounded-md p-5 bg-gray-200" :class="category.color">
@@ -55,7 +55,7 @@ export default {
     }
 }
 
-@media screen and (max-width: 499px) {
+@media screen and (max-width: 480px) {
     .grid-view {
         @apply grid grid-cols-1;
     }
