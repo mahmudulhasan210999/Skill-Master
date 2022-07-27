@@ -15,6 +15,7 @@ import Orders from "../views/user-dashboard/my-orders/index.vue";
 import Settings from "../views/user-dashboard/settings/index.vue";
 import Instructor from '../views/courses/instructor/[id].vue';
 import Categories from '../views/courses/categories/[id].vue';
+import BlogByCategory from '../views/blog/byCategory/[id].vue';
 
 const routes = [
   { 
@@ -28,6 +29,10 @@ const routes = [
   {
     path: '/blogs',
     component: Blog
+  },
+  {
+    path: '/blogs/:id',
+    component: BlogByCategory
   },
   {
     path: '/blog/:id',

@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col navbar">
+    <div class="flex flex-col navbar bg-primary">
         <div class="py-3 nav-cross">
             <router-link to="/cart">
                 <div class="flex items-center text-white border border-white px-5 py-2 rounded-md hover:border-2 hover:border-primary" @click="$emit('navClosed')">
@@ -22,7 +22,7 @@
                     <button @click="$emit('navClosed')" class="py-2 px-3 sm:px-5 text-primary border rounded-md font-semibold bg-white">Sign in</button>
                 </router-link>
                 <router-link to="/registration">
-                    <button @click="$emit('navClosed')" class="py-2 px-3 sm:px-5 border rounded-md bg-black font-semibold text-white ml-2 sm:ml-4">Sign up</button>
+                    <button @click="$emit('navClosed')" class="py-2 px-3 sm:px-5 border border-black rounded-md bg-black font-semibold text-white ml-2 sm:ml-4">Sign up</button>
                 </router-link>
             </div>
         </div>
@@ -43,7 +43,6 @@ export default {
 
 <style scoped>
 .navbar {
-    background: #1C2138;
     z-index: 999;
     width: 70vw;
     position: fixed;
@@ -63,6 +62,7 @@ export default {
     align-items: flex-end;
     align-self: flex-start;
     border-bottom-width: 2px;
+    @apply border-alternate2;
 }
 
 @media screen and (max-width: 1024px) {

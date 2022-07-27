@@ -1,42 +1,58 @@
 <template>
-    <div class= "w-full flex flex-col items-center" @mouseleave="closeDropdown">
+    <div class= "w-full flex flex-col items-center">
     <div class="container">
-        <div class="w-full flex justify-between px-4 lg:px-16 xl:px-36 2xl:px-0">
+        <div class="w-full flex justify-between px-4 xl:px-20 2xl:px-0">
             <div class="flex items-center">
                 <router-link to="/">
                     <img class="h-20 p-2" src="../../assets/logo/platform-logo.png" alt="logo">
                 </router-link>
             </div>
-            <div class="hidden md:flex items-center">
+            <div class="hidden lg:flex items-center">
                 <router-link :to="{ path: '/' }" class="menu-item">Home</router-link>
-                <div class="flex items-center menu-item hover:cursor-pointer" @mouseover="mouseover">
-                    <router-link :to="{ path: '/courses' }">Courses</router-link>
-                    <i class="pi pi-angle-down ml-2"></i>
-                </div>
-                <div v-if="isOpen" class="dropdown z-50 w-64 ml-24" :class="isOpen ? 'isOpen': 'no-display'">
-                    <div class="flex flex-col items-start">
-                        <div class="w-full text-left p-2 flex justify-between text-primary hover:text-secondary" @mouseover="openSubCategory(category.subcategory, category.id)" v-for="(category, index) in items" :key="index">
-                            <router-link :to="{ path: '/' + category.slug }" >
-                                <p class="w-56"> {{ category.title }} </p>
-                            </router-link> 
-                            <span class="font-normal" v-if="category.subcategory">
-                                <i class="pi pi-angle-right" style="color: #000000;"></i>
-                            </span> 
-                            <div v-if="isSubCategoryOpen">
-                                <ul class="flex flex-col w-60 text-left sub-dropdown" v-if="category.id == parentCategoryId">
-                                    <li class="px-4 py-2 w-60 cursor-pointer text-primary hover:text-secondary" v-for="(childrenItem, index2) in subCategoryList" :key="index2">
-                                        <p class="w-full" @click="produtPageByCategory(childrenItem.slug)">{{childrenItem.title}}</p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div> 
+                <div class="flex flex-col" @mouseleave="closeDropdown">
+                    <div class="flex items-center menu-item hover:cursor-pointer" @mouseover="mouseover">
+                        <router-link :to="{ path: '/courses' }">Courses</router-link>
+                        <i class="pi pi-angle-down ml-2"></i>
+                    </div>
+                    <div v-if="isOpen" class="dropdown z-50 w-64 ml-4" :class="isOpen ? 'isOpen': 'no-display'">
+                        <div class="flex flex-col items-start">
+                            <div class="w-full text-left p-2 flex justify-between text-primary hover:text-secondary" @mouseover="openSubCategory(category.subcategory, category.id)" v-for="(category, index) in items" :key="index">
+                                <router-link :to="{ path: '/' + category.slug }" >
+                                    <p class="w-56"> {{ category.title }} </p>
+                                </router-link> 
+                                <span class="font-normal" v-if="category.subcategory">
+                                    <i class="pi pi-angle-right" style="color: #000000;"></i>
+                                </span> 
+                                <div v-if="isSubCategoryOpen">
+                                    <ul class="flex flex-col w-60 text-left sub-dropdown" v-if="category.id == parentCategoryId">
+                                        <li class="px-4 py-2 w-60 cursor-pointer text-primary hover:text-secondary" v-for="(childrenItem, index2) in subCategoryList" :key="index2">
+                                            <p class="w-full" @click="produtPageByCategory(childrenItem.slug)">{{childrenItem.title}}</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div> 
+                        </div>
                     </div>
                 </div> 
-                <router-link :to="{ path: '/blogs' }" class="menu-item">Blogs</router-link>
+                <div class="flex flex-col" @mouseleave="closeBlog">
+                    <div class="flex items-center menu-item hover:cursor-pointer" @mouseover="mouseoverBlog">
+                        <router-link :to="{ path: '/blogs' }">Blogs</router-link>
+                        <i class="pi pi-angle-down ml-2"></i>
+                    </div>
+                    <div v-if="isBlogOpen" class="dropdown z-50 w-64 ml-4" :class="isBlogOpen ? 'isOpen': 'no-display'">
+                        <div class="flex flex-col items-start">
+                            <div class="w-full text-left p-2 flex justify-between text-primary hover:text-secondary" v-for="(blog, index) in blog_category" :key="index">
+                                <router-link :to="{ path: '/blogs/' + blog.slug, slug: blog.title }" >
+                                    <p class="w-56"> {{ blog.title }} </p>
+                                </router-link>  
+                            </div> 
+                        </div>
+                    </div>
+                </div>
                 <router-link :to="{ path: '/contact' }" class="menu-item">Contact</router-link>
                 <div class="md:ml-6 lg:ml-12 mr-2 xl:mr-4">
                     <router-link to="/cart">
-                        <div class="flex items-center border-2 border-alternate1 px-2 lg:px-3 xl:px-5 py-2 rounded-md hover:bg-alternate1 hover:text-white">
+                        <div class="flex items-center border-2 border-alternate2 px-2 lg:px-3 xl:px-5 py-2 rounded-md hover:bg-alternate2 hover:text-white">
                             <i class="pi pi-shopping-cart"></i>
                             <p class="ml-2">Cart</p>
                         </div>
@@ -51,8 +67,8 @@
             </div>
 
             <!-- Menubar For Responsive Dimensions -->
-            <div class="flex items-center md:hidden">
-                <i @click="toggleNav" class="pi pi-bars p-1"></i>
+            <div class="flex items-center lg:hidden">
+                <i @click="toggleNav" class="pi pi-bars p-2 bg-primary text-white rounded-md" style="font-size:1.4rem;"></i>
                 <Navbar v-if="navToggled" @navClosed="closeNav"/>
             </div>
         </div>
@@ -71,6 +87,7 @@ export default {
         return { 
             navToggled: false,
             isOpen: false,
+            isBlogOpen: false,
             isSubCategoryOpen: false,
             subCategoryList: [],
             parentCategoryId: null,
@@ -97,6 +114,14 @@ export default {
             this.isOpen = false;
         },
 
+        mouseoverBlog: function () {
+            this.isBlogOpen = true;
+        },
+
+        closeBlog: function () {
+            this.isBlogOpen = false;
+        },
+
         openSubCategory: function (subCategory, id) {
             this.subCategoryList = subCategory;
             this.parentCategoryId = id;
@@ -112,25 +137,27 @@ export default {
     computed: {
         ...mapState ({
             menu: state => state.menu.menu,
-            items: state => state.home.hot_categories
+            items: state => state.home.hot_categories,
+            blog_category: state => state.blogs.categories
         }),
     },
 
     mounted() {
-        this.$store.dispatch('home/getCategories')
+        this.$store.dispatch('home/getCategories'),
+        this.$store.dispatch('blogs/getCategories')
     }
 }
 </script>
 
 <style scoped>
 .menu-item {
-    @apply mx-1 lg:mx-2 px-2 xl:px-4 py-2 my-2 text-primary hover:text-secondary;
+    @apply mx-1 px-2 xl:px-3 2xl:px-4 py-6 text-primary hover:text-secondary;
 }
 
 .dropdown {
     position: absolute;
-    top: 75px;
-    /* left: 890px; */
+    top: 70px;
+    /* left: 80px; */
     list-style-type: none;
     @apply border border-gray-100 bg-white;
 }

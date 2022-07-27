@@ -12,7 +12,7 @@
                 </div>
             </div>
 
-            <div class="w-full md:w-1/2 bg-white md:mt-0 p-6 lg:p-12 text-sm">
+            <div class="w-full md:w-1/2 bg-white text-left md:mt-0 p-6 lg:p-12 text-sm">
                 <div class="flex text-2xl lg:text-3xl">
                     <p class="pr-2">Sign</p>
                     <p class="text-primary">In</p>
@@ -35,7 +35,7 @@
                 <div class="flex justify-center mt-8"> 
                     <p class="pr-1">Have't Any Account?</p>
                     <router-link to="/registration">
-                        <p class="text-primary">Signup</p>
+                        <p class="text-primary border-b border-primary">Signup</p>
                     </router-link>
                 </div>
             </div>
