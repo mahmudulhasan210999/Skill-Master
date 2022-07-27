@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col items-center w-full px-4 sm:px-12 lg:px-20 xl:px-36 py-20">
+    <div class="flex flex-col items-center w-full cart-container px-10 sm:px-20 lg:px-12 xl:px-24 py-20">
         <div class="container">
             <div class="text-center mb-6">
             <p class="text-2xl md:text-3xl xl:text-5xl font-bold">Checkout</p>
@@ -142,4 +142,9 @@ export default {
 </script>
 
 <style scoped>
+@media screen and (max-width: 420px) {
+    .cart-container {
+        @apply px-4;
+    }
+} 
 </style>
