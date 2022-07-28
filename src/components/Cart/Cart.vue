@@ -3,8 +3,8 @@
         <div class="container">
             <div class="text-center mb-6">
                 <p class="text-2xl md:text-3xl xl:text-5xl font-bold">Add To Cart</p>
-                <div class="flex justify-center text-sm lg:text-base mt-2">
-                    <router-link to="/"><p class="text-primary">Home</p></router-link>
+                <div class="flex justify-center text-sm lg:text-base mt-2 text-primary">
+                    <router-link to="/"><p>Home</p></router-link>
                     <p class="px-2"> / </p>
                     <p>Add To Cart</p>
                 </div>

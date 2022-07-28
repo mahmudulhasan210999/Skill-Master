@@ -3,8 +3,8 @@
         <div class="container">
             <div class="text-center mb-6">
             <p class="text-2xl md:text-3xl xl:text-5xl font-bold">Checkout</p>
-            <div class="flex justify-center text-sm lg:text-base mt-2">
-                <router-link to="/"><p class="text-primary">Home</p></router-link>
+            <div class="flex justify-center text-sm lg:text-base mt-2 text-primary">
+                <router-link to="/"><p>Home</p></router-link>
                 <p class="px-2"> / </p>
                 <p>Checkout</p>
             </div>
@@ -68,7 +68,7 @@
             <div class="lg:w-1/3 lg:pl-8 xl:pl-12 mt-8 lg:mt-0">
                 <div class="w-full p-5 border border-gray-200 rounded-md">
                     <p class="text-black font-semibold">Billing Summary</p>
-                    <div class="flex flex-col py-6 text-sm border-b border-dotted">
+                    <div class="flex flex-col py-6 text-sm border-b border-dotted border-gray-500">
                         <div class="flex justify-between">
                             <p class="font-thin text-gray-500">Base price</p>
                             <p class="font-semibold text-gray-600">$140.00</p>
@@ -77,18 +77,10 @@
                             <p class="font-thin text-gray-500">Discount</p>
                             <p class="font-semibold text-gray-600">$10.00</p>
                         </div>
-                        <div class="flex justify-between mt-3">
-                            <p class="font-thin text-gray-500">CGST</p>
-                            <p class="font-semibold text-gray-600">$10.00</p>
-                        </div>
-                        <div class="flex justify-between mt-3">
-                            <p class="font-thin text-gray-500">SGST</p>
-                            <p class="font-semibold text-gray-600">$00.00</p>
-                        </div>
                     </div>
                     <div class="flex justify-between font-semibold text-xl mt-6">
-                        <p class="text-primary">Total Cost</p>
-                        <p class="text-sky-600">$140.00</p>
+                        <p>Total Cost</p>
+                        <p>$140.00</p>
                     </div>
                     <div class="mt-10 flex justify-center w-full">
                         <button class="py-4 px-12 bg-green-100 rounded-md text-gray-600 font-semibold hover:bg-primary hover:text-white">Place Order</button>
