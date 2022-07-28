@@ -53,29 +53,29 @@
 import { mapState } from "vuex";
 
 export default {
-  computed: {
-    ...mapState ({
-      courses: state => state.courses.courses
-    }),
-  },
+    computed: {
+        ...mapState ({
+            courses: state => state.courses.courses
+        }),
+    },
 
-  mounted() {
-    this.$store.dispatch('courses/getCourses')
-  }
+    mounted() {
+        this.$store.dispatch('courses/getCourses')
+    }
 }
 </script>
 
 <style scoped>
 .container {
-  position: relative;
-  text-align: center;
-  color: white;
+    position: relative;
+    text-align: center;
+    color: white;
 }
 
 .top-left {
-  position: absolute;
-  top: 20px;
-  left: 20px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
 }
 
 @media screen and (max-width: 640px) {

@@ -11,7 +11,7 @@
                             frameborder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                             allowfullscreen="" 
-                            class="video-card w-full h-96">
+                            class="video-card w-full h-52 md:h-60 lg:h-72 xl:h-80 2xl:h-96">
                         </iframe>
                     </div>
                     <div class="w-full md:w-1/2 mt-6 md:mt-0 flex justify-center items-center">
@@ -62,7 +62,7 @@
                     <div class="lg:w-2/3 flex flex-col lg:mr-4">
 
                         <!-- Course Overview, Requirements, Outcome starts -->
-                        <div class="flex flex-col p-6 border border-gray-200 rounded-md">
+                        <div class="flex flex-col p-3 sm:p-6 border border-gray-200 rounded-md">
                             <p class="headlines">Course Overview</p>
                             <div class="overview-details" v-html="course.overview"></div>
                             <div class="mt-5">
@@ -77,46 +77,54 @@
                         <!-- Course Overview, Requirements, Outcome ends -->
 
                         <!-- Course Curriculum starts -->
-                        <div class="flex flex-col mt-8 border border-gray-200 p-6 rounded-md">
+                        <div class="flex flex-col mt-8 border border-gray-200 p-3 sm:p-6 rounded-md">
                             <p class="headlines">Course Curriculum</p>
                             <div class="flex flex-col mt-4 text-sm">
-                                <div class="flex flex-col p-5 bg-white shadow-sm rounded-md border">
-                                    <div class="flex justify-between hover:font-semibold cursor-pointer" @click="showCurriculum">
+                                <div class="flex flex-col p-3 sm:p-5 bg-white shadow-sm rounded-md border border-gray-200">
+                                    <div class="flex justify-between items-center hover:font-semibold cursor-pointer text-gray-600" @click="showCurriculum">
                                         <p>Part 01: How To Learn Web Designing Step By Step</p>
                                         <i class="pi pi-plus"></i>
                                     </div>
                                     <div class="flex flex-col mt-4" v-if="openCurriculum">
-                                        <div class="flex text-sm p-5 border-b">
-                                            <i class="pi pi-video mr-2"></i>
-                                            <p class="text-gray-500 mr-8">Lecture 01</p>
+                                        <div class="flex flex-col sm:flex-row text-sm p-3 sm:p-5 border-b border-gray-200">
+                                            <div class="flex sm:mr-8">
+                                                <i class="pi pi-video pt-0.5 mr-2"></i>
+                                                <p class="text-gray-500">Lecture 01</p>
+                                            </div>
                                             <p class="font-medium">Web Designing Beginner</p>
                                         </div>
-                                        <div class="flex text-sm p-5 border-b">
-                                            <i class="pi pi-video mr-2"></i>
-                                            <p class="text-gray-500 mr-8">Lecture 02</p>
+                                        <div class="flex flex-col sm:flex-row text-sm p-3 sm:p-5 border-b border-gray-200">
+                                            <div class="flex sm:mr-8">
+                                                <i class="pi pi-video pt-0.5 mr-2"></i>
+                                                <p class="text-gray-500">Lecture 02</p>
+                                            </div>
                                             <p class="font-medium">Startup Designing with HTML5 & CSS3</p>
                                         </div>
-                                        <div class="flex text-sm p-5 border-b">
-                                            <i class="pi pi-video mr-2"></i>
-                                            <p class="text-gray-500 mr-8">Lecture 03</p>
+                                        <div class="flex flex-col sm:flex-row text-sm p-3 sm:p-5 border-b border-gray-200">
+                                            <div class="flex sm:mr-8">
+                                                <i class="pi pi-video pt-0.5 mr-2"></i>
+                                                <p class="text-gray-500">Lecture 03</p>
+                                            </div>
                                             <p class="font-medium">How To Call Google Map iFrame</p>
                                         </div>
-                                        <div class="flex text-sm p-5 border-b">
-                                            <i class="pi pi-video mr-2"></i>
-                                            <p class="text-gray-500 mr-8">Lecture 04</p>
+                                        <div class="flex flex-col sm:flex-row text-sm p-3 sm:p-5 border-b border-gray-200">
+                                            <div class="flex sm:mr-8">
+                                                <i class="pi pi-video pt-0.5 mr-2"></i>
+                                                <p class="text-gray-500">Lecture 04</p>
+                                            </div>
                                             <p class="font-medium">Create Drop Down Navigation Using CSS3</p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="mt-5 flex justify-between p-5 bg-white shadow-sm rounded-md border hover:font-semibold cursor-pointer">
+                                <div class="text-gray-600 mt-5 flex justify-between p-5 bg-white shadow-sm rounded-md border border-gray-200 hover:font-semibold cursor-pointer">
                                     <p>Part 02: Learn Web Designing In Basic Level</p>
                                     <i class="pi pi-plus"></i>
                                 </div>
-                                <div class="mt-5 flex justify-between p-5 bg-white shadow-sm rounded-md border hover:font-semibold cursor-pointer">
+                                <div class="text-gray-600 mt-5 flex justify-between p-5 bg-white shadow-sm rounded-md border border-gray-200 hover:font-semibold cursor-pointer">
                                     <p>Part 03: Learn Web Designing In Advance Level</p>
                                     <i class="pi pi-plus"></i>
                                 </div>
-                                <div class="mt-5 flex justify-between p-5 bg-white shadow-sm rounded-md border hover:font-semibold cursor-pointer">
+                                <div class="text-gray-600 mt-5 flex justify-between p-5 bg-white shadow-sm rounded-md border border-gray-200 hover:font-semibold cursor-pointer">
                                     <p>Part 04: How To Become Successful In Designing & Development?</p>
                                     <i class="pi pi-plus"></i>
                                 </div>
@@ -214,10 +222,10 @@
                                     <p class="font-medium">{{course.instructor.name}}</p>
                                     <p class="text-xs text-gray-500">{{course.instructor.experience}} years of experience</p>
                                 </div>
-                            </div> --> 
-                            <div class="p-5 w-full flex flex-col">
-                                <p class="text-xs text-gray-500">Actual Price</p>
-                                <p class="text-2xl text-gray-600 font-semibold" v-if="course.offerPrice >= 1">${{course.offerPrice}} <del class="text-2xl text-red-600 font-semibold">{{ course.price }}</del></p>
+                            </div>  -->
+                            <div class="p-3 sm:p-5 w-full flex flex-col">
+                                <p class="text-sm text-gray-500">Actual Price</p>
+                                <p class="text-2xl text-primary font-semibold" v-if="course.offerPrice >= 1">${{course.offerPrice}} <del class="text-2xl text-red-600 font-semibold">{{ course.price }}</del></p>
                                 <p class="text-2xl text-primary font-semibold" v-else>${{ course.price }}</p>
                                 <div class="mt-4">
                                     <p class="headlines">Course Features</p>
@@ -255,7 +263,7 @@
                          <!-- Course Feature ends -->
 
                         <!-- Course Details starts -->
-                        <div class="flex flex-col mt-6 border border-gray-200 rounded-md p-5">
+                        <div class="flex flex-col mt-6 border border-gray-200 rounded-md p-3 sm:p-5">
                             <p class="headlines">Course Details</p>
                             <div class="mt-6 flex flex-col">
                                 <div class="course-details">
@@ -319,9 +327,9 @@
                         <!-- Course Details ends -->
 
                         <!-- Tags Cloud starts -->
-                        <div class="mt-4 lg:mt-8 p-5 bg-white rounded-md border border-gray-200">
+                        <div class="mt-4 lg:mt-8 p-3 sm:p-5 bg-white rounded-md border border-gray-200">
                             <p class="headlines mb-2">Tags</p>
-                            <div class="grid grid-cols-3">
+                            <div class="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-3">
                                 <div class="flex items-center my-1" v-for="(tag, index) in course.tags" :key="index">
                                     <p class="tags">{{tag}}</p>
                                 </div>
@@ -395,11 +403,10 @@ export default {
 }
 
 .tags {
-    @apply w-full text-center py-2 mx-1 rounded-md text-gray-600 border text-sm cursor-pointer hover:text-white hover:bg-primary;
+    @apply w-full text-center py-2 mx-1 rounded-md text-gray-600 border border-primary text-sm cursor-pointer hover:text-white hover:bg-primary;
 }
 
 @media screen and (min-width: 1536px) {
-
     .course-top {
         @apply px-20;
     }

@@ -2,9 +2,9 @@
     <div class="w-full flex flex-col pr-6 xl:pr-16">
         <div class="w-full lg:border-2 border-gray-200 rounded-md p-6 xl:p-4 xxl:p-6">
             <div class="w-full">
-                <span class="p-input-icon-right">
+                <span class="p-input-icon-right w-full">
                     <i class="pi pi-search" />
-                    <InputText type="text" v-model="value" placeholder="Search Courses..." />
+                    <InputText class="w-full" type="text" v-model="value" placeholder="Search Courses..." />
                 </span>
             </div>
             <div class="mt-6 w-full">
@@ -18,24 +18,23 @@
             <div class="mt-6">
                 <p class="text-xl font-semibold text-black">Price</p>
                 <div class="flex my-2 text-left" v-for="(price, index) in prices" :key="index">
-                    <input class="mt-1 mr-1.5" type="radio" id="price" name="price" :value="price" v-model="selectedPrice">
+                    <input class="mb-0.5 mr-1.5" type="radio" id="price" name="price" :value="price" v-model="selectedPrice">
                     <label class="text-gray-600 text-sm" for="price">{{price.type}} ({{price.course}})</label><br>
                 </div>
             </div>
         </div>
-        <div class="w-full lg:border-2 border-gray-200 rounded-md mt-8 p-6">
+        <div class="w-full lg:border-2 border-gray-200 rounded-md mt-8 px-6 lg:p-6">
             <div>
                 <p class="text-xl font-semibold text-black">Related Courses</p>
                 <div class="flex my-3 text-left" v-for="(course, index) in courses" :key="index">
                     <router-link :to="{ path: '/courses/' + course.slug}">
                         <div class="flex w-full text-sm">
                             <div>
-                                <img class="h-20 w-24 bg-cover" :src="course.img" alt="">
+                                <img class="h-20 w-20 bg-cover" :src="course.img" alt="">
                             </div>
-                            <div class="ml-3 font-medium">
+                            <div class="ml-3 font-medium flex flex-col justify-center">
                                 <p class="text-gray-600">{{course.title}}</p>
-                                <p class="text-yellow-600">★★★★★</p>
-                                <p class="text-primary font-semibold">${{course.price}}</p>
+                                <p class="text-gray-600 font-semibold">${{course.price}}</p>
                             </div>
                         </div>
                     </router-link>

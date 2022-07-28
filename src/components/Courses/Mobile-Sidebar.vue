@@ -21,7 +21,7 @@ export default {
 
 .navbar {
     z-index: 999;
-    width: 65vw;
+    width: 70vw;
     position: fixed;
     top: 0;
     left: 0;
@@ -41,6 +41,7 @@ export default {
     align-items: flex-end;
     align-self: flex-start;
     border-bottom-width: 1px;
+    @apply border-gray-200;
 }
 
 @media screen and (max-width: 560px) {
