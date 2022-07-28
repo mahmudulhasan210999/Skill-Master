@@ -3,8 +3,8 @@
         <div class="container">
             <div class="text-center p-8 md:px-12 lg:py-12">
                 <p class="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold p-4">Get In Touch</p>
-                <div class="flex justify-center">
-                    <router-link to="/"><p class="text-primary text-sm lg:text-base">Home</p></router-link>
+                <div class="flex justify-center text-primary">
+                    <router-link to="/"><p class="text-sm lg:text-base">Home</p></router-link>
                     <p class="px-2 text-sm lg:text-base"> / </p>
                     <p class="text-sm lg:text-base">Contact</p>
                 </div>
@@ -19,22 +19,22 @@
 
                         <div class="sm:flex py-2">
                             <div class="w-full sm:pr-2">
-                                <p class="text-sm py-2">Name</p>
+                                <p class="text-sm py-2 text-gray-600">Name</p>
                                 <InputText class="h-12 w-full" type="text" v-model="value" />
                             </div>
                             <div class="w-full sm:pl-2">
-                                <p class="text-sm py-2">Email</p>
+                                <p class="text-sm py-2 text-gray-600">Email</p>
                                 <InputText class="h-12 w-full" type="text" v-model="value" />
                             </div>
                         </div>
                         
                         <div class="w-full py-2">
-                            <p class="text-sm py-2">Subject</p>
+                            <p class="text-sm py-2 text-gray-600">Subject</p>
                             <InputText class="h-12 w-full" type="text" v-model="value" />
                         </div>
 
                         <div class="w-full py-2">
-                            <p class="text-sm py-2">Message</p>
+                            <p class="text-sm py-2 text-gray-600">Message</p>
                             <Textarea class="h-24 w-full" v-model="value1" rows="5" cols="30" />
                         </div>
 
