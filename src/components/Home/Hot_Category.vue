@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full flex flex-col items-center bg-gray-50 py-12 md:py-16 lg:py-20 px-4 sm:px-8 lg:px-44">
+    <div class="w-full flex flex-col items-center bg-gray-50 py-12 md:py-16 px-4 sm:px-8 lg:px-44">
         <div class="container"> 
             <div class="flex flex-col items-center">
                 <p class="text-sm text-gray-600">Popular Category</p>
