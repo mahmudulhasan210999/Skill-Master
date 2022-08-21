@@ -2,7 +2,7 @@
     <div class="w-full flex flex-col items-center bg-gray-50 px-4 sm:px-8 md:px-12 xl:px-36 pb-16">
         <div class="container">
             <div class="text-center p-12">
-                <p class="text-2xl md:text-3xl xl:text-5xl font-bold p-4">Courses With Sidebar</p>
+                <p class="text-2xl md:text-3xl lg:text-4xl font-bold p-4">Courses With Sidebar</p>
                 <div class="flex justify-center text-sm lg:text-base text-primary">
                     <router-link to="/"><p>Home</p></router-link>
                     <p class="px-2"> / </p>

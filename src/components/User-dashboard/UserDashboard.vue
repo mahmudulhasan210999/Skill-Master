@@ -1,8 +1,8 @@
 <template>
-    <div class="flex w-full justify-center px-4 sm:px-12 md:px-6 py-6 sm:py-12 bg-gray-100">
+    <div class="flex w-full justify-center px-4 sm:px-12 md:px-6 py-6 sm:py-12 xl:py-20 bg-gray-100">
         <div class="container">
         <div class="flex flex-col lg:flex-row">
-                <div class="lg:w-1/4 flex flex-col lg:mr-6 bg-white rounded-md menu-height">
+            <div class="lg:w-1/4 flex flex-col lg:mr-6 bg-white rounded-md menu-height">
             <div class="flex flex-col">
                 <DashboardMenu />
             </div>
@@ -17,13 +17,13 @@
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6">
                 <div v-for="(detail, index) in course_details" :key="index">
-                    <div class="bg-white rounded-md shadow-md p-4 flex justify-between items-center">
+                    <div class="bg-white rounded-md shadow-md p-4 xl:p-5 flex justify-between items-center">
                         <div class="flex flex-col">
-                            <p class="text-2xl font-semibold" :class="detail.text_colour">{{detail.number}}</p>
+                            <p class="text-2xl font-semibold">{{detail.number}}</p>
                             <p class="text-xs text-gray-600">{{detail.title}}</p>
                         </div>
-                        <div>
-                            <i :class="detail.icon" style="font-size:3.5rem;"></i>
+                        <div :class="detail.text_colour">
+                            <i class="pt-1" :class="detail.icon" style="font-size:2.5rem;"></i>
                         </div>
                     </div>
                 </div>
@@ -33,7 +33,7 @@
                     <p class="text-lg font-semibold">My Courses</p>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-4 lg:gap-6 mt-4">
                         <div v-for="(course, index) in my_courses" :key="index">
-                            <div class="container">
+                            <div class="v-container">
                                 <img class="rounded-md w-full" :src="course.image" alt="">
                                 <div class="w-full h-full flex flex-col p-5 justify-end bg-transparemt text-white text-left bottom-left">
                                     <p class="text-lg font-semibold">{{course.title}}</p>
@@ -51,7 +51,7 @@
                                 <img class="" :src="course.img" alt="">
                                 <div class="ml-3">
                                     <p class="text-sm text-gray-600 font-semibold">{{course.title}}</p>
-                                    <p class="mt-1 sm:mt-3 text-xs font-semibold text-gray-500">{{course.date}}</p>
+                                    <p class="mt-1 sm:mt-1.5 text-xs font-semibold text-gray-500">{{course.date}}</p>
                                 </div>
                             </div>
                         </div>
@@ -66,6 +66,7 @@
 
 <script>
 import DashboardMenu from "./Sidebar.vue";
+import img from '../../assets/images/Home/1.jpg'
 
 export default {
     data() {
@@ -83,45 +84,45 @@ export default {
                     title: 'Completed Courses',
                     number: 23,
                     icon: 'pi pi-copy',
-                    text_colour: 'text-green-600'
+                    text_colour: 'text-secondary'
                 },
                 {
                     id: 1,
-                    title: 'Watching Time',
-                    number: 80,
-                    icon: 'pi pi-clock',
-                    text_colour: 'text-yellow-500'
+                    title: 'Saved Courses',
+                    number: 8,
+                    icon: 'pi pi-book',
+                    text_colour: 'text-alternate1'
                 },
                 {
                     id: 1,
                     title: 'Certificate Achievement',
                     number: 16,
                     icon: 'pi pi-bookmark',
-                    text_colour: 'text-blue-600'
+                    text_colour: 'text-alternate2'
                 },
             ],
             my_courses: [
                 {
                     id: 1,
-                    image: 'https://via.placeholder.com/390x220',
+                    image: img,
                     title: 'Web Designing',
                     classes: 17
                 },
                 {
                     id: 2,
-                    image: 'https://via.placeholder.com/390x220',
+                    image: img,
                     title: 'Digital Marketing',
                     classes: 22
                 },
                 {
                     id: 3,
-                    image: 'https://via.placeholder.com/390x220',
+                    image: img,
                     title: 'Account & Chart',
                     classes: 18
                 },
                 {
                     id: 4,
-                    image: 'https://via.placeholder.com/390x220',
+                    image: img,
                     title: 'Business Development',
                     classes: 13
                 }
@@ -156,7 +157,7 @@ export default {
 </script>
 
 <style scoped>
-.container {
+.v-container {
   position: relative;
   text-align: center;
 }
@@ -168,6 +169,6 @@ export default {
 }
 
 .menu-height {
-    height: 520px;
+    height: 505px;
 }
 </style>

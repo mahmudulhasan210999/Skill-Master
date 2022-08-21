@@ -10,7 +10,7 @@
                 </div>
             </div>
 
-            <div class="w-full flex flex-col lg:flex-row bg-gray-100 p-6 md:p-12 lg:p-10 xl:p-16 2xl:p-10 my-16">
+            <div class="w-full flex flex-col lg:flex-row bg-gray-100 p-6 md:p-12 lg:p-10 xl:p-16 2xl:p-10 mb-16">
                 <div class="w-full lg:w-2/3">
                     <div class="w-full flex flex-col">
 
@@ -43,7 +43,7 @@
                                     <a target="_blank" :href='getDetails.author.twitter'><i class="pi pi-linkedin text-primary" style="font-size: 18px;"></i></a>
                                 </div>
                             </div>
-                            <p class="text-sm text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. In vitae, maiores debitis nisi quisquam, optio minima totam necessitatibus commodi quos unde quis, eum adipisci atque. Quod expedita repellendus tempora assumenda!</p>
+                            <p class="text-sm text-gray-500">{{ getDetails.author.bio }}</p>
                         </div>
                     </div>
                 </div>

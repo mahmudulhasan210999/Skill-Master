@@ -8,30 +8,37 @@
                         <p class="text-primary">Account</p>
                     </div>   
                     <div class="my-4 text-left">
-                        <p class="py-2 text-gray-600">Emain Address*</p>
+                        <div class="flex py-2">
+                            <p class="text-gray-600">Email Address</p>
+                            <p class="text-red-500 text-md pl-0.5">*</p>
+                        </div>
                         <InputText class="h-11 w-full" type="text" placeholder="someone@gmail.com" v-model="value" />
                     </div>
                     <div class="mt-4">
                         <div class="flex py-2">
-                            <p class="text-gray-600">Username*</p>
+                            <p class="text-gray-600">Username</p>
+                            <p class="text-red-500 text-md pl-0.5">*</p>
                         </div>
                         <InputText class="h-11 w-full" type="text" placeholder="Alex Romero" v-model="value" />
                     </div>
-                    <div class="mt-4">
+                    <!-- <div class="mt-4">
                         <div class="flex py-2">
-                            <p class="text-gray-600">Phone Number*</p>
+                            <p class="text-gray-600">Phone Number</p>
+                            <p class="text-red-500 text-md pl-0.5">*</p>
                         </div>
                         <InputText class="h-11 w-full" type="text" placeholder="01XXXXXXXXX" v-model="value" />
-                    </div>
+                    </div> -->
                     <div class="mt-4">
                         <div class="flex py-2">
-                            <p class="text-gray-600">Password*</p>
+                            <p class="text-gray-600">Password</p>
+                            <p class="text-red-500 text-md pl-0.5">*</p>
                         </div>
                         <InputText class="h-11 w-full" type="password" placeholder="********" v-model="value" />
                     </div>
                     <div class="mt-4">
                         <div class="flex py-2">
-                            <p class="text-gray-600">Confirm Password*</p>
+                            <p class="text-gray-600">Confirm Password</p>
+                            <p class="text-red-500 text-md pl-0.5">*</p>
                         </div>
                         <InputText class="h-11 w-full" type="password" placeholder="********" v-model="value" />
                     </div>

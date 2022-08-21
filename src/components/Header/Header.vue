@@ -1,5 +1,5 @@
 <template>
-    <div class= "w-full flex flex-col items-center">
+    <div class= "w-full flex flex-col items-center shadow-sm bg-white">
     <div class="container">
         <div class="w-full flex justify-between px-4 xl:px-20 2xl:px-0">
             <div class="flex items-center">
@@ -42,27 +42,17 @@
                     <div v-if="isBlogOpen" class="dropdown z-50 w-64 ml-4" :class="isBlogOpen ? 'isOpen': 'no-display'">
                         <div class="flex flex-col items-start">
                             <div class="w-full text-left p-2 flex justify-between text-primary hover:text-secondary" v-for="(blog, index) in blog_category" :key="index">
-                                <router-link :to="{ path: '/blogs/' + blog.slug, slug: blog.title }" >
-                                    <p class="w-56"> {{ blog.title }} </p>
-                                </router-link>  
+                                <p class="w-56 cursor-pointer" @click="toBlogByCategory(blog.slug)"> {{ blog.title }} </p> 
                             </div> 
                         </div>
                     </div>
                 </div>
                 <router-link :to="{ path: '/contact' }" class="menu-item">Contact</router-link>
-                <div class="md:ml-6 lg:ml-12 mr-2 xl:mr-4">
-                    <router-link to="/cart">
-                        <div class="flex items-center border-2 border-alternate2 px-2 lg:px-3 xl:px-5 py-2 rounded-md hover:bg-alternate2 hover:text-white">
-                            <i class="pi pi-shopping-cart"></i>
-                            <p class="ml-2">Cart</p>
-                        </div>
-                    </router-link>
-                </div>
-                <router-link to="/login">
-                    <button class="py-2 px-2 lg:px-3 xl:px-5 text-primary border-2 border-primary rounded-md font-semibold hover:bg-primary hover:text-white">Sign in</button>
+                <router-link to="/cart">
+                    <button class="ml-8 py-1.5 px-2 lg:px-3 xl:px-4 text-primary border-2 border-primary rounded-md font-semibold hover:bg-primary hover:text-white transition-all">Wishlist</button>
                 </router-link>
-                <router-link to="/registration">
-                    <button class="py-2 px-2 lg:px-3 xl:px-5 rounded-md bg-primary border-2 border-primary font-semibold text-white ml-2 xl:ml-4">Sign up</button>
+                <router-link to="/login">
+                    <button class="py-1.5 px-2 lg:px-3 xl:px-4 rounded-md bg-primary border-2 border-primary font-semibold text-white ml-2 xl:ml-4">Sign in</button>
                 </router-link>
             </div>
 
@@ -128,10 +118,10 @@ export default {
             this.isSubCategoryOpen = true;
         },
 
-        produtPageByCategory(slug){
-            // this.$router.push({ name: 'productByCategory', params: { id:slug } })
-            // this.$store.dispatch('products/getProductByCategory', {slug:slug, current:1}) 
-        },
+        toBlogByCategory(title) {
+            console.log('here')
+            this.$router.push({ name: 'blogbycategory', params:{id: title}})
+        }
     },
 
     computed: {

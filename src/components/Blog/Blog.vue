@@ -1,8 +1,8 @@
 <template>
     <div class="w-full flex flex-col items-center px-4 md:px-8 lg:px-12 xl:px-28 pb-16">
         <div class="container">
-            <div class="text-center p-8">
-                <p class="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold p-4">New Top Articles</p>
+            <div class="text-center p-8 md:p-12">
+                <p class="text-2xl md:text-3xl lg:text-4xl font-bold p-4">New Top Articles</p>
                 <div class="flex justify-center text-primary">
                     <router-link to="/"><p class="text-sm lg:text-base">Home</p></router-link>
                     <p class="px-2 text-sm lg:text-base"> / </p>
@@ -11,7 +11,7 @@
             </div>
 
             <!-- BLOG LIST --> 
-            <div class="product-list p-3 sm:p-6 md:p-12">
+            <div class="product-list px-3 sm:px-6 md:px-12">
                 <div v-for="(blog, index) in blogs" :key="index">
                     <div>
                         <div>

@@ -13,7 +13,7 @@
                     </div>
                 </div>
             </div>
-            <div class="rounded-lg shadow-md py-2 sm:py-4 my-8 md:mb-10 mx-4 sm:mx-8 lg:mx-12 xl:mx-44 2xl:mx-20 bg-white">
+            <!-- <div class="rounded-lg shadow-md py-2 sm:py-4 my-8 md:mb-10 mx-4 sm:mx-8 lg:mx-12 xl:mx-44 2xl:mx-20 bg-white">
                 <div class="grid grid-cols-1 md:grid-cols-3 sm:px-4 lg:px-12">
                     <div class="p-2 sm:p-3 lg:p-5 xl:p-4" v-for="(top, index) in tops" :key="index">
                         <div class="w-full flex items-center">
@@ -27,13 +27,13 @@
                         </div>
                     </div>
                 </div>
-            </div> 
+            </div>  -->
         </div>
   </div>
 </template>
 
 <script>
-import {mapState} from 'vuex';
+// import {mapState} from 'vuex';
 import InputText from 'primevue/inputtext';
 import Dropdown from 'primevue/dropdown';
 import Button from 'primevue/button';
@@ -52,16 +52,18 @@ export default {
             ],
         }
     },
+
     components: {
         InputText,
         Dropdown,
         Button,
     },
-    computed: {
-        ...mapState ({
-            tops: state => state.home.tops
-        }),
-    }
+
+    // computed: {
+    //     ...mapState ({
+    //         tops: state => state.home.tops
+    //     }),
+    // }
 }
 </script>
 

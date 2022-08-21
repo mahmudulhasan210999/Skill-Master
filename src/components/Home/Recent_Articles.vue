@@ -1,46 +1,43 @@
 <template>
-  <div class="flex flex-col items-center w-full my-12 md:my-16 px-8 xl:px-44">
-    <div class="container">
-      <p class="text-lg lg:text-xl font-semibold py-2">Recent Blogs</p>
+    <div class="flex flex-col items-center w-full my-12 md:my-16 px-8 xl:px-44">
+        <div class="container">
+            <p class="text-lg lg:text-xl font-semibold py-2">Recent Blogs</p>
 
-    <div class="mt-2 product-list">
-      <div v-for="(blog, index) in blogs" :key="index">
-        <div>
-          <div>
-            <router-link :to="{ path: '/blog/' + blog.slug}"><img class="lg:p-0 h-44 md:h-52 xl:h-60 2xl:h-72 w-full small" :src="blog.headerImage" alt="Image"></router-link>
-          </div>
-          <div class="p-2 lg:p-3 border border-gray-200">
-            <router-link :to="{ path: '/blog/' + blog.slug}"><p class="h-12 text-sm md:text-base xl:text-xl font-medium">{{ blog.title }}</p></router-link>
-            <div class="flex">
-              <div class="flex items-center">
-                <img class="rounded-full h-6 w-6 md:h-8 md:w-8 bg-cover" :src="blog.author_thumb" alt="Image">
-              </div>
-              <p class="p-2 text-sm text-gray-600">{{ blog.author_name }}</p>
+            <div class="mt-2 product-list">
+                <div v-for="(blog, index) in blogs" :key="index">
+                    <div>
+                        <div>
+                            <router-link :to="{ path: '/blog/' + blog.slug}"><img class="lg:p-0 h-44 md:h-52 xl:h-60 2xl:h-72 w-full bg-cover small" :src="blog.headerImage" alt="Image"></router-link>
+                        </div>
+                        <div class="p-2 lg:p-3 border border-gray-200">
+                            <router-link :to="{ path: '/blog/' + blog.slug}"><p class="h-12 text-sm md:text-base xl:text-lg font-medium">{{ blog.title }}</p></router-link>
+                            <div class="flex">
+                                <div class="flex items-center">
+                                    <img class="rounded-full h-6 w-6 md:h-8 md:w-8 bg-cover" :src="blog.author_thumb" alt="Image">
+                                </div>
+                                <p class="p-2 text-sm text-gray-600">{{ blog.author_name }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
             </div>
-          </div>
         </div>
-      </div> 
     </div>
-    </div>
-  </div>
 </template>
 
 <script>
 import {mapState} from 'vuex';
 
 export default {
-  components: {
-    
-  },
-  computed: {
-    ...mapState ({
-      blogs: state => state.blogs.recent_blogs,
-    }),
-  },
+    computed: {
+        ...mapState ({
+            blogs: state => state.blogs.recent_blogs,
+        }),
+    },
 
-  mounted() {
-    this.$store.dispatch('blogs/getRecentBlogs')
-  }
+    mounted() {
+        this.$store.dispatch('blogs/getRecentBlogs')
+    }
 }
 </script>
 

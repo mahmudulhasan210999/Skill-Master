@@ -1,5 +1,5 @@
 <template>
-    <div class="flex justify-center px-4 sm:px-8 md:px-12 py-6 md:py-12 bg-gray-100">
+    <div class="flex justify-center px-4 sm:px-8 md:px-12 py-6 md:py-12 xl:py-20 bg-gray-100">
         <div class="container">
             <div class="flex flex-col lg:flex-row w-full">
                 <div class="lg:w-1/4 flex flex-col lg:mr-6 bg-white rounded-md menu-height">
@@ -15,12 +15,12 @@
                 <p class="px-2">/</p>
                 <p class="font-semibold">Settings</p>
             </div>
-            <div class="bg-white rounded-md shadow-md p-6">
+            <div class="bg-white rounded-md shadow-md p-6 xl:p-8">
                 <p class="pb-2 font-semibold border-b mb-4">Setup Your Details</p>
                  <div class="flex flex-col w-full">
                     <div class="flex flex-col sm:flex-row w-full mb-6">
                         <div class="flex flex-col sm:w-1/2 sm:mr-2.5 md:mr-5">
-                            <label class="text-sm mb-1">Name</label>
+                            <label class="text-sm mb-1">Username</label>
                             <InputText class="w-full text-lg" type="text" v-model="value" />
                         </div>
                         <div class="flex flex-col mt-6 sm:mt-0 sm:w-1/2 sm:ml-2.5 md:ml-5">
@@ -28,41 +28,13 @@
                             <InputText class="w-full text-lg" type="text" v-model="value" />
                         </div>
                     </div>
-                    <div class="flex flex-col sm:flex-row w-full mb-6">
-                        <div class="flex flex-col sm:w-1/2 sm:mr-2.5 md:mr-5">
-                            <label class="text-sm mb-1">Title</label>
-                            <InputText class="w-full text-lg" type="text" v-model="value" />
-                        </div>
-                        <div class="flex flex-col mt-6 sm:mt-0 sm:w-1/2 sm:ml-2.5 md:ml-5">
+                    <div class="sm:mr-5 md:mr-10 mb-6">
+                        <div class="mt-6 sm:mt-0 sm:w-1/2">
                             <label class="text-sm mb-1">Phone</label>
                             <InputText class="w-full text-lg" type="text" v-model="value" />
                         </div>
                     </div>
-                    <div class="flex flex-col sm:flex-row w-full mb-6">
-                        <div class="flex flex-col sm:w-1/2 sm:mr-2.5 md:mr-5">
-                            <label class="text-sm mb-1">Address</label>
-                            <InputText class="w-full text-lg" type="text" v-model="value" />
-                        </div>
-                        <div class="flex flex-col mt-6 sm:mt-0 sm:w-1/2 sm:ml-2.5 md:ml-5">
-                            <label class="text-sm mb-1">City</label>
-                            <InputText class="w-full text-lg" type="text" v-model="value" />
-                        </div>
-                    </div>
-                    <div class="flex flex-col sm:flex-row w-full mb-6">
-                        <div class="flex flex-col sm:w-1/2 sm:mr-2.5 md:mr-5">
-                            <label class="text-sm mb-1">Country</label>
-                            <InputText class="w-full text-lg" type="text" v-model="value" />
-                        </div>
-                        <div class="flex flex-col mt-6 sm:mt-0 sm:w-1/2 sm:ml-2.5 md:ml-5">
-                            <label class="text-sm mb-1">Zip</label>
-                            <InputText class="w-full text-lg" type="text" v-model="value" />
-                        </div>
-                    </div>
-                    <div class="flex flex-col w-full mb-6">
-                        <label class="text-sm mb-1">About</label>
-                        <Textarea class="w-full" v-model="value" :autoResize="true" rows="5" cols="30" />
-                    </div>
-
+                    
                     <p class="font-semibold my-4">Social Accounts</p>
                     <div class="flex flex-col sm:flex-row w-full mb-6">
                         <div class="flex flex-col sm:w-1/2 sm:mr-2.5 md:mr-5">
@@ -121,6 +93,6 @@ export default {
 
 <style scoped>
 .menu-height {
-    height: 520px;
+    height: 505px;
 }
 </style>

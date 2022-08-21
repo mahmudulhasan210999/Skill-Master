@@ -60,7 +60,7 @@
             <div class="container">
                 <div class="flex flex-col lg:flex-row justify-center ">
                     <div class="lg:w-2/3 flex flex-col lg:mr-4">
-
+ 
                         <!-- Course Overview, Requirements, Outcome starts -->
                         <div class="flex flex-col p-3 sm:p-6 border border-gray-200 rounded-md">
                             <p class="headlines">Course Overview</p>
@@ -76,61 +76,35 @@
                         </div>
                         <!-- Course Overview, Requirements, Outcome ends -->
 
-                        <!-- Course Curriculum starts -->
+                        <!-- Course Chapters starts -->
                         <div class="flex flex-col mt-8 border border-gray-200 p-3 sm:p-6 rounded-md">
                             <p class="headlines">Course Curriculum</p>
-                            <div class="flex flex-col mt-4 text-sm">
-                                <div class="flex flex-col p-3 sm:p-5 bg-white shadow-sm rounded-md border border-gray-200">
-                                    <div class="flex justify-between items-center hover:font-semibold cursor-pointer text-gray-600" @click="showCurriculum">
-                                        <p>Part 01: How To Learn Web Designing Step By Step</p>
-                                        <i class="pi pi-plus"></i>
-                                    </div>
-                                    <div class="flex flex-col mt-4" v-if="openCurriculum">
-                                        <div class="flex flex-col sm:flex-row text-sm p-3 sm:p-5 border-b border-gray-200">
-                                            <div class="flex sm:mr-8">
-                                                <i class="pi pi-video pt-0.5 mr-2"></i>
-                                                <p class="text-gray-500">Lecture 01</p>
+                            <div class="flex flex-col">
+                                <div v-for="(chapter, index) in chapters" :key="index">
+                                    <div class="flex flex-col  mt-4 p-3 sm:p-5 bg-white shadow-sm hover:shadow-md rounded-md border border-gray-200">
+                                        <div class="flex justify-between items-center font-medium cursor-pointer text-gray-700" @click="showCurriculum(chapter.id)">
+                                            <div class="flex">
+                                                <p>Chapter {{chapter.chapter_number}}:</p>
+                                                <p class="pl-1">{{chapter.title}}</p>
                                             </div>
-                                            <p class="font-medium">Web Designing Beginner</p>
+                                            <i class="pi pi-plus"></i> 
                                         </div>
-                                        <div class="flex flex-col sm:flex-row text-sm p-3 sm:p-5 border-b border-gray-200">
-                                            <div class="flex sm:mr-8">
-                                                <i class="pi pi-video pt-0.5 mr-2"></i>
-                                                <p class="text-gray-500">Lecture 02</p>
+                                        <div class="flex flex-col mt-4" v-if="value == chapter.id && openCurriculum">
+                                            <div v-for="(lecture, index) in chapter.lectures" :key="index">
+                                                <div class="flex flex-col sm:flex-row text-sm p-3 sm:p-5 border-b border-gray-200 cursor-pointer">
+                                                    <div class="flex sm:mr-8">
+                                                        <i class="pi pi-video pt-0.5 mr-2 text-gray-700"></i>
+                                                        <p class="text-gray-500">Lecture {{lecture.lecture_number}}</p>
+                                                    </div>
+                                                    <p class="font-medium text-gray-700">{{lecture.title}}</p>
+                                                </div>    
                                             </div>
-                                            <p class="font-medium">Startup Designing with HTML5 & CSS3</p>
-                                        </div>
-                                        <div class="flex flex-col sm:flex-row text-sm p-3 sm:p-5 border-b border-gray-200">
-                                            <div class="flex sm:mr-8">
-                                                <i class="pi pi-video pt-0.5 mr-2"></i>
-                                                <p class="text-gray-500">Lecture 03</p>
-                                            </div>
-                                            <p class="font-medium">How To Call Google Map iFrame</p>
-                                        </div>
-                                        <div class="flex flex-col sm:flex-row text-sm p-3 sm:p-5 border-b border-gray-200">
-                                            <div class="flex sm:mr-8">
-                                                <i class="pi pi-video pt-0.5 mr-2"></i>
-                                                <p class="text-gray-500">Lecture 04</p>
-                                            </div>
-                                            <p class="font-medium">Create Drop Down Navigation Using CSS3</p>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="text-gray-600 mt-5 flex justify-between p-5 bg-white shadow-sm rounded-md border border-gray-200 hover:font-semibold cursor-pointer">
-                                    <p>Part 02: Learn Web Designing In Basic Level</p>
-                                    <i class="pi pi-plus"></i>
-                                </div>
-                                <div class="text-gray-600 mt-5 flex justify-between p-5 bg-white shadow-sm rounded-md border border-gray-200 hover:font-semibold cursor-pointer">
-                                    <p>Part 03: Learn Web Designing In Advance Level</p>
-                                    <i class="pi pi-plus"></i>
-                                </div>
-                                <div class="text-gray-600 mt-5 flex justify-between p-5 bg-white shadow-sm rounded-md border border-gray-200 hover:font-semibold cursor-pointer">
-                                    <p>Part 04: How To Become Successful In Designing & Development?</p>
-                                    <i class="pi pi-plus"></i>
                                 </div>
                             </div>
                         </div>
-                        <!-- Course Curriculum ends -->
+                        <!-- Course Chapters ends -->
                         
                         <!-- Course Rating starts -->
                         <!-- <div class="flex items-center mt-8 border border-gray-200 p-6 rounded-md">
@@ -216,18 +190,19 @@
 
                         <!-- Course Feature starts -->
                         <div class="border border-gray-200 rounded-md">
-                            <!-- <div class="flex p-4 border-b border-gray-200">
+                            <div class="flex p-4 border-b border-gray-200" v-if="course.instructor">
                                 <img class="h-16 w-16 rounded-md" :src="course.instructor.thumb" alt="Instructor-image">
-                                <div class="ml-3">
+                                <div class="ml-3 flex flex-col justify-center">
                                     <p class="font-medium">{{course.instructor.name}}</p>
                                     <p class="text-xs text-gray-500">{{course.instructor.experience}} years of experience</p>
                                 </div>
-                            </div>  -->
+                            </div> 
                             <div class="p-3 sm:p-5 w-full flex flex-col">
                                 <p class="text-sm text-gray-500">Actual Price</p>
-                                <p class="text-2xl text-primary font-semibold" v-if="course.offerPrice >= 1">${{course.offerPrice}} <del class="text-2xl text-red-600 font-semibold">{{ course.price }}</del></p>
+                                <p class="text-2xl text-primary font-semibold" v-if="course.offerPrice >= 1">${{course["offerPrice"]}} <del class="text-2xl text-red-600 font-semibold">{{ course.price }}</del></p>
                                 <p class="text-2xl text-primary font-semibold" v-else>${{ course.price }}</p>
-                                <div class="mt-4">
+                                <div class="mt-5 text-sm text-gray-600" v-html="course.promoText"></div>
+                                <div class="mt-5">
                                     <p class="headlines">Course Features</p>
                                     <div class="flex text-sm mt-2">
                                         <i class="pi pi-angle-right feature-icon" style="font-size:0.7rem;"></i>
@@ -306,21 +281,22 @@
                                         <i class="pi pi-bookmark mr-2" style="font-size:0.8rem;"></i>
                                         <p class="font-thin">Skill Level:</p>
                                     </div>
-                                    <p class="font-semibold">Beginner</p>
+                                    <p class="font-semibold">{{course.skill_level}}</p>
                                 </div>
                                 <div class="course-details mt-4">
                                     <div class="flex items-center">
                                         <i class="pi pi-globe mr-2" style="font-size:0.8rem;"></i>
                                         <p class="font-thin">Language:</p>
                                     </div>
-                                    <p class="font-semibold">English</p>
+                                    <p class="font-semibold">{{course.language}}</p>
                                 </div>
                                 <div class="course-details mt-4">
                                     <div class="flex items-center">
                                         <i class="pi pi-copy mr-2" style="font-size:0.8rem;"></i>
                                         <p class="font-thin">Assesment:</p>
                                     </div>
-                                    <p class="font-semibold">Yes</p>
+                                    <p class="font-semibold" v-if="course.assessment == true">Yes</p>
+                                    <p class="font-semibold" v-else>No</p>
                                 </div>
                             </div>
                         </div>
@@ -350,7 +326,8 @@ import ProgressBar from 'primevue/progressbar';
 export default {
     data() {
         return {
-            openCurriculum: false
+            openCurriculum: false,
+            value: null
         }
     },
 
@@ -360,16 +337,19 @@ export default {
 
     computed: {
         ...mapState ({
-            course: state => state.courses.getDetail
+            course: state => state.courses.getDetail,
+            chapters: state => state.courses.chapters,
         }),
     },
 
     created() {
-        this.$store.dispatch('courses/getCoursesById', this.$route.params.id)
+        this.$store.dispatch('courses/getCoursesBySlug', this.$route.params.id)
+        this.$store.dispatch('courses/getChaptersBySlug', this.$route.params.id)
     },
 
     methods: {
-        showCurriculum () {
+        showCurriculum (id) {
+            this.value = id
             this.openCurriculum = !this.openCurriculum
         }
     }
@@ -379,7 +359,7 @@ export default {
 <style scoped>
 
 .topbar-container {
-    @apply w-full flex justify-center bg-green-50 px-4 sm:px-8 lg:px-16 xl:px-44 py-6 lg:py-16;
+    @apply w-full flex justify-center bg-sky-50 px-4 sm:px-8 lg:px-16 xl:px-44 py-6 lg:py-16;
 }
 
 .text-container {

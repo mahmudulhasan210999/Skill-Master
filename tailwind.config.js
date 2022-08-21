@@ -15,6 +15,7 @@ module.exports = {
       'gray-200': '#e5e7eb',
       'gray-500': '#6b7280',
       'gray-600': '#4b5563',
+      'gray-700': '#374151',
       'green-50': '#f0fdf4',
       'green-100': '#dcfce7',
       'green-500': '#22c55e',
@@ -29,6 +30,7 @@ module.exports = {
       'white': '#FFFFFF',
       'black': '#000000',
       'rose-100': '#ffe4e6',
+      'sky-50': '#f0f9ff'
     }
   },
   plugins: [],

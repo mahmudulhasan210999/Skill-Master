@@ -1,7 +1,7 @@
 <template>
     <div class="w-full flex flex-col bg-white shadow-md p-3 rounded-md">
         <div class="p-8 flex flex-col items-center">
-            <img class="rounded-full" :src="user_info.img" alt="">
+            <img class="rounded-full h-36 w-36" :src="user_info.img" alt="">
             <div class="mt-4 flex flex-col items-center">
                 <p class="text-lg font-semibold">{{user_info.name}}</p>
                 <p class="text-gray-500 text-sm">{{user_info.country}}</p>
@@ -14,7 +14,7 @@
             </div>
             <div class="menu-items" @click="toMyOrders">
                 <i class="pi pi-shopping-cart"></i>
-                <p class="ml-5">My Orders</p>
+                <p class="ml-5">My Courses</p>
             </div>
             <div class="menu-items" @click="toSettings">
                 <i class="pi pi-cog"></i>
@@ -29,11 +29,13 @@
 </template>
 
 <script>
+import img from '../../assets/images/Home/1.jpg'
+
 export default {
     data() {
         return {
             user_info: {
-                img: 'https://via.placeholder.com/160x160',
+                img: img,
                 name: 'Robert Dale',
                 country: 'Canada USA'
             }
@@ -45,7 +47,7 @@ export default {
             this.$router.push('/dashboard');
         },
         toMyOrders() {
-            this.$router.push('/my-orders');
+            this.$router.push('/my-courses');
         },
         toSettings() {
             this.$router.push('/settings');

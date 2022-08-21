@@ -16,7 +16,7 @@
 
         <!-- Recent blogs -->
         <div class="bg-white rounded-md border border-gray-200 p-6 mt-4 lg:mt-8">
-            <p class="text-xl font-bold py-1">Related Blogs</p>
+            <p class="text-xl font-bold py-1">Recent Blogs</p>
             <div class="flex my-3 text-left" v-for="(blog, index) in blogs" :key="index">
                 <router-link :to="{ path: '/blog/' + blog.slug }">
                     <div class="flex w-full text-sm">
@@ -38,7 +38,7 @@
             <p class="text-xl font-semibold text-black">Tags</p>
             <div class="grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-3">
                 <div class="flex items-center my-1" v-for="(tag, index) in tags" :key="index">
-                    <p class="w-full text-center py-2 mx-1 rounded-sm text-gray-600 border text-sm cursor-pointer hover:text-white hover:bg-primary">{{tag.title}}</p>
+                    <p class="w-full text-center py-2 mx-1 rounded-md text-gray-600 border text-sm cursor-pointer hover:text-white hover:bg-primary">{{tag.title}}</p>
                 </div>
             </div>
         </div>

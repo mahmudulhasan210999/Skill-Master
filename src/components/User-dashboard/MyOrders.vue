@@ -1,5 +1,5 @@
 <template>
-    <div class="flex justify-center px-4 sm:px-12 py-6 sm:py-12 bg-gray-100">
+    <div class="flex justify-center px-4 sm:px-12 py-6 sm:py-12 xl:py-20 bg-gray-100">
         <div class="container">
             <div class="flex flex-col lg:flex-row w-full">
                 <div class="lg:w-1/4 flex flex-col lg:mr-6 bg-white rounded-md menu-height">
@@ -13,10 +13,10 @@
                     <p class="text-primary">Home</p>
                 </router-link>
                 <p class="px-2">/</p>
-                <p class="font-semibold">My orders</p>
+                <p class="font-semibold">My Courses</p>
             </div>
             <div class="bg-white rounded-md shadow-md p-6">
-                <p class="pb-4 font-semibold">View Order</p>
+                <p class="pb-4 font-semibold">View Courses</p>
                 <div v-if="cartItem.length > 0">
                         <DataTable :value="cartItem" responsiveLayout="scroll">
                             <Column header="Order">
@@ -120,6 +120,6 @@ export default {
 
 <style scoped>
 .menu-height {
-    height: 520px;
+    height: 505px;
 }
 </style>

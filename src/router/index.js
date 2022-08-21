@@ -32,7 +32,8 @@ const routes = [
   },
   {
     path: '/blogs/:id',
-    component: BlogByCategory
+    name: 'blogbycategory',
+    component: BlogByCategory,
   },
   {
     path: '/blog/:id',
@@ -79,7 +80,7 @@ const routes = [
     component: Dashboard
   },
   {
-    path: '/my-orders',
+    path: '/my-courses',
     component: Orders
   },
   {

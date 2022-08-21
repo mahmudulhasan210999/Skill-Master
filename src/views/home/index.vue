@@ -1,9 +1,9 @@
 <template>
-  <Top />
-  <Category />
-  <Courses />
-  <!-- <GotCategory /> -->
-  <RecentArticles />
+    <Top />
+    <Category />
+    <Courses />
+    <!-- <GotCategory /> -->
+    <RecentArticles />
 </template>
 
 <script>
@@ -14,12 +14,12 @@ import GotCategory from '../../components/Home/Got_Categories.vue'
 import RecentArticles from '../../components/Home/Recent_Articles.vue'
 
 export default {
-  components: {
-    Top,
-    Category,
-    Courses,
-    GotCategory,
-    RecentArticles,
-  }
+    components: {
+        Top,
+        Category,
+        Courses,
+        GotCategory,
+        RecentArticles,
+    }
 }
 </script>
