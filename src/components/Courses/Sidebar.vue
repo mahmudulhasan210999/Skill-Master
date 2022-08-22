@@ -10,7 +10,7 @@
             <div class="mt-6 w-full">
                 <p class="text-xl font-semibold text-black">Course Categories</p>
                 <div class="flex my-2 text-left w-full" v-for="(category, index) in categories" :key="index">
-                    <router-link class="w-full text-gray-600 hover:text-primary" :to="{ path: '/' + category.slug }">
+                    <router-link class="w-full text-gray-600 hover:text-primary" :to="{ path: '/courses/' + category.slug }">
                         <p class="w-full text-sm py-1">{{ category.title}} ({{category.course_count}})</p>
                     </router-link>
                 </div>

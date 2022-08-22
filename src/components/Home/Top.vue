@@ -6,7 +6,7 @@
 
                 <div class="text-left text-white bottom-left">
                     <p class="title-text text-xl sm:text-3xl lg:text-4xl xl:text-5xl font-semibold p-2">Learn On Your Schedule</p>
-                    <p class="desc-text text-sm md:text-base p-2 w-60 sm:w-80 md:w-96 lg:w-full">Lorem ipsum, dolor sit amet consectetur adipisicing elit tur adipisicing elit.</p>
+                    <p class="desc-text text-sm md:text-base p-2 w-60 sm:w-80 md:w-96 lg:w-1/2">Lorem ipsum, dolor sit amet consectetur Lorem ipsum, dolor sit amet consectetur adipisicing elit tur amet consectetur Lorem ipsum, dolor sit amet consectetur adipisicing dolor sit amet consectetur adipisicing elit tur adipisicing elit.</p>
                     <div class="flex p-2">
                         <input class="rounded-l-md w-44 sm:w-60 lg:w-80 md:text-xl pl-4 outline-none text-black" type="text" placeholder="Search...">
                         <button class="p-3 sm:p-4 lg:p-6 rounded-r-md bg-secondary text-white">Go</button>
@@ -81,7 +81,7 @@ export default {
 
 .bottom-left {
     position: absolute;
-    bottom: 240px;
+    bottom: 170px;
     left: 180px;
 }
 

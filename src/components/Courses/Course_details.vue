@@ -91,13 +91,15 @@
                                         </div>
                                         <div class="flex flex-col mt-4" v-if="value == chapter.id && openCurriculum">
                                             <div v-for="(lecture, index) in chapter.lectures" :key="index">
-                                                <div class="flex flex-col sm:flex-row text-sm p-3 sm:p-5 border-b border-gray-200 cursor-pointer">
-                                                    <div class="flex sm:mr-8">
-                                                        <i class="pi pi-video pt-0.5 mr-2 text-gray-700"></i>
-                                                        <p class="text-gray-500">Lecture {{lecture.lecture_number}}</p>
-                                                    </div>
-                                                    <p class="font-medium text-gray-700">{{lecture.title}}</p>
-                                                </div>    
+                                                <router-link :to="{ path: '/' + lecture.id }" >
+                                                    <div class="flex flex-col sm:flex-row text-sm p-3 sm:p-5 border-b border-gray-200 cursor-pointer">
+                                                        <div class="flex sm:mr-8">
+                                                            <i class="pi pi-video pt-0.5 mr-2 text-gray-700"></i>
+                                                            <p class="text-gray-500">Lecture {{lecture.lecture_number}}</p>
+                                                        </div>
+                                                        <p class="font-medium text-gray-700">{{lecture.title}}</p>             
+                                                    </div>  
+                                                </router-link>  
                                             </div>
                                         </div>
                                     </div>
@@ -190,12 +192,14 @@
 
                         <!-- Course Feature starts -->
                         <div class="border border-gray-200 rounded-md">
-                            <div class="flex p-4 border-b border-gray-200" v-if="course.instructor">
-                                <img class="h-16 w-16 rounded-md" :src="course.instructor.thumb" alt="Instructor-image">
-                                <div class="ml-3 flex flex-col justify-center">
-                                    <p class="font-medium">{{course.instructor.name}}</p>
-                                    <p class="text-xs text-gray-500">{{course.instructor.experience}} years of experience</p>
-                                </div>
+                            <div class="p-4 border-b border-gray-200" v-if="course.instructor">
+                                <router-link class="flex" :to="{ path: '/instructor/' + course.id}">
+                                    <img class="h-16 w-16 rounded-md" :src="course.instructor.thumb" alt="Instructor-image">
+                                    <div class="ml-3 flex flex-col justify-center">
+                                        <p class="font-medium">{{course.instructor.name}}</p>
+                                        <p class="text-xs text-gray-500">{{course.instructor.experience}} years of experience</p>
+                                    </div>
+                                </router-link>
                             </div> 
                             <div class="p-3 sm:p-5 w-full flex flex-col">
                                 <p class="text-sm text-gray-500">Actual Price</p>

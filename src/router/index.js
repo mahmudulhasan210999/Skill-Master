@@ -16,6 +16,7 @@ import Settings from "../views/user-dashboard/settings/index.vue";
 import Instructor from '../views/courses/instructor/[id].vue';
 import Categories from '../views/courses/categories/[id].vue';
 import BlogByCategory from '../views/blog/byCategory/[id].vue';
+import Lectures from "../views/courses/lectures/[l_id].vue"
 
 const routes = [
   { 
@@ -44,7 +45,7 @@ const routes = [
     component: Courses
   },
   {
-    path: '/course/:id',
+    path: '/instructor/:id',
     component: Instructor
   },
   {
@@ -52,11 +53,15 @@ const routes = [
     component: Contact
   },
   {
-    path: '/courses/:id',
+    path: '/course/:id',
     component: CourseDetails
   },
   {
-    path: '/:id',
+    path: '/:l_id',
+    component: Lectures
+  },
+  {
+    path: '/courses/:id',
     component: Categories
   },
   {

@@ -11,7 +11,8 @@ const V1API = {
     'get_courses':host+'/api/courses',
     'featured_courses':host+'/api/featured-courses',
     'course_details':host+'/api/courses/',
-    'course_by_category':host+'/api/courses/by-category/'
+    'course_by_category':host+'/api/courses/by-category/',
+    'instructor_by_course_id': host+'/api/course/instructor/'
 }
 
 export default V1API;

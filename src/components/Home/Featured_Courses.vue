@@ -7,14 +7,14 @@
             <Carousel :value="featured_courses" :numVisible="3" :numScroll="3" :responsiveOptions="responsiveOptions">
                 <template #item="slotProps">
                     <div class="p-3">
-                        <router-link :to="{ path: '/courses/' + slotProps.data.slug}">
+                        <router-link :to="{ path: '/course/' + slotProps.data.slug}">
                             <div class="image-container">
                                 <img class="h-60 w-full bg-cover" :src="slotProps.data.thumb" alt="Image">
                                 <div class="top-left px-3 py-1 bg-white shadow-lg rounded-sm text-gray-600 text-sm font-semibold">${{ slotProps.data.price }}</div>
                             </div>
                         </router-link>
                         <div class="border border-gray-200 bg-white">
-                            <router-link :to="{ path: '/courses/' + slotProps.data.slug}">
+                            <router-link :to="{ path: '/course/' + slotProps.data.slug}">
                                 <p class="lg:text-xl p-1 lg:p-3">{{ slotProps.data.title }}</p>
                             </router-link>
                             <div class="flex justify-between text-xs text-gray-500 px-2 lg:px-3">
@@ -32,7 +32,7 @@
                                 </div>
                             </div>
                             <div class="flex justify-between border-t border-gray-200 p-2 lg:p-3 mt-2"> 
-                                <router-link :to="{ path: '/course/' + slotProps.data.instructor_slug}">
+                                <router-link :to="{ path: '/instructor/' + slotProps.data.id}">
                                     <div class="flex">
                                         <img class="rounded-full h-8 w-8 lg:h-10 lg:w-10" :src="slotProps.data.author.thumb" alt="Image">
                                         <p class="p-2 text-sm font-medium text-gray-600">{{ slotProps.data.author.name }}</p>

@@ -17,7 +17,7 @@
                     <div v-if="isOpen" class="dropdown z-50 w-64 ml-4" :class="isOpen ? 'isOpen': 'no-display'">
                         <div class="flex flex-col items-start">
                             <div class="w-full text-left p-2 flex justify-between text-primary hover:text-secondary" @mouseover="openSubCategory(category.subcategory, category.id)" v-for="(category, index) in items" :key="index">
-                                <router-link :to="{ path: '/' + category.slug }" >
+                                <router-link :to="{ path: '/courses/' + category.slug }" >
                                     <p class="w-56"> {{ category.title }} </p>
                                 </router-link> 
                                 <span class="font-normal" v-if="category.subcategory">

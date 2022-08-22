@@ -2,23 +2,23 @@
     <div class="w-full flex flex-col">
         <div class="flex">
             <div class="w-full">
-                <Instructors :i_id="getInstructor()" />
+                <Lecture :slug="getDetails()" />
             </div>
         </div>
     </div>
 </template>
 
 <script>
-import Instructors from '../../../components/Instructors/Instructors.vue'; 
+import Lecture from '../../../components/Courses/lectures/Lecture.vue';
 
 export default {
     components: {
-        Instructors,
+        Lecture
     },
 
     methods: {
-        getInstructor() {
-            return this.$route.params.id
+        getDetails() {
+            return this.$route.params.id;
         }
     },
 }
