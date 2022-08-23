@@ -1,31 +1,35 @@
 <template>
-    <div class="w-full flex flex-col items-center bg-gray-50 py-12 md:py-16 px-4 sm:px-8 lg:px-44">
+    <div class="w-full flex flex-col items-center bg-gray-50 py-12 md:py-16 px-4 sm:px-8 lg:px-20 xl:px-28 2xl:px-44">
         <div class="container"> 
             <div class="flex flex-col items-center">
                 <p class="text-sm text-gray-600">Popular Category</p>
                 <div class="flex justify-center text-base lg:text-2xl font-semibold">
-                    <p class="text-red-600 p-1">Hot & Popular</p>
+                    <p class="text-alternate2 p-1">Hot & Popular</p>
                     <p class="p-1">Category</p>
                 </div>
             </div>
-
-            <div class="grid grid-cols-1 grid-view sm:grid-cols-2 md:grid-cols-3 pt-4">
-                <div class="p-2 lg:p-3" v-for="(category, index) in hot_categories" :key="index">
-                    <router-link :to="{ path: '/' + category.slug }">
-                        <div class="flex items-center rounded-md p-5 bg-gray-200" :class="category.color">
-                            <div>
-                                <!-- <img class="rounded-full h-12 lg:h-20 w-12 lg:w-20 bg-cover" :src="category.img" alt="Image"> -->
-                                <i class="" :class="category.icon" style="font-size:2.5rem;"></i>
-                            </div>
-                            <div class="p-2 lg:p-4">
-                                <p class="text-sm lg:text-base font-semibold" :class="category.text_color">{{ category.title }}</p>
-                                <div class="flex items-center font-medium text-xs lg:text-sm text-gray-600">
-                                    <p class="pi pi-book" style="font-size:0.8rem;"></p>
-                                    <p class="ml-1">{{ category.course_count }} Courses</p>
-                                </div>
+            <div class="bg-gray-200 rounded-xl mt-4">
+                <div class="overflow-x-auto">
+                    <div class="category-box">
+                        <div class="grid grid-cols-3 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-5 p-8 xl:p-12">
+                            <div class="" v-for="(category, index) in hot_categories" :key="index">
+                                <router-link :to="{ path: '/' + category.slug }">
+                                    <div class="flex items-center rounded-lg p-3 bg-white h-24" :class="category.color">
+                                        <div>
+                                            <i class="p-2 bg-alternate2 rounded-md" :class="category.icon" style="font-size:2.5rem;"></i>
+                                        </div>
+                                        <div class="ml-3">
+                                            <p class="text-base font-semibold" :class="category.text_color">{{ category.title }}</p>
+                                            <div class="flex items-center font-medium text-xs lg:text-sm text-gray-600">
+                                                <p class="pi pi-book" style="font-size:0.8rem;"></p>
+                                                <p class="ml-1">{{ category.course_count }} Courses</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </router-link>
                             </div>
                         </div>
-                    </router-link>
+                    </div>
                 </div>
             </div>
         </div>
@@ -49,6 +53,12 @@ export default {
 </script>
 
 <style scoped>
+@media screen and (max-width: 768px) {
+    .category-box {
+        width: 768px;
+    }
+}
+
 @media screen and (max-width: 640px) {
     .grid-view {
         @apply grid grid-cols-2;
