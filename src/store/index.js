@@ -4,31 +4,33 @@ import courses from './modules/courses';
 import menu from './modules/menu';
 import blogs from './modules/blogs';
 import instructors from './modules/instructors';
+import login from './modules/login'
 
 // import { isPromise } from '@vue/shared'
 
 const store = createStore({
-  modules: {
-    home,
-    courses,
-    menu,
-    blogs,
-    instructors,
-  },
+    modules: {
+        home,
+        courses,
+        menu,
+        blogs,
+        instructors,
+        login
+    },
 
-  // State
-  state: {
-  },
+    // State
+    state: {
+    },
 
-  // Actions
-  actions: {
+    // Actions
+    actions: {
 
-  },
+    },
 
-  // Mutaions
-  mutaions: {
+    // Mutaions
+    mutaions: {
 
-  },
+    },
 })
 
 export default store

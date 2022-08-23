@@ -48,7 +48,7 @@
                     </div>
                 </div>
                 <router-link :to="{ path: '/contact' }" class="menu-item">Contact</router-link>
-                <router-link to="/cart">
+                <router-link to="/dashboard">
                     <button class="ml-8 py-1.5 px-2 lg:px-3 xl:px-4 text-primary border-2 border-primary rounded-md font-semibold hover:bg-primary hover:text-white transition-all">Wishlist</button>
                 </router-link>
                 <router-link to="/login">
@@ -81,6 +81,7 @@ export default {
             isSubCategoryOpen: false,
             subCategoryList: [],
             parentCategoryId: null,
+            isLoggedIn: null
         }
     },
 
@@ -128,14 +129,26 @@ export default {
         ...mapState ({
             menu: state => state.menu.menu,
             items: state => state.home.hot_categories,
-            blog_category: state => state.blogs.categories
+            blog_category: state => state.blogs.categories,
+            loggedIn: state => state.login.isLoggedIn 
         }),
     },
 
     mounted() {
         this.$store.dispatch('home/getCategories'),
         this.$store.dispatch('blogs/getCategories')
-    }
+    },
+
+    created() {
+        this.$store.dispatch('login/getLoginStatus');
+    },
+
+    watch: {
+        loggedIn(newValue, oldValue) {
+            this.isLoggedIn = this.loggedIn
+            // console.log(this.isLoggedIn)
+        }
+    },
 }
 </script>
 

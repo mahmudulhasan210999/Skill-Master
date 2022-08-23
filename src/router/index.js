@@ -19,84 +19,126 @@ import BlogByCategory from '../views/blog/byCategory/[id].vue';
 import Lectures from "../views/courses/lectures/[l_id].vue"
 
 const routes = [
-  { 
-    path: '/:pathMatch(.*)*', 
-    component: PageNotFound 
-  },
-  {
-    path: '/',
-    component: Home 
-  },
-  {
-    path: '/blogs',
-    component: Blog
-  },
-  {
-    path: '/blogs/:id',
-    name: 'blogbycategory',
-    component: BlogByCategory,
-  },
-  {
-    path: '/blog/:id',
-    component: BlogDetails
-  },
-  {
-    path: '/courses',
-    component: Courses
-  },
-  {
-    path: '/instructor/:id',
-    component: Instructor
-  },
-  {
-    path: '/contact',
-    component: Contact
-  },
-  {
-    path: '/course/:id',
-    component: CourseDetails
-  },
-  {
-    path: '/:l_id',
-    component: Lectures
-  },
-  {
-    path: '/courses/:id',
-    component: Categories
-  },
-  {
-    path: '/cart',
-    component: Cart
-  },
-  {
-    path: '/checkout',
-    component: Checkout
-  },
-  {
-    path: '/login',
-    component: Login
-  },
-  {
-    path: '/registration',
-    component: Registration
-  },
-  {
-    path: '/dashboard',
-    component: Dashboard
-  },
-  {
-    path: '/my-courses',
-    component: Orders
-  },
-  {
-    path: '/settings',
-    component: Settings
-  },
+    { 
+        path: '/:pathMatch(.*)*', 
+        component: PageNotFound 
+    },
+    {
+        path: '/',
+        component: Home 
+    },
+    {
+        path: '/blogs',
+        component: Blog
+    },
+    {
+        path: '/blogs/:id',
+        name: 'blogbycategory',
+        component: BlogByCategory,
+    },
+    {
+        path: '/blog/:id',
+        component: BlogDetails
+    },
+    {
+        path: '/courses',
+        component: Courses
+    },
+    {
+        path: '/instructor/:id',
+        component: Instructor
+    },
+    {
+        path: '/contact',
+        component: Contact
+    },
+    {
+        path: '/course/:id',
+        component: CourseDetails
+    },
+    {
+        path: '/:l_id',
+        component: Lectures
+    },
+    {
+        path: '/courses/:id',
+        component: Categories
+    },
+    {
+        path: '/cart',
+        component: Cart
+    },
+    {
+        path: '/checkout',
+        component: Checkout
+    },
+    {
+        path: '/login',
+        component: Login,
+        name: 'Login',
+    },
+    {
+        path: '/registration',
+        component: Registration,
+        name: 'Registration',
+    },
+    {
+        path: '/dashboard',
+        component: Dashboard,
+        name: 'Dashboard',
+        meta: {
+            login_required: true
+        }
+    },
+    {
+        path: '/my-courses',
+        component: Orders,
+        name: 'Orders',
+        meta: {
+            login_required: true
+        }
+    },
+    {
+        path: '/settings',
+        component: Settings,
+        name: 'Settings',
+        meta: {
+            login_required: true
+        }
+    },
 ]
 
 const router = createRouter({
-  history: createWebHistory(),
-  routes
+    history: createWebHistory(),
+    routes,
+    scrollBehavior (to, from, savedPosition) {
+        // return desired position
+        if (savedPosition) return savedPosition
+        else return { top: 0 }
+    }
 })
+
+router.beforeEach(function (to, from, next) {
+    let isLoggedIn = JSON.parse(localStorage.getItem('loggedIn'))
+    if(to.meta.login_required){
+        if(isLoggedIn) {
+            next();
+        }
+        else {
+            next('/login');
+        }
+    }
+    else if(to.meta.redirectionNeeded) {
+        if(isLoggedIn) {
+            next(from.fullPath)
+        }
+        else {
+            next();
+        }
+    }
+    else {
+        next();
+    }
+});
 
 export default router
