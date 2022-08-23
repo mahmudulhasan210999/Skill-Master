@@ -4,9 +4,9 @@
         <div class="container">
             <div class="w-full flex flex-col md:flex-row login-container sm:px-28 md:px-12 py-20 lg:px-40 xl:px-72 2xl:px-44">
                 <div class="w-full hidden sm:flex md:w-1/2 l-container"> 
-                    <img class="bg-img rounded-l-lg" src="../../assets/images/20945760.jpg" alt="">
+                    <img class="bg-img rounded-tl-lg rounded-bl-lg sm:rounded-bl-none sm:rounded-tr-lg md:rounded-bl-lg md:rounded-tr-none" src="../../assets/images/20945760.jpg" alt="">
                 </div>
-                <div class="w-full md:w-1/2 bg-white rounded-r-lg text-left md:mt-0 p-6 lg:p-12 text-sm">
+                <div class="w-full md:w-1/2 bg-white rounded-tr-lg rounded-br-lg rounded-tl-lg sm:rounded-tl-none rounded-bl-lg sm:rounded-tr-none md:rounded-bl-none md:rounded-tr-lg text-left md:mt-0 p-6 lg:px-12 flex flex-col justify-center text-sm">
                     <div class="flex text-2xl lg:text-3xl">
                         <p class="pr-2 text-gray-600">Sign</p>
                         <p class="text-primary">In</p>
