@@ -9,8 +9,8 @@
 import Contact from '../../components/Contact/Contact.vue';
 
 export default {
-  components: {
-    Contact,
-  }
+    components: {
+        Contact,
+    }
 }
 </script>

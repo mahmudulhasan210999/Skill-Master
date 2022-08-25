@@ -1,13 +1,13 @@
 <template>
-  <Blog />
+    <Blog />
 </template>
 
 <script>
 import Blog from '../../components/Blog/Blog.vue';
 
 export default {
-  components: {
-    Blog
-  }
+    components: {
+        Blog
+    }
 }
 </script>
