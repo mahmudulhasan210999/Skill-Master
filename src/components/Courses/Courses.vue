@@ -1,20 +1,20 @@
 <template>
     <div class="w-full flex flex-col">
-        <div class="flex items-center text-sm text-gray-600 lg:px-4">
+        <div class="flex items-center text-sm text-gray-600">
             <p>We found</p>
             <p class="px-1 text-base font-semibold">{{courses.length}}</p>
             <p>courses for you</p>
         </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 grid-view">
-            <div class="p-2 course-container md:p-4 2xl:p-3" v-for="(course, index) in courses" :key="index">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 grid-view py-2 md:py-4 2xl:py-3">
+            <div class="box-padding" v-for="(course, index) in courses" :key="index">
                 <div class="shadow-sm hover:shadow-md">
                     <router-link :to="{ path: '/course/' + course.slug}">
                         <div class="container">
-                            <img class="h-52 md:h-56 lg:h-52 xl:h-60 w-full bg-cover" :src="course.thumb" alt="Image">
+                            <img class="h-52 sm:h-56 md:h-60 lg:h-56 xl:h-60 w-full bg-cover rounded-t-lg img-size" :src="course.thumb" alt="Image">
                             <div class="top-left px-3 py-1 bg-white shadow-lg rounded-sm text-gray-600 text-sm font-semibold">${{ course.price }}</div>
                         </div>
                     </router-link>
-                    <div class="border border-gray-200">
+                    <div class="border border-gray-200 rounded-b-lg">
                         <router-link :to="{ path: '/course/' + course.slug}">
                             <p class="text-xl p-3">{{ course.title }}</p>
                         </router-link>
@@ -67,15 +67,15 @@ export default {
 
 <style scoped>
 .container {
-  position: relative;
-  text-align: center;
-  color: white;
+    position: relative;
+    text-align: center;
+    color: white;
 }
 
 .top-left {
-  position: absolute;
-  top: 20px;
-  left: 20px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
 }
 
 @media screen and (max-width: 640px) {
@@ -85,24 +85,33 @@ export default {
 }
 
 @media screen and (max-width: 530px) {
-    .course-container {
-        @apply px-16;
-    }
-
     .grid-view {
         @apply grid-cols-1;
     }
-}
 
-@media screen and (max-width: 450px) {
-    .course-container {
-        @apply px-10;
+    .box-padding {
+        @apply px-12;
+    }
+
+    .img-size {
+        @apply h-60;
     }
 }
 
-@media screen and (max-width: 380px) {
-    .course-container {
-        @apply p-2;
+@media screen and (max-width: 430px) {
+    .box-padding {
+        @apply px-6;
+    }
+}
+
+
+@media screen and (max-width: 340px) {
+    .img-size {
+        @apply h-52;
+    }
+
+    .box-padding {
+        @apply px-0;
     }
 }
 </style>

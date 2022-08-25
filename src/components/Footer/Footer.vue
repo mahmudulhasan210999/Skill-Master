@@ -1,6 +1,6 @@
 <template>
     <div class="w-full flex flex-col items-center"> 
-        <div class="flex flex-col w-full items-center text-center bg-secondary px-8 lg:px-44 py-8 lg:py-16">
+        <div class="flex flex-col w-full items-center text-center bg-secondary px-4 sm:px-8 lg:px-44 py-8 lg:py-16">
             <div class="container">
                 <div class="text-white pb-8">
                     <p class="text-xl lg:text-3xl font-bold p-2">Join Thousand Of Happy Students!</p>
@@ -16,7 +16,7 @@
             </div>
         </div>
 
-        <div class="w-full flex items-center justify-center step_2 px-8 lg:px-20 xl:px-44 py-8 lg:py-14 xl:py-16">
+        <div class="w-full flex items-center justify-center step_2 px-4 sm:px-8 lg:px-20 xl:px-44 py-4 sm:py-8 lg:py-14 xl:py-16">
             <div class="container">
                 <div class="flex flex-col lg:flex-row justify-between gap-3 text-gray-400">
                     <div>

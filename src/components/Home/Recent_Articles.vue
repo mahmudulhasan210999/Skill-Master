@@ -3,15 +3,15 @@
         <div class="container">
             <p class="text-lg lg:text-xl font-semibold py-2">Recent Blogs</p>
 
-            <div class="overflow-x-auto">
+            <div class="overflow-x-auto pb-4">
                 <div class="category-box">
                     <div class="grid grid-cols-3 md:grid-cols-3 gap-5">
                         <div v-for="(blog, index) in blogs" :key="index">
                             <div>
                                 <div>
-                                    <router-link :to="{ path: '/blog/' + blog.slug}"><img class="lg:p-0 w-full bg-cover small" :src="blog.headerImage" alt="Image"></router-link>
+                                    <router-link :to="{ path: '/blog/' + blog.slug}"><img class="lg:p-0 w-full bg-cover rounded-t-lg small" :src="blog.headerImage" alt="Image"></router-link>
                                 </div>
-                                <div class="p-2 lg:p-3 border border-gray-200">
+                                <div class="p-2 lg:p-3 border border-gray-200 rounded-b-lg">
                                     <router-link :to="{ path: '/blog/' + blog.slug}"><p class="h-12 text-sm md:text-base xl:text-lg font-medium">{{ blog.title }}</p></router-link>
                                     <div class="flex">
                                         <div class="flex items-center">

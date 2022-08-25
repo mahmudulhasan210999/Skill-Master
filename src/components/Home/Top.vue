@@ -16,7 +16,7 @@
             </div>
         </div>
         <div class="flex md:hidden"> 
-            <div class="w-full flex flex-col items-center text-left pl-5 sm:px-20">
+            <div class="w-full flex flex-col items-center text-left px-4 sm:px-20">
                 <div class="text-left text-white pt-8 sm:pt-16">
                     <p class="text-3xl sm:text-4xl font-semibold">Learn On Your Schedule</p>
                     <p class="text-base mt-4 pr-5 w-full">Lorem ipsum, dolor sit amet consectetur Lorem ipsum, dolor sit amet consectetur adipisicing elit tur amet consectetur Lorem ipsum, dolor sit amet consectetur adipisicing dolor sit amet consectetur adipisicing elit tur adipisicing elit.</p>

@@ -9,11 +9,11 @@
                     <div class="p-3">
                         <router-link :to="{ path: '/course/' + slotProps.data.slug}">
                             <div class="image-container">
-                                <img class="h-60 w-full bg-cover" :src="slotProps.data.thumb" alt="Image">
+                                <img class="h-60 w-full bg-cover rounded-t-lg" :src="slotProps.data.thumb" alt="Image">
                                 <div class="top-left px-3 py-1 bg-white shadow-lg rounded-sm text-gray-600 text-sm font-semibold">${{ slotProps.data.price }}</div>
                             </div>
                         </router-link>
-                        <div class="border border-gray-200 bg-white">
+                        <div class="border border-gray-200 bg-white rounded-b-lg">
                             <router-link :to="{ path: '/course/' + slotProps.data.slug}">
                                 <p class="lg:text-xl p-1 lg:p-3">{{ slotProps.data.title }}</p>
                             </router-link>
@@ -38,7 +38,7 @@
                                         <p class="p-2 text-sm font-medium text-gray-600">{{ slotProps.data.author.name }}</p>
                                     </div>
                                 </router-link>
-                                <p class="p-1 sm:p-2 rounded-xl bg-sky-50 text-gray-500 text-xs lg:text-sm">{{ slotProps.data.lectureCount }} lectures</p>
+                                <p class="p-1 sm:p-2 rounded-md bg-sky-50 text-gray-500 text-xs lg:text-sm">{{ slotProps.data.lectureCount }} lectures</p>
                             </div>
                         </div>
                     </div>
