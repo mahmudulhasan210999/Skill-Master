@@ -6,12 +6,13 @@
             <div class="container w-full flex items-center">
                 <div class="flex flex-col md:flex-row w-full justify-center items-center course-top">
                     <div class="md:w-1/2 md:ml-8 lg:ml-16">
-                        <iframe data-v-78db0942="" :src="course.trailer+'&amp;modestbranding=1&amp;iv_load_policy=3&amp;cc_load_policy=1'" 
-                            title="Animated Explainer Video of Workspacing" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen="" 
-                            class="video-card w-full h-52 md:h-60 lg:h-72 xl:h-80 2xl:h-96">
+                        <iframe
+                            class="video-card w-full h-52 md:h-60 lg:h-72 xl:h-80 2xl:h-96"
+                            :src="'https://tube.rvere.com/embed?v=' + course.trailer"
+                            title="YouTube video player"
+                            frameBorder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen>
                         </iframe>
                     </div>
                     <div class="w-full md:w-1/2 mt-6 md:mt-0 flex justify-center items-center">
@@ -208,25 +209,11 @@
                                 <div class="mt-5 text-sm text-gray-600" v-html="course.promoText"></div>
                                 <div class="mt-5">
                                     <p class="headlines">Course Features</p>
-                                    <div class="flex text-sm mt-2">
-                                        <i class="pi pi-angle-right feature-icon" style="font-size:0.7rem;"></i>
-                                        <p class="ml-2">Fully Programming</p>
-                                    </div>
-                                    <div class="flex text-sm mt-2">
-                                        <i class="pi pi-angle-right feature-icon" style="font-size:0.7rem;"></i>
-                                        <p class="ml-2">Help Code to Code</p>
-                                    </div>
-                                    <div class="flex text-sm mt-2">
-                                        <i class="pi pi-angle-right feature-icon" style="font-size:0.7rem;"></i>
-                                        <p class="ml-2">Free Trial 7 Days</p>
-                                    </div>
-                                    <div class="flex text-sm mt-2">
-                                        <i class="pi pi-angle-right feature-icon" style="font-size:0.7rem;"></i>
-                                        <p class="ml-2">Unlimited Videos</p>
-                                    </div>
-                                    <div class="flex text-sm mt-2">
-                                        <i class="pi pi-angle-right feature-icon" style="font-size:0.7rem;"></i>
-                                        <p class="ml-2">24x7 Support</p>
+                                    <div v-if="course.features">
+                                        <div class="flex text-sm mt-2" v-for="(feature,index) in getFeatures()" :key="index">
+                                            <i class="pi pi-angle-right feature-icon" style="font-size:0.7rem;"></i>
+                                            <p class="ml-2">{{feature}}</p>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="mt-6 flex justify-center">
@@ -325,7 +312,7 @@
 
 <script>
 import { mapState } from "vuex";
-import ProgressBar from 'primevue/progressbar';
+import ProgressBar from 'primevue/progressbar'; 
 import Toast from "primevue/toast";
 
 export default {
@@ -355,6 +342,12 @@ export default {
     },
 
     methods: {
+        getFeatures(){
+            let features= this.course.features.split(';')
+            console.log(features);
+            return features
+        },
+
         showCurriculum (id) {
             this.value = id
             this.openCurriculum = !this.openCurriculum
@@ -362,13 +355,13 @@ export default {
 
         enrollCourse(course) {
             // console.log(course)
-            this.$store.dispatch('order/placeOrder', {course: this.$route.params.id, price: course.price, offer_status: course.offer_status });
+            this.$store.dispatch('order/placeOrder', {course: this.$route.params.id, price: course.offer_status? course.offerPrice:course.price, offer_status: course.offer_status });
             if(this.message.code == 200) {
                 this.$toast.add({severity: 'success', closable: false, summary: this.message.message, life: 3000});
+                setTimeout( () => this.$router.push({ path: '/dashboard'}), 3000);
             } else {
                 this.$toast.add({severity: 'error', closable: false, summary: this.message.message, life: 3000});
             }
-            setTimeout( () => this.$router.push({ path: '/dashboard'}), 3000);
         }
     }
 }

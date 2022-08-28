@@ -42,7 +42,7 @@ const actions = {
     getCourses ({ commit }, payload) {
         axios.get(V1API.get_courses).then(result => {
             let results = result.data.data
-            console.log(result.data)
+            // console.log(result.data)
             commit('SET_COURSES', results)
         })
         .catch(error => {
@@ -53,7 +53,7 @@ const actions = {
     getCoursesBySlug ({ commit }, payload) {
         axios.get(V1API.course_details + payload).then(result => {
             let results = result.data.data.course
-            // console.log(result.data.data.course)
+            console.log(result.data.data.course)
             commit('SET_DETAIL', results)
         })
         .catch(error => {

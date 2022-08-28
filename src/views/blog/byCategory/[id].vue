@@ -68,7 +68,7 @@ export default {
         blog(newValue, oldValue){
             this.blogs = this.blog
             this.blog_count = this.count
-            console.log(this.blogs)
+            // console.log(this.blogs)
         }
     },
 

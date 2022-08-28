@@ -159,13 +159,13 @@ export default {
     methods: {
         register() {
             this.$store.dispatch('login/getRegister', this.registration_info).then(response => { 
-                console.log(response)
+                // console.log(response)
                 if(response.data.code == 200) {
                     this.$toast.add({severity: 'success', summary: response.data.message, closable: false, life: 3000})
                     setTimeout( () => this.$router.push({ path: '/login'}), 3000); 
                 }
                 else {
-                    console.log(response.data)
+                    // console.log(response.data)
                     this.$toast.add({severity: 'error', detail: JSON.stringify(response.data).replace("{", " ").replace("}", " ").replace(",","\n \n"), closable: false, life: 3000})
                 }
             })
