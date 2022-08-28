@@ -35,7 +35,7 @@
 
                         <div class="w-full py-2">
                             <p class="text-sm py-2 text-gray-600">Message</p>
-                            <Textarea class="h-24 w-full" v-model="value1" rows="5" cols="30" />
+                            <Textarea class="h-24 w-full" v-model="value" rows="5" cols="30" />
                         </div>
 
                         <div class="flex justify-center">
@@ -96,6 +96,12 @@ import Textarea from 'primevue/textarea';
 import Primeicons from 'primeicons/primeicons.css';
 
 export default {
+    data(){
+        return {
+            value: null
+        }
+    },
+    
     components: {
         InputText,
         Textarea,

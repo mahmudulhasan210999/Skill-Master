@@ -4,7 +4,8 @@ import courses from './modules/courses';
 import menu from './modules/menu';
 import blogs from './modules/blogs';
 import instructors from './modules/instructors';
-import login from './modules/login'
+import login from './modules/login';
+import order from './modules/order';
 
 // import { isPromise } from '@vue/shared'
 
@@ -15,7 +16,8 @@ const store = createStore({
         menu,
         blogs,
         instructors,
-        login
+        login,
+        order
     },
 
     // State

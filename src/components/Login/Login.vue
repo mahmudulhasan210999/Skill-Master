@@ -37,7 +37,7 @@
                             />
                             <ErrorMessage class="text-red-500 text-left text-sm mt-1 ml-1" name="Password" />
                         </div>
-                        <button  class="bg-primary text-white text-base rounded-md w-full py-3 mt-6">Sign In</button>
+                        <button class="bg-primary text-white text-base rounded-md w-full py-3 mt-6" @click="login">Sign In</button>
                     </Form>
                     <div class="flex justify-center mt-8 text-gray-500"> 
                         <p class="pr-1">Have't an account?</p>
@@ -88,7 +88,7 @@ export default {
     methods: {
         login() {
             this.$store.dispatch('login/getLogin', this.user_info).then(response => {
-                // console.log(response)  
+                console.log(response)  
                 if(response.data.code !== 200) { 
                     this.$toast.add({severity: 'error', summary: response.data.message, closable: false, life: 3000})
                 }

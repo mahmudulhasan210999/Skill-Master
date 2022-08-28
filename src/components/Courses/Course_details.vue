@@ -1,6 +1,6 @@
 <template>
     <div class="w-full flex flex-col">
-
+        <Toast :breakpoints="{'640px': {width: '80%', right: '0'}}" />
         <!-- Top part starts -->
         <div class="topbar-container">
             <div class="container w-full flex items-center">
@@ -42,7 +42,7 @@
                                 <p class="text-container">Certified:</p>
                                 <p>{{course.certified}} Students</p>
                             </div>
-                            <div class="mt-3 flex justify-center bg-primary p-4 rounded-md text-white">
+                            <div class="mt-3 flex justify-center bg-primary p-4 rounded-md text-white cursor-pointer" @click="enrollCourse(course)">
                                 <div class="flex items-center">
                                     <p>Enroll Now</p>
                                     <i class="pi pi-arrow-circle-right ml-12"></i>
@@ -230,7 +230,7 @@
                                     </div>
                                 </div>
                                 <div class="mt-6 flex justify-center">
-                                    <button class="bg-primary text-white px-8 py-3 rounded-3xl">
+                                    <button class="bg-primary text-white px-8 py-3 rounded-3xl" @click="enrollCourse(course)">
                                         <div class="flex items-center">
                                             <p>Enroll Now</p>
                                             <i class="pi pi-angle-right ml-8"></i>
@@ -326,6 +326,7 @@
 <script>
 import { mapState } from "vuex";
 import ProgressBar from 'primevue/progressbar';
+import Toast from "primevue/toast";
 
 export default {
     data() {
@@ -336,13 +337,15 @@ export default {
     },
 
     components: {
-        ProgressBar 
+        ProgressBar,
+        Toast 
     },
 
     computed: {
         ...mapState ({
             course: state => state.courses.getDetail,
             chapters: state => state.courses.chapters,
+            message: state => state.order.message
         }),
     },
 
@@ -355,6 +358,17 @@ export default {
         showCurriculum (id) {
             this.value = id
             this.openCurriculum = !this.openCurriculum
+        },
+
+        enrollCourse(course) {
+            // console.log(course)
+            this.$store.dispatch('order/placeOrder', {course: this.$route.params.id, price: course.price, offer_status: course.offer_status });
+            if(this.message.code == 200) {
+                this.$toast.add({severity: 'success', closable: false, summary: this.message.message, life: 3000});
+            } else {
+                this.$toast.add({severity: 'error', closable: false, summary: this.message.message, life: 3000});
+            }
+            setTimeout( () => this.$router.push({ path: '/dashboard'}), 3000);
         }
     }
 }

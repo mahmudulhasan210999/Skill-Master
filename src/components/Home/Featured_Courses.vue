@@ -5,7 +5,7 @@
 
         <div>
             <Carousel :value="featured_courses" :numVisible="3" :numScroll="3" :responsiveOptions="responsiveOptions">
-                <template #item="slotProps">
+                <template #item="slotProps"> 
                     <div class="p-3">
                         <router-link :to="{ path: '/course/' + slotProps.data.slug}">
                             <div class="image-container">
@@ -80,6 +80,7 @@ export default {
     components: {
         Carousel,
     },
+
     computed: {
         ...mapState ({
             featured_courses: state => state.courses.featured_courses

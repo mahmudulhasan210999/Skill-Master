@@ -14,11 +14,11 @@ const mutations = {
         localStorage.setItem('access_token', token)
     },
 
-    SET_REFRESH_TOKEN (state, token){
+    SET_REFRESH_TOKEN (state, token) {
         localStorage.setItem('refresh_token', token)
     },
 
-    SET_LOGIN_STATUS(state, status){
+    SET_LOGIN_STATUS(state, status) {
         state.isLoggedIn = status;
     },
 }
@@ -40,7 +40,7 @@ const actions = {
             if(result.data.code !== 401 && result.data.code == 200) {
                 let access_token = result.data.access_token
                 let refresh_token = result.data.refresh_token
-                console.log(result)
+                // console.log(result)
                 commit('SET_ACCESS_TOKEN', access_token)
                 commit('SET_REFRESH_TOKEN', refresh_token) 
                 dispatch('getLoginStatus')
