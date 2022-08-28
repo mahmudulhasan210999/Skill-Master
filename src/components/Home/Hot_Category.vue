@@ -8,7 +8,7 @@
                     <p class="p-1">Category</p>
                 </div>
             </div>
-            <div class="bg-gray-200 rounded-xl mt-4">
+            <div class="bg-gray-100 rounded-xl mt-4">
                 <div class="overflow-x-auto">
                     <div class="category-box">
                         <div class="grid grid-cols-3 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-5 p-8 xl:p-12">

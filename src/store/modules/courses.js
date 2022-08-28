@@ -6,10 +6,11 @@ const state = {
     featured_courses: [],
     getDetail: {},
     courses_by_category: [],
+    courses_by_sub_category: [],
     chapters: []
 }
 
-const getters = {}
+const getters = {} 
 
 const mutations = {
     SET_COURSES(state, items) { 
@@ -26,6 +27,10 @@ const mutations = {
 
     SET_COURSES_BY_CATEGORY(state, items) { 
         state.courses_by_category = items
+    },
+
+    SET_COURSES_BY_SUB_CATEGORY(state, items) { 
+        state.courses_by_sub_category = items
     },
 
     SET_CHAPTERS(state, items) { 
@@ -67,11 +72,11 @@ const actions = {
         })       
     },
 
-    getFeaturedCourses({ commit }, payload) {
+    getFeaturedCourses ({ commit }, payload) {
         axios.get(V1API.featured_courses).then(result => {
             let results = result.data.data
             // console.log(result.data.data)
-            commit('SET_FEATURED_COURSES', results)
+            commit('SET_FEATURED_COURSES', results) 
         })
         .catch(error => {
             console.log(error)
@@ -83,6 +88,17 @@ const actions = {
             let results = result.data.data
             // console.log(result.data.data.course)
             commit('SET_COURSES_BY_CATEGORY', results)
+        })
+        .catch(error => {
+            console.log(error)
+        })       
+    },
+
+    getCoursesBySubCategorySlug ({ commit }, payload) {
+        axios.get(V1API.course_by_sub_category + payload).then(result => {
+            let results = result.data.data
+            // console.log(result.data.data.course)
+            commit('SET_COURSES_BY_SUB_CATEGORY', results)
         })
         .catch(error => {
             console.log(error)

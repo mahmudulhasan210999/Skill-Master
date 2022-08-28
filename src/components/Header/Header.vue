@@ -26,7 +26,7 @@
                                     <div v-if="isSubCategoryOpen">
                                         <ul class="flex flex-col w-60 text-left sub-dropdown" v-if="category.id == parentCategoryId">
                                             <li class="px-4 py-2 w-60 cursor-pointer text-primary hover:text-secondary" v-for="(childrenItem, index2) in subCategoryList" :key="index2">
-                                                <router-link :to="{ path: '/courses/' + childrenItem.slug }" >
+                                                <router-link :to="{ path: '/courses/sub-category/' + childrenItem.slug }" >
                                                     <p class="w-full">{{childrenItem.title}}</p>
                                                 </router-link> 
                                             </li>

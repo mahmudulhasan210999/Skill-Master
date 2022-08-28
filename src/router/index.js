@@ -16,7 +16,8 @@ import Settings from "../views/user-dashboard/settings/index.vue";
 import Instructor from '../views/courses/instructor/[id].vue';
 import Categories from '../views/courses/categories/[id].vue';
 import BlogByCategory from '../views/blog/byCategory/[id].vue';
-import Lectures from "../views/courses/lectures/[l_id].vue"
+import Lectures from "../views/courses/lectures/[l_id].vue";
+import Courses_by_sub_category from "../views/courses/by-sub-categories/[id].vue";
 
 const routes = [
     { 
@@ -63,6 +64,10 @@ const routes = [
     {
         path: '/courses/:id',
         component: Categories
+    },
+    {
+        path: '/courses/sub-category/:id',
+        component: Courses_by_sub_category
     },
     {
         path: '/cart',

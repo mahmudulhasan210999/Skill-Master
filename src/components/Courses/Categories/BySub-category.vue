@@ -63,7 +63,7 @@ export default {
 
     computed: {
         ...mapState ({
-            course: state => state.courses.courses_by_category
+            course: state => state.courses.courses_by_sub_category
         }),
     }, 
 
@@ -74,12 +74,12 @@ export default {
     },
 
     beforeUpdate() {
-        this.$store.dispatch('courses/getCoursesByCategorySlug', this.slug )
+        this.$store.dispatch('courses/getCoursesBySubCategorySlug', this.slug )
     },
 
     created() {
         // console.log(this.slug);
-        this.$store.dispatch('courses/getCoursesByCategorySlug', this.slug )
+        this.$store.dispatch('courses/getCoursesBySubCategorySlug', this.slug )
     }
 }
 </script>

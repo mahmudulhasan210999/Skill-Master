@@ -12,6 +12,7 @@ const V1API = {
     'featured_courses':host+'/api/featured-courses',
     'course_details':host+'/api/courses/',
     'course_by_category':host+'/api/courses/by-category/',
+    'course_by_sub_category':host+'/api/courses/by-sub-category/',
     'instructor_by_course_id': host+'/api/course/instructor/',
     'get_register': host+'/api/register',
     'user_login': host+'/api/token'
