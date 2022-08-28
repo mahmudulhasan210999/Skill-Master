@@ -16,7 +16,8 @@ const V1API = {
     'instructor_by_course_id': host+'/api/course/instructor/',
     'get_register': host+'/api/register',
     'user_login': host+'/api/token',
-    'place_order': host+'/api/courses/place/order'
+    'place_order': host+'/api/courses/place/order',
+    'get_lecture': host+'/api/lecture/details/'
 }
 
 export default V1API;

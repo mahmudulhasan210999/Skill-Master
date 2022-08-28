@@ -7,7 +7,8 @@ const state = {
     getDetail: {},
     courses_by_category: [],
     courses_by_sub_category: [],
-    chapters: []
+    chapters: [],
+    getLecture: {}
 }
 
 const getters = {} 
@@ -33,8 +34,12 @@ const mutations = {
         state.courses_by_sub_category = items
     },
 
-    SET_CHAPTERS(state, items) { 
+    SET_CHAPTERS (state, items) { 
         state.chapters = items
+    },
+
+    SET_LECTURE_VIDEO (state, item) { 
+        state.getLecture = item
     },
 }
 
@@ -53,7 +58,7 @@ const actions = {
     getCoursesBySlug ({ commit }, payload) {
         axios.get(V1API.course_details + payload).then(result => {
             let results = result.data.data.course
-            console.log(result.data.data.course)
+            // console.log(result.data.data.course)
             commit('SET_DETAIL', results)
         })
         .catch(error => {
@@ -103,6 +108,21 @@ const actions = {
         .catch(error => {
             console.log(error)
         })       
+    },
+
+    getLectureVideo ({ commit }, payload) {
+        let config = { 
+            headers:  { 'Authorization': 'Bearer '+ localStorage.getItem('access_token')}    
+        }
+        // console.log(payload)
+        axios.get(V1API.get_lecture + payload, config).then(result => {
+            let results = result.data.data.lecture_details
+            console.log(result.data.data.lecture_details)
+            commit('SET_LECTURE_VIDEO', results)
+        })
+        .catch(error => {
+            console.log(error)
+        })        
     },
 }
 

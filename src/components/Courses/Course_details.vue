@@ -92,7 +92,7 @@
                                         </div>
                                         <div class="flex flex-col mt-4" v-if="value == chapter.id && openCurriculum">
                                             <div v-for="(lecture, index) in chapter.lectures" :key="index">
-                                                <router-link :to="{ path: '/' + lecture.id }" >
+                                                <router-link :to="{ path: '/course/lecture/' + lecture.id }" >
                                                     <div class="flex flex-col sm:flex-row text-sm p-3 sm:p-5 border-b border-gray-200 cursor-pointer">
                                                         <div class="flex sm:mr-8">
                                                             <i class="pi pi-video pt-0.5 mr-2 text-gray-700"></i>
@@ -100,7 +100,7 @@
                                                         </div>
                                                         <p class="font-medium text-gray-700">{{lecture.title}}</p>             
                                                     </div>  
-                                                </router-link>  
+                                                </router-link>   
                                             </div>
                                         </div>
                                     </div>
@@ -344,7 +344,7 @@ export default {
     methods: {
         getFeatures(){
             let features= this.course.features.split(';')
-            console.log(features);
+            // console.log(features);
             return features
         },
 
