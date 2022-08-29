@@ -5,7 +5,7 @@ import BlogDetails from '../views/blog/details/[id].vue';
 import Courses from "../views/courses/index.vue";
 import Contact from '../views/contact/index.vue';
 import CourseDetails from "../views/courses/details/[id].vue";
-import Cart from "../views/cart/index.vue";
+import Wishlist from "../views/wishlist/index.vue";
 import Login from "../views/login/index.vue";
 import Registration from "../views/registration/index.vue";
 import PageNotFound from "../views/404/index.vue";
@@ -70,8 +70,8 @@ const routes = [
         component: Courses_by_sub_category
     },
     {
-        path: '/cart',
-        component: Cart
+        path: '/wishlist',
+        component: Wishlist
     },
     {
         path: '/checkout',

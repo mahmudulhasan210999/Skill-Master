@@ -152,7 +152,7 @@ export default {
 }
 
 .menu-item {
-    @apply mx-1 px-2 xl:px-3 2xl:px-4 py-6 text-primary hover:text-secondary;
+    @apply mx-1 px-2 xl:px-3 2xl:px-4 py-6 font-medium hover:text-secondary;
 }
 
 .dropdown {

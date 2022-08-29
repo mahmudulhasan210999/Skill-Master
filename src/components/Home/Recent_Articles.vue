@@ -5,7 +5,7 @@
 
             <div class="overflow-x-auto pb-4">
                 <div class="category-box">
-                    <div class="grid grid-cols-3 md:grid-cols-3 gap-5">
+                    <div class="grid grid-cols-3 md:grid-cols-3 gap-5 2xl:gap-7">
                         <div v-for="(blog, index) in blogs" :key="index">
                             <div>
                                 <div>

@@ -10,7 +10,10 @@
                         <router-link :to="{ path: '/course/' + slotProps.data.slug}">
                             <div class="image-container">
                                 <img class="h-60 w-full bg-cover rounded-t-lg" :src="slotProps.data.thumb" alt="Image">
-                                <div class="top-left px-3 py-1 bg-white shadow-lg rounded-sm text-gray-600 text-sm font-semibold">${{ slotProps.data.price }}</div>
+                                <div class="top-left px-3 py-1.5 bg-white shadow-lg rounded-sm text-gray-600 text-sm font-semibold">${{ slotProps.data.price }}</div>
+                                <div class="top-right flex items-end bg-white shadow-lg rounded-sm text-gray-600 text-sm font-semibold">
+                                    <i class="pi pi-heart px-2 py-1.5"></i>
+                                </div>
                             </div>
                         </router-link>
                         <div class="border border-gray-200 bg-white rounded-b-lg">
@@ -104,5 +107,11 @@ export default {
     position: absolute;
     top: 20px;
     left: 20px;
+}
+
+.top-right {
+    position: absolute;
+    top: 20px;
+    right: 20px;
 }
 </style>
