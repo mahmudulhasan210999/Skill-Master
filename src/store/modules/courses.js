@@ -117,7 +117,7 @@ const actions = {
         // console.log(payload)
         axios.get(V1API.get_lecture + payload, config).then(result => {
             let results = result.data.data.lecture_details
-            console.log(result.data.data.lecture_details)
+            // console.log(result.data.data.lecture_details)
             commit('SET_LECTURE_VIDEO', results)
         })
         .catch(error => {

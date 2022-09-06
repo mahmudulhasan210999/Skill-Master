@@ -11,9 +11,9 @@
             <div class="bg-gray-100 rounded-xl mt-4">
                 <div class="overflow-x-auto">
                     <div class="category-box">
-                        <div class="grid grid-cols-3 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-5 p-8 xl:p-12">
+                        <div class="grid grid-cols-3 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-5 p-8">
                             <div class="" v-for="(category, index) in hot_categories" :key="index">
-                                <router-link :to="{ path: '/' + category.slug }">
+                                <router-link :to="{ path: '/courses/' + category.slug }">
                                     <div class="flex items-center rounded-lg p-3 bg-white h-24" :class="category.color">
                                         <div>
                                             <i class="p-2 bg-alternate2 rounded-md" :class="category.icon" style="font-size:2.5rem;"></i>

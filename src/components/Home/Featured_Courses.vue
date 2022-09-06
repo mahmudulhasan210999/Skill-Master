@@ -7,16 +7,17 @@
             <Carousel :value="featured_courses" :numVisible="3" :numScroll="3" :responsiveOptions="responsiveOptions">
                 <template #item="slotProps"> 
                     <div class="p-3">
-                        <router-link :to="{ path: '/course/' + slotProps.data.slug}">
-                            <div class="image-container">
+                        <div class="image-container">
+                            <router-link :to="{ path: '/course/' + slotProps.data.slug}">
                                 <img class="h-60 w-full bg-cover rounded-t-lg" :src="slotProps.data.thumb" alt="Image">
-                                <div class="top-left px-3 py-1.5 bg-white shadow-lg rounded-sm text-gray-600 text-sm font-semibold">${{ slotProps.data.price }}</div>
-                                <div class="top-right flex items-end bg-white shadow-lg rounded-sm text-gray-600 text-sm font-semibold">
-                                    <i class="pi pi-heart px-2 py-1.5"></i>
-                                </div>
+                            </router-link>
+                            <div class="top-left px-3 py-1.5 bg-white shadow-lg rounded-sm text-gray-600 text-sm font-semibold">${{ slotProps.data.price }}</div>
+                            <div @click="addToWishlist" class="top-right flex items-end bg-secondary shadow-lg rounded-sm text-sm font-semibold text-white cursor-pointer">
+                                <i v-if="is_wishlisted" class="pi pi-heart-fill px-2 py-1.5"></i>
+                                <i else class="pi pi-heart px-2 py-1.5"></i>
                             </div>
-                        </router-link>
-                        <div class="border border-gray-200 bg-white rounded-b-lg">
+                        </div>
+                        <div class="border border-gray-200 bg-white rounded-b-lg"> 
                             <router-link :to="{ path: '/course/' + slotProps.data.slug}">
                                 <p class="lg:text-xl p-1 lg:p-3">{{ slotProps.data.title }}</p>
                             </router-link>
@@ -68,7 +69,7 @@ export default {
                     numScroll: 3
                 },
                 {
-                    breakpoint: '840px',
+                    breakpoint: '840px', 
                     numVisible: 2,
                     numScroll: 2
                 },
@@ -92,6 +93,10 @@ export default {
 
     mounted() {
         this.$store.dispatch('courses/getFeaturedCourses')
+    },
+
+    methods: {
+        addToWishlist() {}
     }
 }
 </script>

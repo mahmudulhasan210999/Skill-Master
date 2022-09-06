@@ -7,7 +7,7 @@
                         <p class="text-3xl lg:text-4xl font-semibold p-2">Learn On Your Schedule</p>
                         <p class="text-base p-2 w-full">Lorem ipsum, dolor sit amet consectetur Lorem ipsum, dolor sit amet consectetur adipisicing elit tur amet consectetur Lorem ipsum, dolor sit amet consectetur adipisicing dolor sit amet consectetur adipisicing elit tur adipisicing elit.</p>
                         <div class="flex p-2">
-                            <input class="rounded-l-md w-80 md:text-xl pl-4 outline-none text-black" type="text" placeholder="Search...">
+                            <input class="rounded-l-md w-80 md:text-xl px-4 outline-none text-black" type="text" placeholder="Search...">
                             <button class="p-5 lg:p-6 rounded-r-md bg-secondary text-white">Go</button>
                         </div>
                     </div>
@@ -21,7 +21,7 @@
                     <p class="text-3xl sm:text-4xl font-semibold">Learn On Your Schedule</p>
                     <p class="text-base mt-4 pr-5 w-full">Lorem ipsum, dolor sit amet consectetur Lorem ipsum, dolor sit amet consectetur adipisicing elit tur amet consectetur Lorem ipsum, dolor sit amet consectetur adipisicing dolor sit amet consectetur adipisicing elit tur adipisicing elit.</p>
                     <div class="flex mt-4">
-                        <input class="rounded-l-md w-56 sm:w-72 md:text-xl pl-4 outline-none text-black" type="text" placeholder="Search...">
+                        <input class="rounded-l-md w-56 sm:w-72 md:text-xl px-4 outline-none text-black" type="text" placeholder="Search...">
                         <button class="p-4 sm:p-6 rounded-r-md bg-secondary text-white">Go</button>
                     </div>
                 </div>

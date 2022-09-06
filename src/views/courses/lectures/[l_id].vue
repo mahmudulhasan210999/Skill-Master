@@ -30,7 +30,7 @@ export default {
     },
 
     created() {
-        console.log(this.$route.params.l_id)
+        // console.log(this.$route.params.l_id)
         this.$store.dispatch('courses/getLectureVideo', this.$route.params.l_id)
     },
 }
