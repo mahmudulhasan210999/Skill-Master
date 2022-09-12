@@ -88,7 +88,7 @@ export default {
     methods: {
         login() {
             this.$store.dispatch('login/getLogin', this.user_info).then(response => {
-                // console.log(response)  
+                // console.log(response)   
                 if(response.data.code !== 200) { 
                     this.$toast.add({severity: 'error', summary: response.data.message, closable: false, life: 3000})
                 }

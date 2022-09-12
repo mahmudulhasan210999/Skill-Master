@@ -59,7 +59,11 @@ const routes = [
     },
     {
         path: '/course/lecture/:l_id',
-        component: Lectures
+        component: Lectures,
+        name: 'Lectures',
+        meta: {
+            login_required: true
+        }
     },
     {
         path: '/courses/:id',
@@ -130,7 +134,7 @@ router.beforeEach(function (to, from, next) {
             next();
         }
         else {
-            next('/login');
+            next('/login'); 
         }
     }
     else if(to.meta.redirectionNeeded) {

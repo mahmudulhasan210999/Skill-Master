@@ -55,7 +55,6 @@ export default {
         logout() {
             localStorage.removeItem('access_token')
             localStorage.removeItem('wishlist_items')
-            localStorage.removeItem('cart_items')
             localStorage.removeItem('refresh_token')
             this.$store.dispatch('login/getLoginStatus')
             this.$router.push('/')
